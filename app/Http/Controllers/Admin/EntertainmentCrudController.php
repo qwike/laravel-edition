@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\EntertainmentRequest;
 use App\Models\Entertainment;
-use App\Models\Product;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
@@ -133,11 +132,16 @@ class EntertainmentCrudController extends CrudController
                 'type' => 'textarea',
             ],
             [
+                'name' => 'price',
+                'label' => 'Цена',
+                'type' => 'number',
+            ],
+            [
                 'name' => 'image',
                 'label' => 'Изображение',
                 'type' => 'image',
                 'withMedia' => [
-                    'collection' => Product::COLLECTION_NAME_ENTERTAINMENT,
+                    'collection' => Entertainment::COLLECTION_NAME_ENTERTAINMENT,
                 ],
             ],
             [
