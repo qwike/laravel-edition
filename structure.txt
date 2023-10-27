@@ -1,0 +1,50 @@
+addresses
+-id increment
+-name
+-coords
+
+excursions 
+-id 
+-name 
+-desc text
+-price double .22
+
+products
+-id 
+-name varchar(255)
+-desc text
+
+entertainments
+-id 
+-name 
+-desc 
+-price 
+
+projects
+-id 
+-name 
+-desc 
+
+events
+-id 
+-name 
+-desc 
+-start_date date_time
+-end_date date_time
+
+
+houses
+-id 
+-name 
+-desc 
+-price double
+-people (min max?)
+
+orders
+-id 
+-type entity?
+-name 
+-phone
+-comment text
+
+users --laravel 
