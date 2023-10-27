@@ -3,4 +3,5 @@
 
 <x-backpack::menu-item title="Адреса" icon="la la-map-marker-alt" :link="backpack_url('address')" />
 <x-backpack::menu-item title="Продукты" icon="la la-shopping-cart" :link="backpack_url('product')" />
+<x-backpack::menu-item title="Экскурсии" icon="la la-route" :link="backpack_url('excursion')" />
 <x-backpack::menu-item title='Logs' icon='la la-terminal' :link="backpack_url('log')" />
