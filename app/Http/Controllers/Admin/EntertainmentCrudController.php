@@ -54,6 +54,11 @@ class EntertainmentCrudController extends CrudController
                 'type' => 'textarea',
             ],
             [
+                'name' => 'price',
+                'label' => 'Цена',
+                'type' => 'number',
+            ],
+            [
                 'name' => 'created_at',
                 'label' => 'Создано',
                 'type' => 'date'
