@@ -25,7 +25,9 @@ class ProjectRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'name' => 'required|min:5|max:255',
+            'description' => 'nullable|string|max:3000',
+            'image' => 'required|mimes:jpeg,jpg,png,webp|max:2048',
         ];
     }
 
@@ -37,7 +39,9 @@ class ProjectRequest extends FormRequest
     public function attributes()
     {
         return [
-            //
+            'name' => 'Наименование',
+            'description' => 'Описание',
+            'image' => 'Изображение',
         ];
     }
 
