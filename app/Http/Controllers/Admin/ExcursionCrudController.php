@@ -30,7 +30,7 @@ class ExcursionCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\Excursion::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/excursion');
-        CRUD::setEntityNameStrings('Экскурсия', 'Экскурсии');
+        CRUD::setEntityNameStrings('Экскурсию', 'Экскурсии');
     }
 
     /**
