@@ -140,6 +140,8 @@ class HouseCrudController extends CrudController
                 'name' => 'image',
                 'label' => 'Изображение',
                 'type' => 'image',
+                'width' => '200px',
+                'height' => '200px',
                 'withMedia' => [
                     'collection' => House::COLLECTION_NAME_HOUSE,
                 ],

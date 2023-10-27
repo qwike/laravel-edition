@@ -103,6 +103,8 @@ class ProductCrudController extends CrudController
                 'name' => 'image',
                 'label' => 'Изображение',
                 'type' => 'image',
+                'width' => '200px',
+                'height' => '200px',
                 'withMedia' => [
                     'collection' => Product::COLLECTION_NAME_PRODUCT,
                 ],

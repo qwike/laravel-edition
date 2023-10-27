@@ -135,6 +135,8 @@ class ExcursionCrudController extends CrudController
                 'name' => 'image',
                 'label' => 'Изображение',
                 'type' => 'image',
+                'width' => '200px',
+                'height' => '200px',
                 'withMedia' => [
                     'collection' => Excursion::COLLECTION_NAME_EXCURSION,
                 ],

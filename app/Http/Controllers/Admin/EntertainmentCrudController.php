@@ -140,6 +140,8 @@ class EntertainmentCrudController extends CrudController
                 'name' => 'image',
                 'label' => 'Изображение',
                 'type' => 'image',
+                'width' => '200px',
+                'height' => '200px',
                 'withMedia' => [
                     'collection' => Entertainment::COLLECTION_NAME_ENTERTAINMENT,
                 ],
