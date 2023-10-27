@@ -29,7 +29,7 @@ class HouseCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\House::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/house');
-        CRUD::setEntityNameStrings('house', 'houses');
+        CRUD::setEntityNameStrings('Домик', 'Домики');
     }
 
     /**
