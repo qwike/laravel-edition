@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\ProjectRequest;
-use App\Models\Project;
+use App\Http\Requests\OrderRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class ProjectCrudController
+ * Class OrderCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class ProjectCrudController extends CrudController
+class OrderCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -27,9 +26,9 @@ class ProjectCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\App\Models\Project::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/project');
-        CRUD::setEntityNameStrings('Проект', 'Проекты');
+        CRUD::setModel(\App\Models\Order::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/order');
+        CRUD::setEntityNameStrings('Заявка', 'Заявки');
     }
 
     /**
@@ -42,14 +41,24 @@ class ProjectCrudController extends CrudController
     {
         CRUD::setColumns([
             [
+                'name' => 'entity',
+                'label' => 'Сущность',
+                'type' => 'text',
+            ],
+            [
                 'name' => 'name',
-                'label' => 'Наименование',
+                'label' => 'Имя',
                 'type' => 'text',
                 'limit' => 120,
             ],
             [
-                'name' => 'description',
-                'label' => 'Описание',
+                'name' => 'phone',
+                'label' => 'Номер телефона',
+                'type' => 'text',
+            ],
+            [
+                'name' => 'comment',
+                'label' => 'Комментарий',
                 'type' => 'textarea',
             ],
             [
@@ -78,26 +87,27 @@ class ProjectCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(ProjectRequest::class);
+        CRUD::setValidation(OrderRequest::class);
         CRUD::addFields([
             [
-                'name' => 'name',
-                'label' => 'Наименование',
+                'name' => 'entity',
+                'label' => 'Сущность',
                 'type' => 'text',
             ],
             [
-                'name' => 'description',
-                'label' => 'Описание',
-                'type' => 'textarea',
+                'name' => 'name',
+                'label' => 'Имя',
+                'type' => 'text',
             ],
             [
-                'name' => 'image',
-                'label' => 'Изображение',
-                'type' => 'upload',
-                'withMedia' => [
-                    'collection' => Project::COLLECTION_NAME_PROJECT,
-                ],
-                'hint' => 'Формат: jpeg, jpg, png, webp. Максимальный размер: 2MB',
+                'name' => 'phone',
+                'label' => 'Номер телефона',
+                'type' => 'text',
+            ],
+            [
+                'name' => 'comment',
+                'label' => 'Комментарий',
+                'type' => 'textarea',
             ],
         ]); // set fields from db columns.
 
@@ -111,25 +121,25 @@ class ProjectCrudController extends CrudController
     {
         CRUD::setColumns([
             [
+                'name' => 'entity',
+                'label' => 'Сущность',
+                'type' => 'text',
+            ],
+            [
                 'name' => 'name',
-                'label' => 'Наименование',
+                'label' => 'Имя',
                 'type' => 'text',
                 'limit' => 120,
             ],
             [
-                'name' => 'description',
-                'label' => 'Описание',
-                'type' => 'textarea',
+                'name' => 'phone',
+                'label' => 'Номер телефона',
+                'type' => 'text',
             ],
             [
-                'name' => 'image',
-                'label' => 'Изображение',
-                'type' => 'image',
-                'width' => '200px',
-                'height' => '200px',
-                'withMedia' => [
-                    'collection' => Project::COLLECTION_NAME_PROJECT,
-                ],
+                'name' => 'comment',
+                'label' => 'Комментарий',
+                'type' => 'textarea',
             ],
             [
                 'name' => 'created_at',

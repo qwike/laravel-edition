@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class HouseRequest extends FormRequest
+class OrderRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,10 +25,10 @@ class HouseRequest extends FormRequest
     public function rules()
     {
         return [
+            'entity' => 'required',
             'name' => 'required|min:5|max:255',
-            'description' => 'nullable|string|max:3000',
-            'price' => 'required|gt:0',
-            'image.*' => 'required|mimes:jpeg,jpg,png,webp|max:2048',
+            'phone' => 'required',
+            'comment' => 'nullable|string|max:3000',
         ];
     }
 
@@ -40,10 +40,10 @@ class HouseRequest extends FormRequest
     public function attributes()
     {
         return [
-            'name' => 'Наименование',
-            'description' => 'Описание',
-            'price' => 'Цена',
-            'image' => 'Изображение',
+            'entity' => 'Сущность',
+            'name' => 'Имя',
+            'phone' => 'Номер телефона',
+            'comment' => 'Комментарий',
         ];
     }
 
