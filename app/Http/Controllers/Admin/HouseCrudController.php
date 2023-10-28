@@ -103,7 +103,7 @@ class HouseCrudController extends CrudController
             [
                 'name' => 'image',
                 'label' => 'Изображение',
-                'type' => 'upload_multiple',
+                'type' => 'upload',
                 'withMedia' => [
                     'collection' => House::COLLECTION_NAME_HOUSE,
                 ],
