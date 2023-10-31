@@ -6,6 +6,7 @@ use App\Http\Requests\HouseRequest;
 use App\Models\House;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
 /**
  * Class HouseCrudController
@@ -22,7 +23,7 @@ class HouseCrudController extends CrudController
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
-     * 
+     *
      * @return void
      */
     public function setup()
@@ -34,7 +35,7 @@ class HouseCrudController extends CrudController
 
     /**
      * Define what happens when the List operation is loaded.
-     * 
+     *
      * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
      * @return void
      */
@@ -77,7 +78,7 @@ class HouseCrudController extends CrudController
 
     /**
      * Define what happens when the Create operation is loaded.
-     * 
+     *
      * @see https://backpackforlaravel.com/docs/crud-operation-create
      * @return void
      */
@@ -119,6 +120,17 @@ class HouseCrudController extends CrudController
 
     protected function setupShowOperation()
     {
+        $images_html = '<div style="display: flex; flex-wrap: wrap;">';
+        $images = House::find(\request()->id)->getMedia(House::COLLECTION_NAME_HOUSE);
+        foreach ($images as $image) {
+            $images_html .= '
+            <img
+                alt="Фото"
+                src="http://muvyr/storage/media/' . $image['id'] . '/' . $image['file_name'] . '"
+                style="height: 200px; margin: 5px; border-radius: 5px;"
+            >';
+        }
+        $images_html .= '</div>';
         CRUD::setColumns([
             [
                 'name' => 'name',
@@ -139,12 +151,8 @@ class HouseCrudController extends CrudController
             [
                 'name' => 'image',
                 'label' => 'Изображение',
-                'type' => 'image',
-                'width' => '200px',
-                'height' => '200px',
-                'withMedia' => [
-                    'collection' => House::COLLECTION_NAME_HOUSE,
-                ],
+                'type' => 'custom_html',
+                'value' => $images_html,
             ],
             [
                 'name' => 'created_at',
@@ -161,7 +169,7 @@ class HouseCrudController extends CrudController
 
     /**
      * Define what happens when the Update operation is loaded.
-     * 
+     *
      * @see https://backpackforlaravel.com/docs/crud-operation-update
      * @return void
      */
