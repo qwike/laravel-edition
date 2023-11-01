@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use App\Enums\OrderTypeEnum;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\Enum;
 
 class OrderRequest extends FormRequest
 {
@@ -22,13 +24,14 @@ class OrderRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-            'entity' => 'required',
             'name' => 'required|min:5|max:255',
             'phone' => 'required',
             'comment' => 'nullable|string|max:3000',
+            'comment_admin' => 'nullable|string|max:3000',
+            'status' => [new Enum(OrderTypeEnum::class)],
         ];
     }
 
@@ -40,7 +43,7 @@ class OrderRequest extends FormRequest
     public function attributes()
     {
         return [
-            'entity' => 'Сущность',
+            'orderable_type' => 'Тип',
             'name' => 'Имя',
             'phone' => 'Номер телефона',
             'comment' => 'Комментарий',

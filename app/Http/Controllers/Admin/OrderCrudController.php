@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Enums\OrderTypeEnum;
+use App\Enums\StatusEnum;
 use App\Http\Requests\OrderRequest;
+use App\Models\Event;
+use App\Models\Excursion;
+use App\Models\House;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
@@ -14,7 +19,6 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 class OrderCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
-    use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
@@ -41,8 +45,14 @@ class OrderCrudController extends CrudController
     {
         CRUD::setColumns([
             [
-                'name' => 'entity',
-                'label' => 'Сущность',
+                'name' => 'orderable_type',
+                'label' => 'Тип',
+                'type' => 'enum',
+                'options' => OrderTypeEnum::options(),
+            ],
+            [
+                'name' => 'orderable.name',
+                'label' => 'Наименование позиции',
                 'type' => 'text',
             ],
             [
@@ -60,6 +70,17 @@ class OrderCrudController extends CrudController
                 'name' => 'comment',
                 'label' => 'Комментарий',
                 'type' => 'textarea',
+            ],
+            [
+                'name' => 'comment_admin',
+                'label' => 'Комментарий Администратора',
+                'type' => 'textarea',
+            ],
+            [
+                'name' => 'status',
+                'label' => 'Статус',
+                'type' => 'enum',
+                'options' => StatusEnum::options(),
             ],
             [
                 'name' => 'created_at',
@@ -85,44 +106,13 @@ class OrderCrudController extends CrudController
      * @see https://backpackforlaravel.com/docs/crud-operation-create
      * @return void
      */
-    protected function setupCreateOperation()
-    {
-        CRUD::setValidation(OrderRequest::class);
-        CRUD::addFields([
-            [
-                'name' => 'entity',
-                'label' => 'Сущность',
-                'type' => 'text',
-            ],
-            [
-                'name' => 'name',
-                'label' => 'Имя',
-                'type' => 'text',
-            ],
-            [
-                'name' => 'phone',
-                'label' => 'Номер телефона',
-                'type' => 'text',
-            ],
-            [
-                'name' => 'comment',
-                'label' => 'Комментарий',
-                'type' => 'textarea',
-            ],
-        ]); // set fields from db columns.
-
-        /**
-         * Fields can be defined using the fluent syntax:
-         * - CRUD::field('price')->type('number');
-         */
-    }
 
     protected function setupShowOperation()
     {
         CRUD::setColumns([
             [
-                'name' => 'entity',
-                'label' => 'Сущность',
+                'name' => 'orderable.name',
+                'label' => 'Наименование позиции',
                 'type' => 'text',
             ],
             [
@@ -140,6 +130,17 @@ class OrderCrudController extends CrudController
                 'name' => 'comment',
                 'label' => 'Комментарий',
                 'type' => 'textarea',
+            ],
+            [
+                'name' => 'comment_admin',
+                'label' => 'Комментарий Администратора',
+                'type' => 'textarea',
+            ],
+            [
+                'name' => 'status',
+                'label' => 'Статус',
+                'type' => 'enum',
+                'options' => StatusEnum::options(),
             ],
             [
                 'name' => 'created_at',
@@ -162,6 +163,53 @@ class OrderCrudController extends CrudController
      */
     protected function setupUpdateOperation()
     {
-        $this->setupCreateOperation();
+        CRUD::setValidation(OrderRequest::class);
+        CRUD::addFields([
+//            [
+//                'name' => 'orderable',
+//                'attribute' => 'name',
+//                'label' => 'Наименование позиции',
+//                'type' => 'text',
+//                'attributes' => [
+//                    'readonly' => 'readonly',
+//                    'disabled' => 'disabled',
+//                ],
+//            ],
+            [
+                'name' => 'name',
+                'label' => 'Имя',
+                'type' => 'text',
+                'attributes' => [
+                    'readonly' => 'readonly',
+                    'disabled' => 'disabled',
+                ],
+            ],
+            [
+                'name' => 'phone',
+                'label' => 'Номер телефона',
+                'type' => 'text',
+                'attributes' => [
+                    'readonly' => 'readonly',
+                    'disabled' => 'disabled',
+                ],
+            ],
+            [
+                'name' => 'comment',
+                'label' => 'Комментарий',
+                'type' => 'textarea',
+            ],
+            [
+                'name' => 'comment_admin',
+                'label' => 'Комментарий Администратора',
+                'type' => 'textarea',
+            ],
+            [
+                'name' => 'status',
+                'label' => 'Статус',
+                'type' => 'enum',
+                'enum_class' => StatusEnum::class,
+                'enum_function' => 'label',
+            ],
+        ]);
     }
 }

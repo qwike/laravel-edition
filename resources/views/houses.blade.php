@@ -16,7 +16,7 @@
                 @foreach($houses as $house)
                     <div class="item wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
                         <div class="item_img_container">
-                            <img src="{{ $house->getHouseImage() }}" alt="Фото домика">
+                            <img src="{{ $house->getHouseImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Фото домика">
                         </div>
                         <div class="item_title">{{ $house->name }}</div>
                         <div class="item_price">{{ $house->price }}</div>

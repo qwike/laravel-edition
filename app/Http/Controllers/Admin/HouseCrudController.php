@@ -126,7 +126,7 @@ class HouseCrudController extends CrudController
             $images_html .= '
             <img
                 alt="Фото"
-                src="http://muvyr/storage/media/' . $image['id'] . '/' . $image['file_name'] . '"
+                src="' . $image->getUrl() . '"
                 style="height: 200px; margin: 5px; border-radius: 5px;"
             >';
         }
@@ -150,7 +150,7 @@ class HouseCrudController extends CrudController
             ],
             [
                 'name' => 'image',
-                'label' => 'Изображение',
+                'label' => 'Изображение(-я)',
                 'type' => 'custom_html',
                 'value' => $images_html,
             ],

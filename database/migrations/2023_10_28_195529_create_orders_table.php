@@ -13,10 +13,17 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string('entity');
+            $table->morphs('orderable');
             $table->string('name');
             $table->string('phone');
             $table->text('comment')->nullable();
+            $table->text('comment_admin')->nullable();
+            $table->enum('status', [
+               'process',
+               'working',
+               'retention',
+               'closed',
+            ])->nullable();
             $table->timestamps();
         });
     }
