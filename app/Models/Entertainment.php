@@ -23,8 +23,16 @@ class Entertainment extends Model implements HasMedia
         'price',
     ];
 
-    public function getProductImage(): ?Media
+    public function getEntertainmentImage(): ?string
     {
-        return $this->getFirstMedia(self::COLLECTION_NAME_ENTERTAINMENT);
+        $url = "";
+        $image = $this->getFirstMedia(self::COLLECTION_NAME_ENTERTAINMENT);
+        if($image) {
+            $url = $image->getUrl();
+        }
+        else {
+            $url = "/storage/images/placeholder.png";
+        }
+        return $url;
     }
 }

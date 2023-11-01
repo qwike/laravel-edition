@@ -23,8 +23,16 @@ class House extends Model implements HasMedia
         'price',
     ];
 
-    public function getProductImage(): ?Media
+    public function getHouseImage(): ?string
     {
-        return $this->getFirstMedia(self::COLLECTION_NAME_HOUSE);
+        $url = "";
+        $image = $this->getFirstMedia(self::COLLECTION_NAME_HOUSE);
+        if($image) {
+            $url = $image->getUrl();
+        }
+        else {
+            $url = "/storage/images/placeholder.png";
+        }
+        return $url;
     }
 }
