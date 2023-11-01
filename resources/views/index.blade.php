@@ -2,6 +2,12 @@
 
 @section('title', 'Возрожденный Мувыр')
 
+@section('css')
+    <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/slick-theme.css') }}">
+@endsection
+
 @section('content')
     <section class="welcome">
         <div class="welcome_title wow animate__animated animate__fadeInUpBig">
@@ -198,6 +204,7 @@
             </div>
         </div>
     </main>
+    <script src="{{ asset('/js/slick.js') }}"></script>
     <script>
         $(document).ready(function() {
             $("#tour_slider").slick({
@@ -224,5 +231,8 @@
                 ],
             });
         });
+    </script>
+    <script>
+        new WOW().init();
     </script>
 @endsection

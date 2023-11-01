@@ -5,7 +5,7 @@
                 <ul>
                     <li><a href="tours.php" class="hover footer_link">Экскурсии</a></li>
                     <li><a href="events.php" class="hover footer_link">Мероприятия</a></li>
-                    <li><a href="houses.php" class="hover footer_link">Гостевые домики</a></li>
+                    <li><a href="{{ route('houses') }}" class="hover footer_link">Гостевые домики</a></li>
                 </ul>
                 <ul>
                     <li><a href="funs.php" class="hover footer_link">Развлечения</a></li>

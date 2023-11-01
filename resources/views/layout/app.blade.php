@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/slick-theme.css') }}">
+    @yield('css')
     <script src="{{ asset('/js/jquery.js') }}"></script>
-    <script src="{{ asset('/js/slick.js') }}"></script>
     <script src="{{ asset('/js/wow.min.js') }}"></script>
 
 

@@ -7,7 +7,7 @@
                     <div class="drop">
                         <a href="tours.php" class="hover" id="tours">Экскурсии</a>
                         <a href="events.php" class="hover" id="events">Мероприятия</a>
-                        <a href="houses.php" class="hover" id="houses">Гостевые домики</a>
+                        <a href="{{ route('houses') }}" class="hover" id="houses">Гостевые домики</a>
                         <a href="funs.php" class="hover" id="funs">Развлечения</a>
                         <a href="milk.php" class="hover" id="milk">Молочная продукция</a>
                         <a href="investors.php" class="hover" id="investors">Инвесторам</a>
@@ -46,7 +46,7 @@
             <div class="header_burger_menu">
                 <a href="tours.php" class="hover" id="tours">Экскурсии</a>
                 <a href="events.php" class="hover" id="events">Мероприятия</a>
-                <a href="houses.php" class="hover" id="houses">Гостевые домики</a>
+                <a href="{{ route('houses') }}" class="hover" id="houses">Гостевые домики</a>
                 <a href="funs.php" class="hover" id="funs">Развлечения</a>
                 <a href="milk.php" class="hover" id="milk">Молочная продукция</a>
                 <a href="history.php" class="hover" id="history">История</a>
