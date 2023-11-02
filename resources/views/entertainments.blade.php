@@ -18,7 +18,7 @@
                     @foreach($entertainments as $entertainment)
                         <div class="item wow animate__animated animate__fadeInUp">
                             <div class="item_img_container">
-                                <img src="{{ $entertainment->getEntertainmentImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}'">
+                                <img src="{{ $entertainment->getEntertainmentImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Фото развлечения">
                             </div>
                             <div class="item_name">{{ $entertainment->name }}</div>
                             <div class="item_desc">{{ $entertainment->description }}</div>
@@ -30,9 +30,8 @@
         </div>
     </div>
     <script>
-        $("#funs").addClass("active_header_btn")
+        $("#entertainments").addClass("active_header_btn")
     </script>
-    <script src="assets/js/wow.min.js"></script>
     <script>
         $(document).ready(() => {
             new WOW().init();

@@ -6,10 +6,10 @@
                     <li><a href="{{ route('excursions') }}" class="hover footer_link">Экскурсии</a></li>
                     <li><a href="{{ route('events') }}" class="hover footer_link">Мероприятия</a></li>
                     <li><a href="{{ route('houses') }}" class="hover footer_link">Гостевые домики</a></li>
-                    <li><a href="funs.php" class="hover footer_link">Развлечения</a></li>
+                    <li><a href="{{ route('entertainments') }}" class="hover footer_link">Развлечения</a></li>
                 </ul>
                 <ul>
-                    <li><a href="milk.php" class="hover footer_link">Продукция</a></li>
+                    <li><a href="{{ route('products') }}" class="hover footer_link">Продукция</a></li>
                     <li><a href="{{ route('projects') }}" class="hover footer_link">Инвесторам</a></li>
                     <li><a href="history.php" class="hover footer_link">История</a></li>
                     <li><a href="contacts.php" class="hover footer_link">Контакты</a></li>

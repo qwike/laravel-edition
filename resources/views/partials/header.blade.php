@@ -8,8 +8,8 @@
                         <a href="{{ route('excursions') }}" class="hover" id="excursions">Экскурсии</a>
                         <a href="{{ route('events') }}" class="hover" id="events">Мероприятия</a>
                         <a href="{{ route('houses') }}" class="hover" id="houses">Гостевые домики</a>
-                        <a href="funs.php" class="hover" id="entertainments">Развлечения</a>
-                        <a href="milk.php" class="hover" id="products">Молочная продукция</a>
+                        <a href="{{ route('entertainments') }}" class="hover" id="entertainments">Развлечения</a>
+                        <a href="{{ route('products') }}" class="hover" id="products">Молочная продукция</a>
                         <a href="{{ route('projects') }}" class="hover" id="projects">Инвесторам</a>
                     </div>
                 </div>
@@ -47,8 +47,8 @@
                 <a href="{{ route('excursions') }}" class="hover" id="excursions">Экскурсии</a>
                 <a href="{{ route('events') }}" class="hover" id="events">Мероприятия</a>
                 <a href="{{ route('houses') }}" class="hover" id="houses">Гостевые домики</a>
-                <a href="funs.php" class="hover" id="entertainments">Развлечения</a>
-                <a href="milk.php" class="hover" id="products">Молочная продукция</a>
+                <a href="{{ route('entertainments') }}" class="hover" id="entertainments">Развлечения</a>
+                <a href="{{ route('products') }}" class="hover" id="products">Молочная продукция</a>
                 <a href="{{ route('projects') }}" class="hover" id="projects">Инвесторам</a>
                 <a href="history.php" class="hover" id="history">История</a>
             </div>
