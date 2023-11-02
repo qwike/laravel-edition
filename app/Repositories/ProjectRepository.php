@@ -11,4 +11,9 @@ class ProjectRepository
     {
         return Project::query()->orderBy('created_at', 'DESC')->limit(2)->get();
     }
+
+    public function getProjects(): Collection
+    {
+        return Project::query()->orderBy('created_at', 'DESC')->get();
+    }
 }

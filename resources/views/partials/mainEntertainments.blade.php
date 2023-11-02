@@ -5,14 +5,14 @@
     </div>
     <div class="flex_space_between" style="margin-top: 20px;">
         <div class="fun_main_img_container wow animate__animated animate__slideInUp">
-            <img src="{{ asset('/images/fun1.jpg') }}" alt="Развлечение" class="fun_main_img">
+            <img src="{{ $entertainments->getEventImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Развлечение" class="fun_main_img">
         </div>
         <div class="fun_images">
             <div class="fun_img_container wow animate__animated animate__slideInUp" data-wow-delay="0.3s">
-                <img src="{{ asset('/images/fun2.jpg') }}" alt="Развлечение" class="fun_img">
+                <img src="{{ $event->getEventImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Развлечение" class="fun_img">
             </div>
             <div class="fun_img_container wow animate__animated animate__slideInUp" data-wow-delay="0.45s">
-                <img src="{{ asset('/images/fun3.jpg') }}" alt="Развлечение" class="fun_img">
+                <img src="{{ $event->getEventImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Развлечение" class="fun_img">
             </div>
         </div>
     </div>

@@ -10,7 +10,7 @@
                         <a href="{{ route('houses') }}" class="hover" id="houses">Гостевые домики</a>
                         <a href="funs.php" class="hover" id="entertainments">Развлечения</a>
                         <a href="milk.php" class="hover" id="products">Молочная продукция</a>
-                        <a href="investors.php" class="hover" id="projects">Инвесторам</a>
+                        <a href="{{ route('projects') }}" class="hover" id="projects">Инвесторам</a>
                     </div>
                 </div>
                 <a href="history.php" class="hover" id="history">История</a>
@@ -49,7 +49,8 @@
                 <a href="{{ route('houses') }}" class="hover" id="houses">Гостевые домики</a>
                 <a href="funs.php" class="hover" id="entertainments">Развлечения</a>
                 <a href="milk.php" class="hover" id="products">Молочная продукция</a>
-                <a href="history.php" class="hover" id="projects">История</a>
+                <a href="{{ route('projects') }}" class="hover" id="projects">Инвесторам</a>
+                <a href="history.php" class="hover" id="history">История</a>
             </div>
         </div>
     </div>

@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\House;
 use App\Repositories\HouseRepository;
-use Illuminate\Http\Request;
 
 class HouseController extends Controller
 {

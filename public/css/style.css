@@ -189,7 +189,7 @@ footer {
 }
 .footer_logo {
     position: absolute;
-    transform: translateX(-50%);
+    transform: translate(-50%, -20%);
     left: 50%;
     display: flex;
     flex-direction: column;
@@ -197,6 +197,7 @@ footer {
 }
 footer .container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 .footer_link {
@@ -232,9 +233,11 @@ footer li::before {
     display: flex;
 }
 .footer_logo_img {
+    margin: 20px auto;
+}
+.footer_logo_img img {
     width: 120px;
     height: 120px;
-    margin: 10px auto;
 }
 @media (max-width: 1200px) {
 	.container {
