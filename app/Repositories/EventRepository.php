@@ -11,4 +11,9 @@ class EventRepository
     {
         return Event::query()->orderBy('created_at', 'DESC')->limit(2)->get();
     }
+
+    public function getEvents(): Collection
+    {
+        return Event::query()->orderBy('created_at', 'DESC')->get();
+    }
 }

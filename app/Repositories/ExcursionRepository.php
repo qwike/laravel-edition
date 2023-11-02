@@ -11,4 +11,9 @@ class ExcursionRepository
     {
         return Excursion::query()->limit(5)->get();
     }
+
+    public function getExcursions(): Collection
+    {
+        return Excursion::query()->orderBy('created_at', 'DESC')->get();
+    }
 }

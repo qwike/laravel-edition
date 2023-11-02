@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Excursion;
+use App\Repositories\ExcursionRepository;
 use Illuminate\Http\Request;
 
 class ExcursionController extends Controller
 {
+    public function __construct(protected ExcursionRepository $excursionRepository)
+    {
+    }
+
     public function excursions()
     {
-        $excursions = Excursion::query()->get();
+        $excursions = $this->excursionsRepository->getExcursions();
 
         return view('excursions', [
             'excursions' => $excursions,
