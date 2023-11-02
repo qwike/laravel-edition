@@ -2,26 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Event;
-use App\Models\Excursion;
-use App\Models\House;
-use App\Models\Project;
 use App\Repositories\EventRepository;
+use App\Repositories\ExcursionRepository;
+use App\Repositories\HouseRepository;
+use App\Repositories\ProjectRepository;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
-    public function __construct(protected EventRepository $eventRepository)
+    public function __construct(
+        protected EventRepository $eventRepository,
+        protected HouseRepository $houseRepository,
+        protected ProjectRepository $projectRepository,
+        protected ExcursionRepository $excursionRepository)
     {
 
     }
 
     public function index()
     {
-        $excursions = Excursion::query()->limit(5)->get();
+        $excursions = $this->excursionRepository->getMainExcursions();
         $events = $this->eventRepository->getMainEvents();
-        $houses = House::query()->limit(3)->get();
-        $projects = Project::query()->get();
+        $houses = $this->houseRepository->getMainHouses();
+        $projects = $this->projectRepository->getMainProjects();
 
         return view('index', [
             'excursions' => $excursions,
