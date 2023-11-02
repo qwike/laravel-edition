@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     height: calc(100vh - 120px);
-    background: url(/storage/images/welcome.jpg);
+    background: url(/images/welcome.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

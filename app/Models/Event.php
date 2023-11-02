@@ -23,16 +23,8 @@ class Event extends Model implements HasMedia
         'date',
     ];
 
-    public function getEventImage(): ?string
+    public function getEventImage(): ?Media
     {
-        $url = "";
-        $image = $this->getFirstMedia(self::COLLECTION_NAME_EVENT);
-        if($image) {
-            $url = $image->getUrl();
-        }
-        else {
-            $url = "/storage/images/placeholder.png";
-        }
-        return $url;
+        return $this->getFirstMedia(self::COLLECTION_NAME_EVENT);
     }
 }

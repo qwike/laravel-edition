@@ -22,16 +22,8 @@ class Product extends Model implements HasMedia
         'description',
     ];
 
-    public function getProductImage(): ?string
+    public function getProductImage(): ?Media
     {
-        $url = "";
-        $image = $this->getFirstMedia(self::COLLECTION_NAME_PRODUCT);
-        if($image) {
-            $url = $image->getUrl();
-        }
-        else {
-            $url = "/storage/images/placeholder.png";
-        }
-        return $url;
+        return $this->getFirstMedia(self::COLLECTION_NAME_PRODUCT);
     }
 }

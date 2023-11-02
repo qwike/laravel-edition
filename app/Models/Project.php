@@ -22,16 +22,8 @@ class Project extends Model implements HasMedia
         'description',
     ];
 
-    public function getProjectImage(): ?string
+    public function getProjectImage(): ?Media
     {
-        $url = "";
-        $image = $this->getFirstMedia(self::COLLECTION_NAME_PROJECT);
-        if($image) {
-            $url = $image->getUrl();
-        }
-        else {
-            $url = "/storage/images/placeholder.png";
-        }
-        return $url;
+        return $this->getFirstMedia(self::COLLECTION_NAME_PROJECT);
     }
 }

@@ -17,11 +17,11 @@
         </div>
         <div class="footer_container">
             <div class="footer_logo">
-                <a href="{{ route('home') }}" class="footer_logo_img"><img src="/storage/images/logo.png" alt="Логотип" class="footer_logo_img"></a>
+                <a href="{{ route('home') }}" class="footer_logo_img"><img src="{{ asset('/images/logo.png') }}" alt="Логотип" class="footer_logo_img"></a>
                 <div class="icons">
-                    <a href="https://instagram.com/muvyr.village?utm_medium=copy_link"><img src="/storage/images/inst.svg" alt="Инстаграм"></a>
-                    <a href="https://vk.com/weekendvmywer"><img src="/storage/images/vk.svg" alt="ВК"></a>
-                    <a href="https://t.me/discoverUdmurtia"><img src="/storage/images/telegram.svg" alt="Телеграм"></a>
+                    <a href="https://instagram.com/muvyr.village?utm_medium=copy_link"><img src="{{ asset('/images/inst.svg') }}" alt="Инстаграм"></a>
+                    <a href="https://vk.com/weekendvmywer"><img src="{{ asset('/images/vk.svg') }}" alt="ВК"></a>
+                    <a href="https://t.me/discoverUdmurtia"><img src="{{ asset('/images/telegram.svg') }}" alt="Телеграм"></a>
                 </div>
             </div>
             <div class="footer_right">

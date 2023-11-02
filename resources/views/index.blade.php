@@ -32,7 +32,7 @@
                             @else
                                 @foreach($excursions as $excursion)
                                     <div class="tour">
-                                        <div class="box"><img src="{{ $excursion->getExcursionImage() }}" alt="Экскурсия"></div>
+                                        <div class="box"><img src="{{ $excursion->getExcursionImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Экскурсия"></div>
                                         <div class="tour_header">{{ $excursion->name }}</div>
                                         <div class="tour_text">{{ substr($excursion->description, 0, 58) . "..." }}</div>
                                     </div>
@@ -61,7 +61,7 @@
                         @else
                             @foreach($events as $event)
                                 <div class="event wow animate__animated animate__fadeInUp">
-                                    <div class="box"><img src="{{ $event->getEventImage() }}" alt="Мероприятие"></div>
+                                    <div class="box"><img src="{{ $event->getEventImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Мероприятие"></div>
                                     <div class="tour_header">{{ $event->name }}</div>
                                     <div class="tour_text">{{ substr($event->description, 0, 60)."..." }}</div>
                                 </div>
@@ -84,7 +84,7 @@
                         <a href="events.php" class="page_link">Все Мероприятия</a>
                     </div>
                 </div>
-                <img src="/storage/images/marry.jpg" alt="Свадьбы" class="marry_img wow animate__animated animate__zoomIn">
+                <img src="{{ asset('/images/marry.jpg') }}" alt="Свадьбы" class="marry_img wow animate__animated animate__zoomIn">
             </div>
         </div>
         <div class="container mt">
@@ -94,14 +94,14 @@
             </div>
             <div class="flex_space_between" style="margin-top: 20px;">
                 <div class="fun_main_img_container wow animate__animated animate__slideInUp">
-                    <img src="/storage/images/fun1.jpg" alt="Развлечение" class="fun_main_img">
+                    <img src="{{ asset('/images/fun1.jpg') }}" alt="Развлечение" class="fun_main_img">
                 </div>
                 <div class="fun_images">
                     <div class="fun_img_container wow animate__animated animate__slideInUp" data-wow-delay="0.3s">
-                        <img src="/storage/images/fun2.jpg" alt="Развлечение" class="fun_img">
+                        <img src="{{ asset('/images/fun2.jpg') }}" alt="Развлечение" class="fun_img">
                     </div>
                     <div class="fun_img_container wow animate__animated animate__slideInUp" data-wow-delay="0.45s">
-                        <img src="/storage/images/fun3.jpg" alt="Развлечение" class="fun_img">
+                        <img src="{{ asset('/images/fun3.jpg') }}" alt="Развлечение" class="fun_img">
                     </div>
                 </div>
             </div>
@@ -146,7 +146,7 @@
                     </div>
                 </div>
                 <div class="milk_img_container wow animate__animated animate__zoomIn">
-                    <img src="/storage/images/milk.jpg" alt="Молочная продукция" class="milk_img">
+                    <img src="{{ asset('/images/milk.jpg') }}" alt="Молочная продукция" class="milk_img">
                 </div>
             </div>
         </div>
@@ -159,7 +159,7 @@
                     @foreach($projects as $project)
                         <div class="goal wow animate__animated animate__backInUp">
                             <div class="goal_img_container">
-                                <img src="{{ $project->getProjectImage() }}" alt="Фото проекта">
+                                <img src="{{ $project->getProjectImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Фото проекта">
                             </div>
                             <div class="goal_text">
                                 <div class="goal_header">{{ $project->name }}</div>
@@ -174,7 +174,7 @@
         <div class="container" style="margin-block: 30px;">
             <div class="flex_space_between">
                 <div class="his_img_box">
-                    <img src="/storage/images/his.png" alt="История">
+                    <img src="{{ asset('/images/his.png') }}" alt="История">
                 </div>
                 <div class="his_text wow animate__animated animate__fadeIn">
                     <div class="header">История Мувыра</div>
