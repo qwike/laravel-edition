@@ -1,7 +1,7 @@
 <div class="container mt">
     <div class="goals_title">Инвесторам</div>
     <div class="goals">
-        @if(empty($projects))
+        @if($projects->isEmpty())
             <div>В данный момент здесь пусто :(</div>
         @else
             @foreach($projects as $project)

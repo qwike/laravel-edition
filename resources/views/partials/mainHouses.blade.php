@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="houses">
-        @if(empty($houses))
+        @if($houses->isEmpty())
             <div>В данный момент нет домиков :(</div>
         @else
             @foreach($houses as $house)

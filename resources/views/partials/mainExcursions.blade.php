@@ -8,7 +8,7 @@
             <div id="tour_prev_arrow" class="arrow"><</div>
             <div class="track_box">
                 <div class="tours" id="tour_slider">
-                    @if(empty($excursions))
+                    @if($excursions->isEmpty())
                         <div>В данный момент нет экскурсий :(</div>
                     @else
                         @foreach($excursions as $excursion)

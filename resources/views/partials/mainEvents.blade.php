@@ -7,7 +7,7 @@
         <div id="event_prev_arrow" class="arrow"><</div>
         <div class="event_track_box">
             <div class="events" id="event_slider">
-                @if(empty($events))
+                @if($events->isEmpty())
                     <div>В данный момент нет мероприятий :(</div>
                 @else
                     @foreach($events as $event)

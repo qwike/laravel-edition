@@ -10,7 +10,7 @@
     <div class="container mt">
         <div class="header">Экскурсии</div>
         <div class="catalog">
-            @if(empty($excursions))
+            @if($excursions->isEmpty())
                 <div>В данный момент нет экскурсий :(</div>
             @else
                 @foreach($excursions as $excursion)
@@ -19,11 +19,11 @@
                             <img src="{{ $excursion->getExcursionImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Фото домика">
                         </div>
                         <div class="item_title">{{ $excursion->name }}</div>
-                        <div class="item_price_number">{{ $excursion->price }} руб.</div>
+                        <div class="item_price">{{ $excursion->price }} руб.</div>
                         <div class="item_desc">
                             {{ $excursion->description }}
                         </div>
-                        <div class="item_btn">Бронировать</div>
+                        <div class="item_btn">Записаться</div>
                     </div>
                 @endforeach
             @endif
@@ -32,7 +32,6 @@
     <script>
         $("#tours").addClass("active_header_btn")
     </script>
-    <script src="assets/js/wow.min.js"></script>
     <script>
         $(document).ready(() => {
             new WOW().init();

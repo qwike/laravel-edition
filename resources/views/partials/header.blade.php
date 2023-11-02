@@ -5,12 +5,12 @@
                 <div class="drop_container">
                     <div class="drop_btn hover"><img src="{{ asset('/images/drop.svg') }}" alt="Список" style="margin-right: 20px">Услуги</div>
                     <div class="drop">
-                        <a href="tours.php" class="hover" id="tours">Экскурсии</a>
-                        <a href="events.php" class="hover" id="events">Мероприятия</a>
+                        <a href="{{ route('excursions') }}" class="hover" id="excursions">Экскурсии</a>
+                        <a href="{{ route('events') }}" class="hover" id="events">Мероприятия</a>
                         <a href="{{ route('houses') }}" class="hover" id="houses">Гостевые домики</a>
-                        <a href="funs.php" class="hover" id="funs">Развлечения</a>
-                        <a href="milk.php" class="hover" id="milk">Молочная продукция</a>
-                        <a href="investors.php" class="hover" id="investors">Инвесторам</a>
+                        <a href="funs.php" class="hover" id="entertainments">Развлечения</a>
+                        <a href="milk.php" class="hover" id="products">Молочная продукция</a>
+                        <a href="investors.php" class="hover" id="projects">Инвесторам</a>
                     </div>
                 </div>
                 <a href="history.php" class="hover" id="history">История</a>
@@ -44,12 +44,12 @@
                 <img src="{{ asset('/images/burger.svg') }}" alt="Бургер">
             </div>
             <div class="header_burger_menu">
-                <a href="tours.php" class="hover" id="tours">Экскурсии</a>
-                <a href="events.php" class="hover" id="events">Мероприятия</a>
+                <a href="{{ route('excursions') }}" class="hover" id="excursions">Экскурсии</a>
+                <a href="{{ route('events') }}" class="hover" id="events">Мероприятия</a>
                 <a href="{{ route('houses') }}" class="hover" id="houses">Гостевые домики</a>
-                <a href="funs.php" class="hover" id="funs">Развлечения</a>
-                <a href="milk.php" class="hover" id="milk">Молочная продукция</a>
-                <a href="history.php" class="hover" id="history">История</a>
+                <a href="funs.php" class="hover" id="entertainments">Развлечения</a>
+                <a href="milk.php" class="hover" id="products">Молочная продукция</a>
+                <a href="history.php" class="hover" id="projects">История</a>
             </div>
         </div>
     </div>
@@ -106,5 +106,4 @@
             clicked = true;
         }
     });
-</script>
 </script>

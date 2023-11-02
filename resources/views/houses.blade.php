@@ -10,7 +10,7 @@
     <div class="container mt">
         <div class="header">Гостевые домики</div>
         <div class="catalog">
-            @if(empty($houses))
+            @if($houses->isEmpty())
                 <div>В данный момент нет домиков :(</div>
             @else
                 @foreach($houses as $house)

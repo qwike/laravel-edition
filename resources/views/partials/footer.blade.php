@@ -3,8 +3,8 @@
         <div class="footer_left">
             <div class="footer_list">
                 <ul>
-                    <li><a href="tours.php" class="hover footer_link">Экскурсии</a></li>
-                    <li><a href="events.php" class="hover footer_link">Мероприятия</a></li>
+                    <li><a href="{{ route('excursions') }}" class="hover footer_link">Экскурсии</a></li>
+                    <li><a href="{{ route('events') }}" class="hover footer_link">Мероприятия</a></li>
                     <li><a href="{{ route('houses') }}" class="hover footer_link">Гостевые домики</a></li>
                 </ul>
                 <ul>
@@ -13,7 +13,6 @@
                     <li><a href="history.php" class="hover footer_link">История</a></li>
                 </ul>
             </div>
-
         </div>
         <div class="footer_container">
             <div class="footer_logo">

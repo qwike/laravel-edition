@@ -10,26 +10,25 @@
     <div class="container mt">
         <div class="header">Мероприятия</div>
         <div class="catalog">
-            @if(empty($events))
+            @if($events->isEmpty())
                 <div>В данный момент нет домиков :(</div>
             @else
                 @foreach($events as $event)
-                                <div class="item wow animate__animated animate__fadeInUp">
-                                    <div class="item_img_container">
-                                        <img src="{{ $event->getEventImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Фото домика" second_image="assets/images/event2.jpg">
-                                    </div>
-                                    <div class="item_title">{{ $event->name }}</div>
-                                    <div class="item_price_number">{{ $event->date }}</div>
-                                    <div class="item_desc">
-                                        {{ $event->description }}
-                                    </div>
-                                </div>
+                    <div class="item wow animate__animated animate__fadeInUp">
+                        <div class="item_img_container">
+                            <img src="{{ $event->getEventImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Фото домика" second_image="assets/images/event2.jpg">
+                        </div>
+                        <div class="item_title">{{ $event->name }}</div>
+                        <div class="item_price">{{ $event->date }}</div>
+                        <div class="item_desc">
+                            {{ $event->description }}
+                        </div>
+                        <div class="item_btn">Записаться</div>
+                    </div>
                 @endforeach
             @endif
         </div>
     </div>
-
-    <script src="assets/js/wow.min.js"></script>
     <script>
         $(document).ready(() => {
             new WOW().init();
