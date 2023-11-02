@@ -6,6 +6,6 @@ class MediaHelper
 {
     public static function defaultImage(): string
     {
-        return asset('image/placeholder.png');
+        return asset('images/placeholder.png');
     }
 }
