@@ -16,7 +16,6 @@ class IndexController extends Controller
         protected ProjectRepository $projectRepository,
         protected ExcursionRepository $excursionRepository)
     {
-
     }
 
     public function index()
