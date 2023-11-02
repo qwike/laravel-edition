@@ -13,7 +13,7 @@ class ExcursionController extends Controller
 
     public function excursions()
     {
-        $excursions = $this->excursionRepository->getExcursions();
+        $excursions = $this->excursionsRepository->getExcursions();
 
         return view('excursions', [
             'excursions' => $excursions,

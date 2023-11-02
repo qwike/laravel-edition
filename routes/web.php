@@ -17,3 +17,4 @@ Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('h
 Route::get('/houses', [App\Http\Controllers\HouseController::class, 'houses'])->name('houses');
 Route::get('/excursions', [App\Http\Controllers\ExcursionController::class, 'excursions'])->name('excursions');
 Route::get('/events', [App\Http\Controllers\EventController::class, 'events'])->name('events');
+Route::get('/products', [App\Http\Controllers\ProductController::class, 'products'])->name('products');
