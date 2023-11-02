@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('home');
 Route::get('/houses/', [App\Http\Controllers\HouseController::class, 'houses'])->name('houses');
+Route::get('/excursions/', [App\Http\Controllers\ExcursionController::class, 'excursions'])->name('excursions');

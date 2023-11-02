@@ -23,16 +23,8 @@ class Excursion extends Model implements HasMedia
         'price',
     ];
 
-    public function getExcursionImage(): ?string
+    public function getExcursionImage(): ?Media
     {
-        $url = "";
-        $image = $this->getFirstMedia(self::COLLECTION_NAME_EXCURSION);
-        if($image) {
-            $url = $image->getUrl();
-        }
-        else {
-            $url = "/storage/images/placeholder.png";
-        }
-        return $url;
+        return $this->getFirstMedia(self::COLLECTION_NAME_EXCURSION);
     }
 }
