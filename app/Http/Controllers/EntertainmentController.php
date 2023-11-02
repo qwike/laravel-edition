@@ -11,7 +11,7 @@ class EntertainmentController extends Controller
     {
     }
 
-    public function houses()
+    public function entertainments()
     {
         $entertainments = $this->entertainmentRepository->getEntertainments();
 
