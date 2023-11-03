@@ -21,3 +21,4 @@ Route::get('/events', [App\Http\Controllers\EventController::class, 'events'])->
 Route::get('/products', [App\Http\Controllers\ProductController::class, 'products'])->name('products');
 Route::get('/projects', [App\Http\Controllers\ProjectController::class, 'projects'])->name('projects');
 Route::get('/history', [App\Http\Controllers\HistoryController::class, 'history'])->name('history');
+Route::get('/contacts', [App\Http\Controllers\ContactsController::class, 'contacts'])->name('contacts');

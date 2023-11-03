@@ -11,9 +11,10 @@
                         <a href="{{ route('entertainments') }}" class="hover" id="entertainments">Развлечения</a>
                         <a href="{{ route('products') }}" class="hover" id="products">Молочная продукция</a>
                         <a href="{{ route('projects') }}" class="hover" id="projects">Инвесторам</a>
+                        <a href="{{ route('contacts') }}" class="hover" id="contacts">Контакты</a>
                     </div>
                 </div>
-                <a href="history.php" class="hover" id="history">История</a>
+                <a href="{{ route('history') }}" class="hover" id="history">История</a>
             </div>
             <div class="header_logo">
                 <a href="{{ route('home') }}"><img src="{{ asset('/images/logo.png') }}" alt="Логотип"></a>
@@ -50,7 +51,8 @@
                 <a href="{{ route('entertainments') }}" class="hover" id="entertainments">Развлечения</a>
                 <a href="{{ route('products') }}" class="hover" id="products">Молочная продукция</a>
                 <a href="{{ route('projects') }}" class="hover" id="projects">Инвесторам</a>
-                <a href="history.php" class="hover" id="history">История</a>
+                <a href="{{ route('history') }}" class="hover" id="history">История</a>
+                <a href="{{ route('contacts') }}" class="hover" id="contacts">Контакты</a>
             </div>
         </div>
     </div>

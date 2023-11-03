@@ -11,7 +11,7 @@
                 https://vk.com/weekendvmywer
             </div>
             <div style="margin-block: 20px">
-                <a href="contacts.php" class="page_link">Карта Мувыра</a>
+                <a href="{{ route('contacts') }}" class="page_link">Карта Мувыра</a>
             </div>
         </div>
     </div>

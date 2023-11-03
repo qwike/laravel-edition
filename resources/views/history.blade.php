@@ -10,7 +10,7 @@
     <div class="about_content">
         <div class="container">
             <div class="about_image wow animate__animated animate__fadeInDown">
-                <img src="{{ asset('/images/muvir_story2.PNG.jpg') }}">
+                <img src="{{ asset('/images/muvir_story.jpg') }}">
             </div>
             <h2 style="margin-top: 20px">История мувыра</h2>
             <div class="about_content_block">

@@ -11,8 +11,8 @@
                 <ul>
                     <li><a href="{{ route('products') }}" class="hover footer_link">Продукция</a></li>
                     <li><a href="{{ route('projects') }}" class="hover footer_link">Инвесторам</a></li>
-                    <li><a href="history.php" class="hover footer_link">История</a></li>
-                    <li><a href="contacts.php" class="hover footer_link">Контакты</a></li>
+                    <li><a href="{{ route('history') }}" class="hover footer_link">История</a></li>
+                    <li><a href="{{ route('contacts') }}" class="hover footer_link">Контакты</a></li>
                 </ul>
             </div>
         </div>
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="footer_right">
-                <a href="tel:" class="hover footer_link">+7 (901) 865 87-55</a>
+                <a href="tel:+79018658755" class="hover footer_link">+7 (901) 865 87-55</a>
                 <p>Сделано командой</p>
                 <p>"Будущее России"</p>
             </div>
