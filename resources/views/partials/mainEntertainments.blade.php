@@ -17,6 +17,6 @@
         </div>
     </div>
     <div style="float: right; margin-top: 15px">
-        <a href="funs.php" class="page_link">Развлечения</a>
+        <a href="{{ route('entertainments') }}" class="page_link">Развлечения</a>
     </div>
 </div>

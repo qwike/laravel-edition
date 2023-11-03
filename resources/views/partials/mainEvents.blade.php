@@ -23,7 +23,7 @@
         <div id="event_next_arrow" class="arrow">></div>
     </div>
     <div style="float: right; margin-top: 15px">
-        <a href="events.php" class="page_link">Все Мероприятия</a>
+        <a href="{{ route('events') }}" class="page_link">Все Мероприятия</a>
     </div>
 </div>
 <div class="container mt">

@@ -22,6 +22,6 @@
         @endif
     </div>
     <div style="float: right; margin-top: 15px">
-        <a href="houses.php" class="page_link">Бронировать</a>
+        <a href="{{ route('houses') }}" class="page_link">Бронировать</a>
     </div>
 </div>

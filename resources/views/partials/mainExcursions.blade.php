@@ -25,6 +25,6 @@
         </div>
     </div>
     <div style="float: right; margin-top: 15px">
-        <a href="tours.php" class="page_link">Все Экскурсии</a>
+        <a href="{{ route('excursions') }}" class="page_link">Все Экскурсии</a>
     </div>
 </div>
