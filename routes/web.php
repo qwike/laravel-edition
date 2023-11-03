@@ -20,3 +20,4 @@ Route::get('/excursions', [App\Http\Controllers\ExcursionController::class, 'exc
 Route::get('/events', [App\Http\Controllers\EventController::class, 'events'])->name('events');
 Route::get('/products', [App\Http\Controllers\ProductController::class, 'products'])->name('products');
 Route::get('/projects', [App\Http\Controllers\ProjectController::class, 'projects'])->name('projects');
+Route::get('/history', [App\Http\Controllers\HistoryController::class, 'history'])->name('history');
