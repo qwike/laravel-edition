@@ -11,7 +11,7 @@
 @section('content')
     <section class="welcome">
         <div class="welcome_title wow animate__animated animate__fadeInUpBig">
-            Добро пожаловать в
+            <p>@lang('pages.main.title', ['num' => 10])</p>
             <p><span>Мувыр</span></p>
             <a class="learn_more" href="#УЗНАТЬ_БОЛЬШЕ_О_МУВЫРЕ">Узнать больше</a>
         </div>

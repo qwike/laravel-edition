@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class House extends Model implements HasMedia
@@ -26,5 +27,10 @@ class House extends Model implements HasMedia
     public function getHouseImage(): ?Media
     {
         return $this->getFirstMedia(self::COLLECTION_NAME_HOUSE);
+    }
+
+    public function getHouseImages(): ?MediaCollection
+    {
+        return $this->getMedia(self::COLLECTION_NAME_HOUSE);
     }
 }

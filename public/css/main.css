@@ -287,6 +287,10 @@
     width: 40%;
 }
 
+.entertainments {
+    
+}
+
 /* MEDIA QUARIES */
 @media (max-width: 1200px) {
 }
@@ -296,9 +300,6 @@
     }
     .welcome_title span {
         font-size: 90px;
-    }
-    .flex_space_between {
-        flex-direction: column;
     }
     .text_box {
         width: 100%;

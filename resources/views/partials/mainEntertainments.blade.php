@@ -3,18 +3,12 @@
         <div class="header">Развлечения</div>
         <div class="text">Мы предлагаем большой спектр развлечений</div>
     </div>
-    <div class="flex_space_between" style="margin-top: 20px;">
-        <div class="fun_main_img_container wow animate__animated animate__slideInUp">
-            <img src="{{ $entertainments[0]->getEntertainmentImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Развлечение" class="fun_main_img">
-        </div>
-        <div class="fun_images">
-            <div class="fun_img_container wow animate__animated animate__slideInUp" data-wow-delay="0.3s">
-                <img src="{{ $entertainments[1]->getEntertainmentImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Развлечение" class="fun_img">
+    <div class="flex_space_between entertainments" style="margin-top: 20px;">
+        @foreach($entertainments as $entertainment)
+            <div class="fun_main_img_container wow animate__animated animate__slideInUp">
+                <img src="{{ $entertainment->getEntertainmentImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="{{ $entertainment->name }}" class="fun_main_img">
             </div>
-            <div class="fun_img_container wow animate__animated animate__slideInUp" data-wow-delay="0.45s">
-                <img src="{{ $entertainments[2]->getEntertainmentImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Развлечение" class="fun_img">
-            </div>
-        </div>
+        @endforeach
     </div>
     <div style="float: right; margin-top: 15px">
         <a href="{{ route('entertainments') }}" class="page_link">Развлечения</a>

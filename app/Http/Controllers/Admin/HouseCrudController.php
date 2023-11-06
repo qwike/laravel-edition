@@ -6,6 +6,7 @@ use App\Http\Requests\HouseRequest;
 use App\Models\House;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Backpack\MediaLibraryUploaders\Uploaders\MediaMultipleFiles;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
 /**
@@ -120,17 +121,6 @@ class HouseCrudController extends CrudController
 
     protected function setupShowOperation()
     {
-        $images_html = '<div style="display: flex; flex-wrap: wrap;">';
-        $images = House::find(\request()->id)->getMedia(House::COLLECTION_NAME_HOUSE);
-        foreach ($images as $image) {
-            $images_html .= '
-            <img
-                alt="Фото"
-                src="' . $image->getUrl() . '"
-                style="height: 200px; margin: 5px; border-radius: 5px;"
-            >';
-        }
-        $images_html .= '</div>';
         CRUD::setColumns([
             [
                 'name' => 'name',
@@ -151,8 +141,11 @@ class HouseCrudController extends CrudController
             [
                 'name' => 'image',
                 'label' => 'Изображение(-я)',
-                'type' => 'custom_html',
-                'value' => $images_html,
+                'type' => 'upload_multiple_image',
+                'withMedia' => [
+                    'uploader' => MediaMultipleFiles::class,
+                    'collection' => House::COLLECTION_NAME_HOUSE,
+                ],
             ],
             [
                 'name' => 'created_at',

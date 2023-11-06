@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Enums\OrderTypeEnum;
+use App\Enums\StatusEnum;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -20,6 +22,15 @@ class Order extends Model
         'comment',
         'comment_admin',
         'status',
+    ];
+
+    protected $casts = [
+        'status' => StatusEnum::class,
+        'orderable_type' => OrderTypeEnum::class,
+    ];
+
+    protected $attributes = [
+        'status' => StatusEnum::process,
     ];
 
     public function orderable(): MorphTo

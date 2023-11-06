@@ -45,15 +45,15 @@ class OrderCrudController extends CrudController
     {
         CRUD::setColumns([
             [
+                'name' => 'id',
+                'label' => 'id',
+                'type' => 'text',
+            ],
+            [
                 'name' => 'orderable_type',
                 'label' => 'Тип',
                 'type' => 'enum',
                 'options' => OrderTypeEnum::options(),
-            ],
-            [
-                'name' => 'orderable.name',
-                'label' => 'Наименование позиции',
-                'type' => 'text',
             ],
             [
                 'name' => 'name',
@@ -65,16 +65,6 @@ class OrderCrudController extends CrudController
                 'name' => 'phone',
                 'label' => 'Номер телефона',
                 'type' => 'text',
-            ],
-            [
-                'name' => 'comment',
-                'label' => 'Комментарий',
-                'type' => 'textarea',
-            ],
-            [
-                'name' => 'comment_admin',
-                'label' => 'Комментарий Администратора',
-                'type' => 'textarea',
             ],
             [
                 'name' => 'status',
@@ -154,27 +144,24 @@ class OrderCrudController extends CrudController
             ],
         ]);
     }
-
-    /**
-     * Define what happens when the Update operation is loaded.
-     * 
-     * @see https://backpackforlaravel.com/docs/crud-operation-update
-     * @return void
-     */
     protected function setupUpdateOperation()
     {
+        $order = $this->crud->getCurrentEntry();
         CRUD::setValidation(OrderRequest::class);
         CRUD::addFields([
-//            [
-//                'name' => 'orderable',
-//                'attribute' => 'name',
-//                'label' => 'Наименование позиции',
-//                'type' => 'text',
-//                'attributes' => [
-//                    'readonly' => 'readonly',
-//                    'disabled' => 'disabled',
-//                ],
-//            ],
+            [
+                'name' => 'orderable_id',
+                'label' => 'Наименование',
+                'entity' => false,
+                'model' => $order->orderable_type?->value,
+                'type' => 'select',
+                'attribute' => 'name',
+                'allows_null' => true,
+                'attributes' => [
+                    'readonly' => 'readonly',
+                    'disabled' => 'disabled',
+                ],
+            ],
             [
                 'name' => 'name',
                 'label' => 'Имя',
@@ -197,6 +184,10 @@ class OrderCrudController extends CrudController
                 'name' => 'comment',
                 'label' => 'Комментарий',
                 'type' => 'textarea',
+                'attributes' => [
+                    'readonly' => 'readonly',
+                    'disabled' => 'disabled',
+                ],
             ],
             [
                 'name' => 'comment_admin',

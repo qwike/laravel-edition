@@ -13,7 +13,7 @@
             @foreach($houses as $house)
                 <div class="house wow animate__animated animate__fadeInLeft">
                     <div class="house_img_container">
-                        <img src="{{ $house->getHouseImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Домик">
+                        <img src="{{ $house->getHouseImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="{{ $house->name }}">
                     </div>
                     <div class="house_title">{{ $house->name }}</div>
                     <div class="house_desc">{{ $house->description }}</div>

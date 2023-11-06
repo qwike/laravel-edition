@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Models\House;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Model;
 
 class HouseRepository
 {
@@ -15,5 +16,10 @@ class HouseRepository
     public function getHouses(): Collection
     {
         return House::query()->orderBy('name', 'DESC')->get();
+    }
+
+    public function getHouse($id): Model
+    {
+        return House::query()->findOrFail($id);
     }
 }
