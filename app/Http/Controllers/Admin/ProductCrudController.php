@@ -13,11 +13,6 @@ use Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanel;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
-/**
- * Class ProductCrudController
- * @package App\Http\Controllers\Admin
- * @property-read CrudPanel $crud
- */
 class ProductCrudController extends CrudController
 {
     use ListOperation;
@@ -26,11 +21,6 @@ class ProductCrudController extends CrudController
     use DeleteOperation;
     use ShowOperation;
 
-    /**
-     * Configure the CrudPanel object. Apply settings to all operations.
-     *
-     * @return void
-     */
     public function setup()
     {
         CRUD::setModel(Product::class);
@@ -38,23 +28,11 @@ class ProductCrudController extends CrudController
         CRUD::setEntityNameStrings('Продукт', 'Продукты');
     }
 
-    /**
-     * Define what happens when the Update operation is loaded.
-     *
-     * @see https://backpackforlaravel.com/docs/crud-operation-update
-     * @return void
-     */
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();
     }
 
-    /**
-     * Define what happens when the Create operation is loaded.
-     *
-     * @see https://backpackforlaravel.com/docs/crud-operation-create
-     * @return void
-     */
     protected function setupCreateOperation()
     {
         CRUD::setValidation(ProductRequest::class);
@@ -78,11 +56,7 @@ class ProductCrudController extends CrudController
                 ],
                 'hint' => 'Формат: jpeg, jpg, png, webp. Максимальный размер: 2MB',
             ],
-        ]); // set fields from db columns.
-        /**
-         * Fields can be defined using the fluent syntax:
-         * - CRUD::field('price')->type('number');
-         */
+        ]);
     }
 
     protected function setupShowOperation()
@@ -122,12 +96,6 @@ class ProductCrudController extends CrudController
         ]);
     }
 
-    /**
-     * Define what happens when the List operation is loaded.
-     *
-     * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
-     * @return void
-     */
     protected function setupListOperation()
     {
         CRUD::setColumns([
@@ -152,10 +120,6 @@ class ProductCrudController extends CrudController
                 'label' => 'Отредактировано',
                 'type' => 'date'
             ],
-        ]); // set columns from db columns.
-        /**
-         * Columns can be defined using the fluent syntax:
-         * - CRUD::column('price')->type('number');
-         */
+        ]);
     }
 }

@@ -3,10 +3,10 @@
         <div class="header">Развлечения</div>
         <div class="text">Мы предлагаем большой спектр развлечений</div>
     </div>
-    <div class="flex_space_between entertainments" style="margin-top: 20px;">
+    <div class="entertainments" style="margin-top: 20px;">
         @foreach($entertainments as $entertainment)
-            <div class="fun_main_img_container wow animate__animated animate__slideInUp">
-                <img src="{{ $entertainment->getEntertainmentImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="{{ $entertainment->name }}" class="fun_main_img">
+            <div class="entertainment_img_container wow animate__animated animate__slideInUp">
+                <img src="{{ $entertainment->getEntertainmentImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="{{ $entertainment->name }}">
             </div>
         @endforeach
     </div>

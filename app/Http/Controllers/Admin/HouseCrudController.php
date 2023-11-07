@@ -9,11 +9,6 @@ use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 use Backpack\MediaLibraryUploaders\Uploaders\MediaMultipleFiles;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-/**
- * Class HouseCrudController
- * @package App\Http\Controllers\Admin
- * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
- */
 class HouseCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
@@ -22,11 +17,6 @@ class HouseCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
-    /**
-     * Configure the CrudPanel object. Apply settings to all operations.
-     *
-     * @return void
-     */
     public function setup()
     {
         CRUD::setModel(\App\Models\House::class);
@@ -34,12 +24,6 @@ class HouseCrudController extends CrudController
         CRUD::setEntityNameStrings('Домик', 'Домики');
     }
 
-    /**
-     * Define what happens when the List operation is loaded.
-     *
-     * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
-     * @return void
-     */
     protected function setupListOperation()
     {
         CRUD::setColumns([
@@ -48,11 +32,6 @@ class HouseCrudController extends CrudController
                 'label' => 'Наименование',
                 'type' => 'text',
                 'limit' => 120,
-            ],
-            [
-                'name' => 'description',
-                'label' => 'Описание',
-                'type' => 'textarea',
             ],
             [
                 'name' => 'price',
@@ -70,19 +49,8 @@ class HouseCrudController extends CrudController
                 'type' => 'date'
             ],
         ]);
-
-        /**
-         * Columns can be defined using the fluent syntax:
-         * - CRUD::column('price')->type('number');
-         */
     }
 
-    /**
-     * Define what happens when the Create operation is loaded.
-     *
-     * @see https://backpackforlaravel.com/docs/crud-operation-create
-     * @return void
-     */
     protected function setupCreateOperation()
     {
         CRUD::setValidation(HouseRequest::class);
@@ -112,11 +80,6 @@ class HouseCrudController extends CrudController
                 'hint' => 'Формат: jpeg, jpg, png, webp. Максимальный размер: 2MB',
             ],
         ]);
-
-        /**
-         * Fields can be defined using the fluent syntax:
-         * - CRUD::field('price')->type('number');
-         */
     }
 
     protected function setupShowOperation()
@@ -160,12 +123,6 @@ class HouseCrudController extends CrudController
         ]);
     }
 
-    /**
-     * Define what happens when the Update operation is loaded.
-     *
-     * @see https://backpackforlaravel.com/docs/crud-operation-update
-     * @return void
-     */
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();

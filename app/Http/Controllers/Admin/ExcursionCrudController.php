@@ -8,11 +8,6 @@ use App\Models\Product;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
-/**
- * Class ExcursionCrudController
- * @package App\Http\Controllers\Admin
- * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
- */
 class ExcursionCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
@@ -21,11 +16,6 @@ class ExcursionCrudController extends CrudController
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
-    /**
-     * Configure the CrudPanel object. Apply settings to all operations.
-     * 
-     * @return void
-     */
     public function setup()
     {
         CRUD::setModel(\App\Models\Excursion::class);
@@ -33,12 +23,6 @@ class ExcursionCrudController extends CrudController
         CRUD::setEntityNameStrings('Экскурсию', 'Экскурсии');
     }
 
-    /**
-     * Define what happens when the List operation is loaded.
-     * 
-     * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
-     * @return void
-     */
     protected function setupListOperation()
     {
         CRUD::setColumns([
@@ -51,7 +35,8 @@ class ExcursionCrudController extends CrudController
             [
                 'name' => 'description',
                 'label' => 'Описание',
-                'type' => 'textarea',
+                'type' => 'text',
+                'limit' => 30,
             ],
             [
                 'name' => 'price',
@@ -68,19 +53,9 @@ class ExcursionCrudController extends CrudController
                 'label' => 'Отредактировано',
                 'type' => 'date'
             ],
-        ]); // set columns from db columns.
-        /**
-         * Columns can be defined using the fluent syntax:
-         * - CRUD::column('price')->type('number');
-         */
+        ]);
     }
 
-    /**
-     * Define what happens when the Create operation is loaded.
-     * 
-     * @see https://backpackforlaravel.com/docs/crud-operation-create
-     * @return void
-     */
     protected function setupCreateOperation()
     {
         CRUD::setValidation(ExcursionRequest::class);
@@ -109,12 +84,7 @@ class ExcursionCrudController extends CrudController
                 'label' => 'Цена',
                 'type' => 'number',
             ],
-        ]); // set fields from db columns.
-
-        /**
-         * Fields can be defined using the fluent syntax:
-         * - CRUD::field('price')->type('number');
-         */
+        ]);
     }
 
     protected function setupShowOperation()
@@ -159,12 +129,6 @@ class ExcursionCrudController extends CrudController
         ]);
     }
 
-    /**
-     * Define what happens when the Update operation is loaded.
-     * 
-     * @see https://backpackforlaravel.com/docs/crud-operation-update
-     * @return void
-     */
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();

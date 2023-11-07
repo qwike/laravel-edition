@@ -6,9 +6,9 @@
                 <br>Адрес:
                 Игринский район, д. Мувыр
                 <br>Телефон:
-                +7 (901) 865-87-55
+                <a href="tel:+79018658755">+7 (901) 865 87-55</a>
                 <br>Вконтакте:
-                https://vk.com/weekendvmywer
+                <a href="https://vk.com/weekendvmywer">https://vk.com/weekendvmywer</a>
             </div>
             <div style="margin-block: 20px">
                 <a href="{{ route('contacts') }}" class="page_link">Карта Мувыра</a>
