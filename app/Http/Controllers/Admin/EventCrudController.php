@@ -38,7 +38,7 @@ class EventCrudController extends CrudController
             ],
             [
                 'name' => 'date',
-                'label' => 'Дата Проведения',
+                'label' => 'Дата',
                 'type' => 'text',
             ],
             [
@@ -48,7 +48,7 @@ class EventCrudController extends CrudController
             ],
             [
                 'name' => 'updated_at',
-                'label' => 'Отредактировано',
+                'label' => 'Обновлено',
                 'type' => 'date'
             ],
         ]);
@@ -70,7 +70,7 @@ class EventCrudController extends CrudController
             ],
             [
                 'name' => 'date',
-                'label' => 'Дата Проведения',
+                'label' => 'Дата',
                 'type' => 'text',
                 'hint' => 'Например: сезон, месяц или конкретная дата (03.09.2030 или 4 Февраля 2030 г.)',
             ],
@@ -102,7 +102,7 @@ class EventCrudController extends CrudController
             ],
             [
                 'name' => 'date',
-                'label' => 'Дата Проведения',
+                'label' => 'Дата',
                 'type' => 'text',
             ],
             [
@@ -122,7 +122,7 @@ class EventCrudController extends CrudController
             ],
             [
                 'name' => 'updated_at',
-                'label' => 'Отредактировано',
+                'label' => 'Обновлено',
                 'type' => 'date',
             ],
         ]);

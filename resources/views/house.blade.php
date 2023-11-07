@@ -29,7 +29,7 @@
                 <h2>{{ $house->name }}</h2>
                 <p>{{ $house->description }}</p>
                 <p>{{ $house->price }}</p>
-                <div class="order">Оставить заявку</div>
+                <div class="order">@lang('pages.house.button')</div>
             </div>
         </div>
     </div>

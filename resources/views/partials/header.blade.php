@@ -3,18 +3,18 @@
         <nav>
             <div>
                 <div class="drop_container">
-                    <div class="drop_btn hover"><img src="{{ asset('/images/drop.svg') }}" alt="Список" style="margin-right: 20px">Услуги</div>
+                    <div class="drop_btn hover"><img src="{{ asset('/images/drop.svg') }}" alt="Список" style="margin-right: 20px">@lang('pages.layout.services')</div>
                     <div class="drop">
-                        <a href="{{ route('excursions') }}" class="hover" id="excursions">Экскурсии</a>
-                        <a href="{{ route('events') }}" class="hover" id="events">Мероприятия</a>
-                        <a href="{{ route('houses') }}" class="hover" id="houses">Гостевые домики</a>
-                        <a href="{{ route('entertainments') }}" class="hover" id="entertainments">Развлечения</a>
-                        <a href="{{ route('products') }}" class="hover" id="products">Молочная продукция</a>
-                        <a href="{{ route('projects') }}" class="hover" id="projects">Инвесторам</a>
-                        <a href="{{ route('contacts') }}" class="hover" id="contacts">Контакты</a>
+                        <a href="{{ route('excursions') }}" class="hover b_excursions" id="excursions">@lang('pages.layout.excursions')</a>
+                        <a href="{{ route('events') }}" class="hover b_events" id="events">@lang('pages.layout.events')</a>
+                        <a href="{{ route('houses') }}" class="hover b_houses" id="houses">@lang('pages.layout.houses')</a>
+                        <a href="{{ route('entertainments') }}" class="hover b_entertainments" id="entertainments">@lang('pages.layout.entertainments')</a>
+                        <a href="{{ route('products') }}" class="hover b_products" id="products">@lang('pages.layout.products')</a>
+                        <a href="{{ route('contacts') }}" class="hover b_contacts" id="contacts">@lang('pages.layout.contacts')</a>
+                        <a href="{{ route('projects') }}" class="hover b_projects" id="projects">@lang('pages.layout.projects')</a>
                     </div>
                 </div>
-                <a href="{{ route('history') }}" class="hover" id="history">История</a>
+                <a href="{{ route('history') }}" class="hover b_history" id="history">@lang('pages.layout.history')</a>
             </div>
             <div class="header_logo">
                 <a href="{{ route('home') }}"><img src="{{ asset('/images/logo.png') }}" alt="Логотип"></a>
@@ -25,7 +25,7 @@
                     <a href="https://vk.com/weekendvmywer"><img src="{{ asset('/images/vk.svg') }}" alt="ВК"></a>
                     <a href="https://t.me/discoverUdmurtia"><img src="{{ asset('/images/telegram.svg') }}" alt="Телеграм"></a>
                 </div>
-                <a href="tel:" class="hover">+7 (901) 865 87-55</a>
+                <a href="tel:" class="hover">@lang('pages.phone_number')</a>
             </div>
         </nav>
     </div>
@@ -45,14 +45,14 @@
                 <img src="{{ asset('/images/burger.svg') }}" alt="Бургер">
             </div>
             <div class="header_burger_menu">
-                <a href="{{ route('excursions') }}" class="hover" id="excursions">Экскурсии</a>
-                <a href="{{ route('events') }}" class="hover" id="events">Мероприятия</a>
-                <a href="{{ route('houses') }}" class="hover" id="houses">Гостевые домики</a>
-                <a href="{{ route('entertainments') }}" class="hover" id="entertainments">Развлечения</a>
-                <a href="{{ route('products') }}" class="hover" id="products">Молочная продукция</a>
-                <a href="{{ route('projects') }}" class="hover" id="projects">Инвесторам</a>
-                <a href="{{ route('history') }}" class="hover" id="history">История</a>
-                <a href="{{ route('contacts') }}" class="hover" id="contacts">Контакты</a>
+                <a href="{{ route('excursions') }}" class="hover b_excursions" id="excursions">@lang('pages.layout.excursions')</a>
+                <a href="{{ route('events') }}" class="hover b_events" id="events">@lang('pages.layout.events')</a>
+                <a href="{{ route('houses') }}" class="hover b_houses" id="houses">@lang('pages.layout.houses')</a>
+                <a href="{{ route('entertainments') }}" class="hover b_entertainments" id="entertainments">@lang('pages.layout.entertainments')</a>
+                <a href="{{ route('products') }}" class="hover b_products" id="products">@lang('pages.layout.products')</a>
+                <a href="{{ route('history') }}" class="hover b_history" id="history">@lang('pages.layout.history')</a>
+                <a href="{{ route('contacts') }}" class="hover b_contacts" id="contacts">@lang('pages.layout.contacts')</a>
+                <a href="{{ route('projects') }}" class="hover b_projects" id="projects">@lang('pages.layout.projects')</a>
             </div>
         </div>
     </div>

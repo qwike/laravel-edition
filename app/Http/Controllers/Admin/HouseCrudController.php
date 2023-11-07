@@ -35,7 +35,7 @@ class HouseCrudController extends CrudController
             ],
             [
                 'name' => 'price',
-                'label' => 'Цена',
+                'label' => 'Стоимость',
                 'type' => 'number',
             ],
             [
@@ -45,7 +45,7 @@ class HouseCrudController extends CrudController
             ],
             [
                 'name' => 'updated_at',
-                'label' => 'Отредактировано',
+                'label' => 'Обновлено',
                 'type' => 'date'
             ],
         ]);
@@ -67,7 +67,7 @@ class HouseCrudController extends CrudController
             ],
             [
                 'name' => 'price',
-                'label' => 'Цена',
+                'label' => 'Стоимость',
                 'type' => 'number',
             ],
             [
@@ -98,7 +98,7 @@ class HouseCrudController extends CrudController
             ],
             [
                 'name' => 'price',
-                'label' => 'Цена',
+                'label' => 'Стоимость',
                 'type' => 'number',
             ],
             [
@@ -117,7 +117,7 @@ class HouseCrudController extends CrudController
             ],
             [
                 'name' => 'updated_at',
-                'label' => 'Отредактировано',
+                'label' => 'Обновлено',
                 'type' => 'date',
             ],
         ]);

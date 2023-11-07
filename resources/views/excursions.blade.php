@@ -8,10 +8,10 @@
 
 @section('content')
     <div class="container mt">
-        <div class="header">Экскурсии</div>
+        <div class="header">@lang('pages.excursions.title')</div>
         <div class="catalog">
             @if($excursions->isEmpty())
-                <div>В данный момент нет экскурсий :(</div>
+                <div>@lang('pages.excursions.empty')</div>
             @else
                 @foreach($excursions as $excursion)
                     <div class="item wow animate__animated animate__fadeInUp">
@@ -23,16 +23,14 @@
                         <div class="item_desc">
                             {{ $excursion->description }}
                         </div>
-                        <div class="item_btn">Записаться</div>
+                        <div class="item_btn">@lang('pages.excursions.button')</div>
                     </div>
                 @endforeach
             @endif
         </div>
     </div>
     <script>
-        $("#tours").addClass("active_header_btn")
-    </script>
-    <script>
+        $(".b_excursions").addClass("active_btn")
         $(document).ready(() => {
             new WOW().init();
         })

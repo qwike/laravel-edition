@@ -1,14 +1,13 @@
 <div class="container mt">
     <div class="wow animate__animated animate__fadeIn">
-        <div class="header">Гостевые Домики</div>
+        <div class="header">@lang('pages.main.houses.title')</div>
         <div class="text">
-            <p>Мы предлагаем вам остановиться в наших</p>
-            <p>уютных гостевых домиках</p>
+            <p>@lang('pages.main.houses.description')</p>
         </div>
     </div>
     <div class="houses">
         @if($houses->isEmpty())
-            <div>В данный момент нет домиков :(</div>
+            <div>@lang('pages.main.houses.empty')</div>
         @else
             @foreach($houses as $house)
                 <div class="house wow animate__animated animate__fadeInLeft">
@@ -22,6 +21,6 @@
         @endif
     </div>
     <div style="float: right; margin-top: 15px">
-        <a href="{{ route('houses') }}" class="page_link">Бронировать</a>
+        <a href="{{ route('houses') }}" class="page_link">@lang('pages.main.houses.button')</a>
     </div>
 </div>

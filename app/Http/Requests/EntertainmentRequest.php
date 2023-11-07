@@ -6,56 +6,18 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class EntertainmentRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-    public function authorize()
+    public function authorize(): bool
     {
-        // only allow updates if the user is logged in
         return backpack_auth()->check();
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
-    public function rules()
+    public function rules(): array
     {
         return [
             'name' => 'required|min:5|max:255',
             'description' => 'nullable|string|max:3000',
             'price' => 'required|gt:0',
             'image' => 'nullable|mimes:jpeg,jpg,png,webp|max:2048',
-        ];
-    }
-
-    /**
-     * Get the validation attributes that apply to the request.
-     *
-     * @return array
-     */
-    public function attributes()
-    {
-        return [
-            'name' => 'Наименование',
-            'description' => 'Описание',
-            'price' => 'Цена',
-            'image' => 'Изображение',
-        ];
-    }
-
-    /**
-     * Get the validation messages that apply to the request.
-     *
-     * @return array
-     */
-    public function messages()
-    {
-        return [
-            //
         ];
     }
 }

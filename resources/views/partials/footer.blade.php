@@ -3,16 +3,16 @@
         <div class="footer_left">
             <div class="footer_list">
                 <ul>
-                    <li><a href="{{ route('excursions') }}" class="hover footer_link">Экскурсии</a></li>
-                    <li><a href="{{ route('events') }}" class="hover footer_link">Мероприятия</a></li>
-                    <li><a href="{{ route('houses') }}" class="hover footer_link">Гостевые домики</a></li>
-                    <li><a href="{{ route('entertainments') }}" class="hover footer_link">Развлечения</a></li>
+                    <li><a href="{{ route('excursions') }}" class="hover footer_link b_excursions">@lang('pages.layout.excursions')</a></li>
+                    <li><a href="{{ route('events') }}" class="hover footer_link b_events">@lang('pages.layout.events')</a></li>
+                    <li><a href="{{ route('houses') }}" class="hover footer_link b_houses">@lang('pages.layout.houses')</a></li>
+                    <li><a href="{{ route('entertainments') }}" class="hover footer_link b_entertainments">@lang('pages.layout.entertainments')</a></li>
                 </ul>
                 <ul>
-                    <li><a href="{{ route('products') }}" class="hover footer_link">Продукция</a></li>
-                    <li><a href="{{ route('projects') }}" class="hover footer_link">Инвесторам</a></li>
-                    <li><a href="{{ route('history') }}" class="hover footer_link">История</a></li>
-                    <li><a href="{{ route('contacts') }}" class="hover footer_link">Контакты</a></li>
+                    <li><a href="{{ route('products') }}" class="hover footer_link b_products">@lang('pages.layout.products')</a></li>
+                    <li><a href="{{ route('history') }}" class="hover footer_link b_history">@lang('pages.layout.history')</a></li>
+                    <li><a href="{{ route('contacts') }}" class="hover footer_link b_contacts">@lang('pages.layout.contacts')</a></li>
+                    <li><a href="{{ route('projects') }}" class="hover footer_link b_projects">@lang('pages.layout.projects')</a></li>
                 </ul>
             </div>
         </div>
@@ -26,11 +26,10 @@
                 </div>
             </div>
             <div class="footer_right">
-                <a href="tel:+79018658755" class="hover footer_link">+7 (901) 865 87-55</a>
+                <a href="tel:+79018658755" class="hover footer_link">@lang('pages.phone_number')</a>
                 <p>Сделано командой</p>
                 <p>"Будущее России"</p>
             </div>
         </div>
-
     </div>
 </footer>

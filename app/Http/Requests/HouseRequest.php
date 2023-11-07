@@ -27,14 +27,4 @@ class HouseRequest extends FormRequest
             'image.*' =>  'nullable|mimes:jpeg,jpg,png,webp|max:2048',
         ];
     }
-
-    public function attributes(): array
-    {
-        return [
-            'name' => 'Наименование',
-            'description' => 'Описание',
-            'price' => 'Цена',
-            'image' => 'Изображение',
-        ];
-    }
 }

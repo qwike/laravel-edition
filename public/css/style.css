@@ -141,10 +141,6 @@ nav div {
     margin: 0px 10px;
     padding: 0px;
 }
-.active_header_btn, .hover:hover, .drop_btn_active, .btn_active {
-    background: var(--color-yellow);
-    color: var(--color-black);
-}
 .header_burger img {
     width: 45px;
     height: 45px;
@@ -152,11 +148,10 @@ nav div {
 .header_burger_menu{
     position: absolute;
     display: flex;
-    width: 260px;
+    width: 280px;
     right: 0;
     flex-direction: column;
     align-items: end;
-    z-index: 10;
     transition: all .5s;
     max-height: 0px;
     padding-top: 0px;
@@ -171,7 +166,8 @@ nav div {
     text-decoration: none;
     color: var(--color-black);
     font-weight: 600;
-    padding: 10px 2px;
+    padding: 10px;
+    border-radius: 15px;
 }
 .header_burger {
   position: relative;
@@ -238,6 +234,10 @@ footer li::before {
 .footer_logo_img img {
     width: 120px;
     height: 120px;
+}
+.active_btn, .hover:hover, .drop_btn_active, .btn_active {
+    background: var(--color-yellow);
+    color: var(--color-black);
 }
 @media (max-width: 1200px) {
 	.container {

@@ -9,11 +9,10 @@
 @section('content')
     <div class="container mt">
         <div class="page_content">
-            <h2>Развлечения</h2>
-            <div class="information_block">В деревне Мувыр можно наслаждаться природой, прогуляться по лесу до висячего моста, прокатиться на лодке, рыбачить, организовать барбекю, устроить пикник в беседке или под открытым небом и многое другое</div>
+            <h2>@lang('pages.entertainments.title')</h2>
             <div class="catalog">
                 @if($entertainments->isEmpty())
-                    <div>В данный момент нет развлечений :(</div>
+                    <div>@lang('pages.entertainments.empty')</div>
                 @else
                     @foreach($entertainments as $entertainment)
                         <div class="item wow animate__animated animate__fadeInUp">
@@ -30,9 +29,7 @@
         </div>
     </div>
     <script>
-        $("#entertainments").addClass("active_header_btn")
-    </script>
-    <script>
+        $(".b_entertainments").addClass("active_btn")
         $(document).ready(() => {
             new WOW().init();
         })

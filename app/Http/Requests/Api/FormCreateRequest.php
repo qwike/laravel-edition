@@ -29,7 +29,7 @@ class FormCreateRequest extends FormRequest
                 'required',
                 new Enum(OrderTypeEnum::class),
             ],
-            'orderable_id' => 'required|exists:'.$this->table.',id', // Подумать
+            'orderable_id' => 'required|exists:'.$this->table.',id',
             'name' => 'required|string|max:255',
             'phone' => 'required|string|regex:/^\\+7\d{10}$/',
             'comment' => 'nullable|string|max:3000',

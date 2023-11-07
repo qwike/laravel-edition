@@ -37,7 +37,7 @@ class AddressCrudController extends CrudController
             ],
             [
                 'name'  => 'updated_at',
-                'label' => 'Отредактировано',
+                'label' => 'Обновлено',
                 'type'  => 'date'
             ],
         ]);

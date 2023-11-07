@@ -39,7 +39,7 @@ class ProductCrudController extends CrudController
         CRUD::addFields([
             [
                 'name' => 'name',
-                'label' => 'Нименование',
+                'label' => 'Наименование',
                 'type' => 'text',
             ],
             [
@@ -90,7 +90,7 @@ class ProductCrudController extends CrudController
             ],
             [
                 'name' => 'updated_at',
-                'label' => 'Отредактировано',
+                'label' => 'Обновлено',
                 'type' => 'date',
             ],
         ]);
@@ -117,7 +117,7 @@ class ProductCrudController extends CrudController
             ],
             [
                 'name' => 'updated_at',
-                'label' => 'Отредактировано',
+                'label' => 'Обновлено',
                 'type' => 'date'
             ],
         ]);

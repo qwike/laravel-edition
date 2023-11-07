@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\ExcursionRepository;
-use Illuminate\Http\Request;
 
 class ExcursionController extends Controller
 {

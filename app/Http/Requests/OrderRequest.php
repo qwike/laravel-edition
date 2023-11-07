@@ -24,8 +24,7 @@ class OrderRequest extends FormRequest
     public function attributes(): array
     {
         return [
-            'orderable_type' => 'Тип',
-            'status' => 'Статус',
+            'name' => 'имя',
         ];
     }
 }

@@ -5,9 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Enums\OrderTypeEnum;
 use App\Enums\StatusEnum;
 use App\Http\Requests\OrderRequest;
-use App\Models\Event;
-use App\Models\Excursion;
-use App\Models\House;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
@@ -63,10 +60,10 @@ class OrderCrudController extends CrudController
             ],
             [
                 'name' => 'updated_at',
-                'label' => 'Отредактировано',
+                'label' => 'Обновлено',
                 'type' => 'date'
             ],
-        ]); // set columns from db columns.
+        ]);
     }
 
     protected function setupShowOperation()
@@ -111,7 +108,7 @@ class OrderCrudController extends CrudController
             ],
             [
                 'name' => 'updated_at',
-                'label' => 'Отредактировано',
+                'label' => 'Обновлено',
                 'type' => 'date',
             ],
         ]);

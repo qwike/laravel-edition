@@ -43,7 +43,7 @@ class ProjectCrudController extends CrudController
             ],
             [
                 'name' => 'updated_at',
-                'label' => 'Отредактировано',
+                'label' => 'Обновлено',
                 'type' => 'date'
             ],
         ]);
@@ -106,7 +106,7 @@ class ProjectCrudController extends CrudController
             ],
             [
                 'name' => 'updated_at',
-                'label' => 'Отредактировано',
+                'label' => 'Обновлено',
                 'type' => 'date',
             ],
         ]);

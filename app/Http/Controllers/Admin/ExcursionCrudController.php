@@ -40,7 +40,7 @@ class ExcursionCrudController extends CrudController
             ],
             [
                 'name' => 'price',
-                'label' => 'Цена',
+                'label' => 'Стоимость',
                 'type' => 'number',
             ],
             [
@@ -50,7 +50,7 @@ class ExcursionCrudController extends CrudController
             ],
             [
                 'name' => 'updated_at',
-                'label' => 'Отредактировано',
+                'label' => 'Обновлено',
                 'type' => 'date'
             ],
         ]);
@@ -81,7 +81,7 @@ class ExcursionCrudController extends CrudController
             ],
             [
                 'name' => 'price',
-                'label' => 'Цена',
+                'label' => 'Стоимость',
                 'type' => 'number',
             ],
         ]);
@@ -113,7 +113,7 @@ class ExcursionCrudController extends CrudController
             ],
             [
                 'name' => 'price',
-                'label' => 'Цена',
+                'label' => 'Стоимость',
                 'type' => 'number',
             ],
             [
@@ -123,7 +123,7 @@ class ExcursionCrudController extends CrudController
             ],
             [
                 'name' => 'updated_at',
-                'label' => 'Отредактировано',
+                'label' => 'Обновлено',
                 'type' => 'date',
             ],
         ]);

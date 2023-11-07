@@ -8,10 +8,10 @@
 
 @section('content')
     <div class="container mt">
-        <div class="header">Гостевые домики</div>
+        <div class="header">@lang('pages.houses.title')</div>
         <div class="catalog">
             @if($houses->isEmpty())
-                <div>В данный момент нет домиков :(</div>
+                <div>@lang('pages.houses.empty')</div>
             @else
                 @foreach($houses as $house)
                     <div class="item wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
@@ -23,13 +23,14 @@
                         <div class="item_title">{{ $house->name }}</div>
                         <div class="item_price">{{ $house->price }}</div>
                         <div class="item_desc">{{ $house->description }}</div>
-                        <a href="{{ route('house', ['id' => $house->id]) }}" class="item_btn">Бронировать</a>
+                        <a href="{{ route('house', ['id' => $house->id]) }}" class="item_btn">@lang('pages.houses.button')</a>
                     </div>
                 @endforeach
             @endif
         </div>
     </div>
     <script>
+        $(".b_houses").addClass("active_btn")
         new WOW().init();
     </script>
 @endsection

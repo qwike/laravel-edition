@@ -7,7 +7,6 @@ use App\Repositories\EntertainmentRepository;
 use App\Repositories\ExcursionRepository;
 use App\Repositories\HouseRepository;
 use App\Repositories\ProjectRepository;
-use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {

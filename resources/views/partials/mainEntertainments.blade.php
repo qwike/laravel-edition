@@ -1,7 +1,7 @@
 <div class="container mt">
     <div class="wow animate__animated animate__fadeIn">
-        <div class="header">Развлечения</div>
-        <div class="text">Мы предлагаем большой спектр развлечений</div>
+        <div class="header">@lang('pages.main.entertainments.title')</div>
+        <div class="text">@lang('pages.main.entertainments.description')</div>
     </div>
     <div class="entertainments" style="margin-top: 20px;">
         @foreach($entertainments as $entertainment)
@@ -11,6 +11,6 @@
         @endforeach
     </div>
     <div style="float: right; margin-top: 15px">
-        <a href="{{ route('entertainments') }}" class="page_link">Развлечения</a>
+        <a href="{{ route('entertainments') }}" class="page_link">@lang('pages.main.entertainments.button')</a>
     </div>
 </div>
