@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ asset('/css/house.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/slick-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/modal.css') }}">
 @endsection
 
 @section('content')
@@ -29,11 +30,17 @@
                 <h2>{{ $house->name }}</h2>
                 <p>{{ $house->description }}</p>
                 <p>{{ $house->price }}</p>
-                <div class="order">@lang('pages.house.button')</div>
+                <button
+                    class="btn_order item_btn"
+                    data-position-name="{{ $house->name }}"
+                    data-position-price="{{ $house->price }} руб.">
+                        @lang('pages.house.button')
+                </button>
             </div>
         </div>
     </div>
-
+    @include('partials.formModal')
+    <script src="{{ asset('/js/modalForm.js') }}"></script>
     <script src="{{ asset('/js/slick.js') }}"></script>
     <script src="{{ asset('/js/houseSlider.js') }}"></script>
     <script src="{{ asset('/js/focusImage.js') }}"></script>

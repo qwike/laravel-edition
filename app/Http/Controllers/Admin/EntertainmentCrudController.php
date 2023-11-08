@@ -34,7 +34,8 @@ class EntertainmentCrudController extends CrudController
             [
                 'name' => 'description',
                 'label' => 'Описание',
-                'type' => 'textarea',
+                'type' => 'text',
+                'limit' => 30,
             ],
             [
                 'name' => 'price',
@@ -92,7 +93,6 @@ class EntertainmentCrudController extends CrudController
                 'name' => 'name',
                 'label' => 'Наименование',
                 'type' => 'text',
-                'limit' => 120,
             ],
             [
                 'name' => 'description',

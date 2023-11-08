@@ -94,7 +94,6 @@ class ExcursionCrudController extends CrudController
                 'name' => 'name',
                 'label' => 'Наименование',
                 'type' => 'text',
-                'limit' => 120,
             ],
             [
                 'name' => 'description',

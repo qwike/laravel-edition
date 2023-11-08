@@ -34,7 +34,8 @@ class ProjectCrudController extends CrudController
             [
                 'name' => 'description',
                 'label' => 'Описание',
-                'type' => 'textarea',
+                'type' => 'text',
+                'limit' => 30,
             ],
             [
                 'name' => 'created_at',

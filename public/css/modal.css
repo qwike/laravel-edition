@@ -1,0 +1,73 @@
+#modal_backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal_content {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+.modal_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal_close {
+    cursor: pointer;
+    transition: all .3s;
+}
+.modal_close:hover {
+    color: var(--color-yellow);
+}
+.modal_input_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-block: 10px;
+}
+.modal_header {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.modal_price {
+    color: #444;
+}
+.price_title {
+    font-weight: 500;
+    color: var(--color-black);
+}
+.modal_confirm {
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    background: var(--color-green);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all .3s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.modal_confirm:hover {
+    color: var(--color-black);
+    background: var(--color-yellow);
+}
+.modal_hint {
+    font-size: 16px;
+    color: #444;
+}
+.modal_input {
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid var(--color-black);
+    border-radius: 3px;
+}
+.modal_input_wrapper textarea {
+    font-size: 16px;
+}

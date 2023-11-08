@@ -78,7 +78,6 @@ class OrderCrudController extends CrudController
                 'name' => 'name',
                 'label' => 'Имя',
                 'type' => 'text',
-                'limit' => 120,
             ],
             [
                 'name' => 'phone',

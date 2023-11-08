@@ -4,6 +4,7 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('/css/catalog.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/modal.css') }}">
 @endsection
 
 @section('content')
@@ -23,12 +24,19 @@
                         <div class="item_desc">
                             {{ $excursion->description }}
                         </div>
-                        <div class="item_btn">@lang('pages.excursions.button')</div>
+                        <div
+                            class="item_btn"
+                            data-position-name="{{ $excursion->name }}"
+                            data-position-price="{{ $excursion->price }} руб.">
+                                @lang('pages.excursions.button')
+                        </div>
                     </div>
                 @endforeach
             @endif
         </div>
     </div>
+    @include('partials.formModal')
+    <script src="{{ asset('/js/modalForm.js') }}"></script>
     <script>
         $(".b_excursions").addClass("active_btn")
         $(document).ready(() => {

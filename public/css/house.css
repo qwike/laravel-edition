@@ -28,17 +28,21 @@
 .house_info {
     width: 50%;
 }
-.order {
+.btn_order {
+    width: 100%;
     padding: 10px;
     border-radius: 10px;
     background: var(--color-green);
+    border: none;
+    outline: none;
+    font-size: 18px;
     color: #fff;
     text-align: center;
     font-weight: 500;
     transition: all .3s;
     cursor: pointer;
 }
-.order:hover {
+.btn_order:hover {
     background: var(--color-yellow);
     color: var(--color-black);
 }

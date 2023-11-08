@@ -5,8 +5,8 @@
     $column['disk'] = $column['disk'] ?? null;
     $column['wrapper']['element'] = $column['wrapper']['element'] ?? 'a';
     $column['wrapper']['target'] = $column['wrapper']['target'] ?? '_blank';
-    $column['height'] = $column['height'] ?? "200px";
-    $column['width'] = $column['width'] ?? "auto";
+    $column['height'] = $column['height'] ?? "auto";
+    $column['width'] = $column['width'] ?? "200px";
     $column_wrapper_href = $column['wrapper']['href'] ??
     function($file_path, $disk, $prefix) use ($column) {
         if (is_null($disk)) {
@@ -31,7 +31,7 @@
                 $column['wrapper']['href'] = $href;
             @endphp
             @includeWhen(!empty($column['wrapper']), 'crud::columns.inc.wrapper_start')
-                <img height="{{$column['height']}}" width="{{$column['width']}}" src="{{$href}}" alt="Изображение">
+                <img width="{{$column['width']}}" src="{{$href}}" alt="Изображение" style="border-radius: 3px; max-height: 200px; margin: 5px;">
             @includeWhen(!empty($column['wrapper']), 'crud::columns.inc.wrapper_end')
         @endforeach
     @else

@@ -34,6 +34,12 @@ class HouseCrudController extends CrudController
                 'limit' => 120,
             ],
             [
+                'name' => 'description',
+                'label' => 'Описание',
+                'type' => 'text',
+                'limit' => 30,
+            ],
+            [
                 'name' => 'price',
                 'label' => 'Стоимость',
                 'type' => 'number',
@@ -89,7 +95,6 @@ class HouseCrudController extends CrudController
                 'name' => 'name',
                 'label' => 'Наименование',
                 'type' => 'text',
-                'limit' => 120,
             ],
             [
                 'name' => 'description',

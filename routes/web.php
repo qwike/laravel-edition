@@ -13,3 +13,4 @@ Route::get('/projects', [App\Http\Controllers\ProjectController::class, 'project
 Route::get('/history', [App\Http\Controllers\HistoryController::class, 'history'])->name('history');
 Route::get('/contacts', [App\Http\Controllers\ContactsController::class, 'contacts'])->name('contacts');
 Route::get('/telegram', [App\Http\Controllers\Api\TelegramController::class , 'handler'])->name('telegram');
+Route::post('/form', [App\Http\Controllers\Api\FormController::class , 'create'])->name('createOrder');

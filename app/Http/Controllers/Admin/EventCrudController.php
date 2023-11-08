@@ -34,7 +34,8 @@ class EventCrudController extends CrudController
             [
                 'name' => 'description',
                 'label' => 'Описание',
-                'type' => 'textarea',
+                'type' => 'text',
+                'limit' => 30,
             ],
             [
                 'name' => 'date',
@@ -93,7 +94,6 @@ class EventCrudController extends CrudController
                 'name' => 'name',
                 'label' => 'Наименование',
                 'type' => 'text',
-                'limit' => 120,
             ],
             [
                 'name' => 'description',
