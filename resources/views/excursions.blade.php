@@ -27,7 +27,9 @@
                         <div
                             class="item_btn"
                             data-position-name="{{ $excursion->name }}"
-                            data-position-price="{{ $excursion->price }} руб.">
+                            data-position-price="{{ $excursion->price }} руб."
+                            data-orderable-type="excursions"
+                            data-orderable-id="{{ $excursion->id }}">
                                 @lang('pages.excursions.button')
                         </div>
                     </div>
@@ -36,7 +38,6 @@
         </div>
     </div>
     @include('partials.formModal')
-    <script src="{{ asset('/js/modalForm.js') }}"></script>
     <script>
         $(".b_excursions").addClass("active_btn")
         $(document).ready(() => {

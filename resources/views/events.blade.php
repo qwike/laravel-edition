@@ -27,7 +27,9 @@
                         <div
                             class="item_btn"
                             data-position-name="{{ $event->name }}"
-                            data-position-price="Договорная">
+                            data-position-price="Договорная"
+                            data-orderable-type="events"
+                            data-orderable-id="{{ $event->id }}">
                                 @lang('pages.events.button')
                         </div>
                     </div>
@@ -36,7 +38,6 @@
         </div>
     </div>
     @include('partials.formModal')
-    <script src="{{ asset('/js/modalForm.js') }}"></script>
     <script>
         $(".b_events").addClass("active_btn")
         $(document).ready(() => {

@@ -33,14 +33,15 @@
                 <button
                     class="btn_order item_btn"
                     data-position-name="{{ $house->name }}"
-                    data-position-price="{{ $house->price }} руб.">
+                    data-position-price="{{ $house->price }} руб."
+                    data-orderable-type="houses"
+                    data-orderable-id="{{ $house->id }}">
                         @lang('pages.house.button')
                 </button>
             </div>
         </div>
     </div>
     @include('partials.formModal')
-    <script src="{{ asset('/js/modalForm.js') }}"></script>
     <script src="{{ asset('/js/slick.js') }}"></script>
     <script src="{{ asset('/js/houseSlider.js') }}"></script>
     <script src="{{ asset('/js/focusImage.js') }}"></script>
