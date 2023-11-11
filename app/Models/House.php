@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\UnitEnum;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -22,6 +23,11 @@ class House extends Model implements HasMedia
         'name',
         'description',
         'price',
+        'unit',
+    ];
+
+    protected $casts = [
+        'unit' => UnitEnum::class,
     ];
 
     public function getHouseImage(): ?Media

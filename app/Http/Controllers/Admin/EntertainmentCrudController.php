@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Enums\UnitEnum;
 use App\Http\Requests\EntertainmentRequest;
 use App\Models\Entertainment;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
@@ -73,6 +74,15 @@ class EntertainmentCrudController extends CrudController
                 'name' => 'price',
                 'label' => 'Стоимость',
                 'type' => 'number',
+                'decimals' => 2,
+                'hint' => '0 - Бесплатно',
+            ],
+            [
+                'name' => 'unit',
+                'label' => 'Единица измерения',
+                'type' => 'enum',
+                'enum_class' => UnitEnum::class,
+                'enum_function' => 'label',
             ],
             [
                 'name' => 'image',
@@ -103,6 +113,13 @@ class EntertainmentCrudController extends CrudController
                 'name' => 'price',
                 'label' => 'Стоимость',
                 'type' => 'number',
+                'decimals' => 2,
+            ],
+            [
+                'name' => 'unit',
+                'label' => 'Единица измерения',
+                'type' => 'enum',
+                'options' => UnitEnum::options(),
             ],
             [
                 'name' => 'image',

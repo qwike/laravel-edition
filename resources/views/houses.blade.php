@@ -21,7 +21,7 @@
                             </div>
                         </a>
                         <div class="item_title">{{ $house->name }}</div>
-                        <div class="item_price">{{ $house->price }}</div>
+                        <div class="item_price">{{ $house->price . ' ' . $house->unit->label()}}</div>
                         <div class="item_desc">{{ $house->description }}</div>
                         <a href="{{ route('house', ['id' => $house->id]) }}" class="item_btn">@lang('pages.houses.button')</a>
                     </div>

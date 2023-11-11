@@ -29,7 +29,7 @@
             <div class="house_info">
                 <h2>{{ $house->name }}</h2>
                 <p>{{ $house->description }}</p>
-                <p>{{ $house->price }}</p>
+                <p>{{ $house->price . ' ' . $house->unit->label() }}</p>
                 <button
                     class="btn_order item_btn"
                     data-position-name="{{ $house->name }}"

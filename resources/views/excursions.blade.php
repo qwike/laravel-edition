@@ -20,7 +20,7 @@
                             <img src="{{ $excursion->getExcursionImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Фото домика">
                         </div>
                         <div class="item_title">{{ $excursion->name }}</div>
-                        <div class="item_price">{{ $excursion->price }} руб.</div>
+                        <div class="item_price">{{ $excursion->price > 0? $excursion->price .' руб.' : 'Бесплатно' }}</div>
                         <div class="item_desc">
                             {{ $excursion->description }}
                         </div>

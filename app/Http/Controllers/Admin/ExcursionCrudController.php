@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\ExcursionRequest;
 use App\Models\Excursion;
-use App\Models\Product;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
@@ -71,6 +70,13 @@ class ExcursionCrudController extends CrudController
                 'type' => 'textarea',
             ],
             [
+                'name' => 'price',
+                'label' => 'Стоимость',
+                'type' => 'number',
+                'decimals' => 2,
+                'hint' => '0 - Бесплатно',
+            ],
+            [
                 'name' => 'image',
                 'label' => 'Изображение',
                 'type' => 'upload',
@@ -78,11 +84,6 @@ class ExcursionCrudController extends CrudController
                     'collection' => Excursion::COLLECTION_NAME_EXCURSION,
                 ],
                 'hint' => 'Формат: jpeg, jpg, png, webp. Максимальный размер: 2MB',
-            ],
-            [
-                'name' => 'price',
-                'label' => 'Стоимость',
-                'type' => 'number',
             ],
         ]);
     }
@@ -114,6 +115,7 @@ class ExcursionCrudController extends CrudController
                 'name' => 'price',
                 'label' => 'Стоимость',
                 'type' => 'number',
+                'decimals' => 2,
             ],
             [
                 'name' => 'created_at',

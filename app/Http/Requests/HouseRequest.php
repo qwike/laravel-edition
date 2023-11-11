@@ -2,8 +2,10 @@
 
 namespace App\Http\Requests;
 
+use App\Enums\UnitEnum;
 use App\Rules\CountImageRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\Enum;
 
 class HouseRequest extends FormRequest
 {
@@ -25,6 +27,7 @@ class HouseRequest extends FormRequest
                 app(CountImageRule::class, ['id' => $this->route('id')]),
             ],
             'image.*' =>  'nullable|mimes:jpeg,jpg,png,webp|max:2048',
+            'unit' => ['required', new Enum(UnitEnum::class)],
         ];
     }
 }

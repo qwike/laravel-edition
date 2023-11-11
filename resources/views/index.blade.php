@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Возрожденный Мувыр')
+@section('title', 'Деревня Мувыр')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('/css/main.css') }}">

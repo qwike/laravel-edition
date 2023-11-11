@@ -17,7 +17,7 @@ class ExcursionRequest extends FormRequest
             'name' => 'required|min:5|max:255',
             'description' => 'nullable|string|max:3000',
             'image' => 'nullable|mimes:jpeg,jpg,png,webp|max:2048',
-            'price' => 'required|gt:0',
+            'price' => 'required|gte:0',
         ];
     }
 }

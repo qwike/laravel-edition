@@ -21,7 +21,7 @@
                             </div>
                             <div class="item_name">{{ $entertainment->name }}</div>
                             <div class="item_desc">{{ $entertainment->description }}</div>
-                            <div class="item_priсe">{{ $entertainment->price }}</div>
+                            <div class="item_price">{{ $entertainment->price > 0? $entertainment->price . ' ' . $entertainment->unit->label() : 'Бесплатно' }}</div>
                         </div>
                     @endforeach
                 @endif
@@ -29,9 +29,9 @@
         </div>
     </div>
     <script>
-        $(".b_entertainments").addClass("active_btn")
+        $(".b_entertainments").addClass("active_btn");
         $(document).ready(() => {
             new WOW().init();
-        })
+        });
     </script>
 @endsection

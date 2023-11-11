@@ -21,6 +21,7 @@ class Excursion extends Model implements HasMedia
         'name',
         'description',
         'price',
+        'unit',
     ];
 
     public function getExcursionImage(): ?Media

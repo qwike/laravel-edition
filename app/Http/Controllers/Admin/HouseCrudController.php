@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Enums\UnitEnum;
 use App\Http\Requests\HouseRequest;
 use App\Models\House;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
@@ -75,6 +76,14 @@ class HouseCrudController extends CrudController
                 'name' => 'price',
                 'label' => 'Стоимость',
                 'type' => 'number',
+                'decimals' => 2,
+            ],
+            [
+                'name' => 'unit',
+                'label' => 'Единица измерения',
+                'type' => 'enum',
+                'enum_class' => UnitEnum::class,
+                'enum_function' => 'label',
             ],
             [
                 'name' => 'image',
@@ -105,6 +114,13 @@ class HouseCrudController extends CrudController
                 'name' => 'price',
                 'label' => 'Стоимость',
                 'type' => 'number',
+                'decimals' => 2,
+            ],
+            [
+                'name' => 'unit',
+                'label' => 'Единица измерения',
+                'type' => 'enum',
+                'options' => UnitEnum::options(),
             ],
             [
                 'name' => 'image',
