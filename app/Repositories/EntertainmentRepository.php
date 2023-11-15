@@ -11,7 +11,7 @@ class EntertainmentRepository
 {
     public function getMainEntertainments(): Collection
     {
-        return Entertainment::query()->orderBy('created_at', 'DESC')->limit(3)->get();
+        return Entertainment::query()->orderBy('created_at', 'DESC')->limit(6)->get();
     }
 
     public function getEntertainments(): Collection

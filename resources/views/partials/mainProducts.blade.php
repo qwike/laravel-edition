@@ -1,14 +1,24 @@
-<div class="container mt">
-    <div class="flex_space_between">
-        <div class="milk_text wow animate__animated animate__fadeIn">
-            <div class="header">@lang('pages.main.products.title')</div>
-            <div class="text">@lang('pages.main.products.description')</div>
-            <div style="float: left; margin-top: 30px">
-                <a href="{{ route('products') }}" class="page_link">@lang('pages.main.products.button')</a>
-            </div>
+<div class="container">
+    <div class="section_header">
+        <div class="section_title">Молочная продукция</div>
+        <a class="button_section_more" href="{{ route('products') }}">
+            Вся продукция
+            <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">
+        </a>
+    </div>
+    <div class="section_description">На нашей базе отдыха вы сможете приобрести молочную продукцию собственного производства</div>
+    <div class="products_images">
+        <div class="product_image_box">
+            <img src="{{ asset('/images/milk1.png') }}" alt="Продукция">
         </div>
-        <div class="milk_img_container wow animate__animated animate__zoomIn">
-            <img src="{{ asset('/images/milk.jpg') }}" alt="Молочная продукция" class="milk_img">
+        <div class="product_image_box">
+            <img src="{{ asset('/images/milk2.png') }}" alt="Продукция">
+        </div>
+        <div class="product_image_box">
+            <img src="{{ asset('/images/milk3.png') }}" alt="Продукция">
+        </div>
+        <div class="product_image_box">
+            <img src="{{ asset('/images/milk4.png') }}" alt="Продукция">
         </div>
     </div>
 </div>

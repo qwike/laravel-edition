@@ -1,26 +1,41 @@
-<div class="container mt">
-    <div class="wow animate__animated animate__fadeIn">
-        <div class="header">@lang('pages.main.houses.title')</div>
-        <div class="text">
-            <p>@lang('pages.main.houses.description')</p>
+<section>
+    <div class="container">
+        <div class="section_header">
+            <div class="section_title">Гостевые домики</div>
+            <a class="button_section_more" href="{{ route('houses') }}">
+                Все домики
+                <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">
+            </a>
+        </div>
+        <div class="section_description">Мы предлагаем вам остановиться в наших уютных гостевых домиках</div>
+        <div class="catalog">
+            @if($houses->isEmpty())
+                <div>@lang('pages.main.houses.empty')</div>
+            @else
+                @foreach($houses as $house)
+                    <div class="card_noshadow">
+                        <div class="card_img_box">
+                            <img src="{{ $house->getHouseImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="{{ $house->name }}">
+                        </div>
+                        <div class="card_info_10">
+                            <div class="card_title">{{ $house->name }}</div>
+                            <div class="card_line">
+                                <div class="card_line_label">Вместимость:</div>
+                                <div class="card_line_value">до 4 человек</div>
+                            </div>
+                            <div class="card_line">
+                                <div class="card_price">{{ $house->price }} {{ $house->unit->label() }}</div>
+                                <button class="card_button">
+                                    Оставить заявку
+                                    <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            @endif
         </div>
     </div>
-    <div class="houses">
-        @if($houses->isEmpty())
-            <div>@lang('pages.main.houses.empty')</div>
-        @else
-            @foreach($houses as $house)
-                <div class="house wow animate__animated animate__fadeInLeft">
-                    <div class="house_img_container">
-                        <img src="{{ $house->getHouseImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="{{ $house->name }}">
-                    </div>
-                    <div class="house_title">{{ $house->name }}</div>
-                    <div class="house_desc">{{ $house->description }}</div>
-                </div>
-            @endforeach
-        @endif
-    </div>
-    <div style="float: right; margin-top: 15px">
-        <a href="{{ route('houses') }}" class="page_link">@lang('pages.main.houses.button')</a>
-    </div>
-</div>
+</section>
+
+
