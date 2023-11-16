@@ -9,7 +9,7 @@
         </div>
         <div class="section_description">Мы предлагаем большой спектр развлечений для детей и взрослых</div>
         <div class="catalog">
-            @if($excursions->isEmpty())
+            @if($entertainments->isEmpty())
                 <div>@lang('pages.main.entertainments.empty')</div>
             @else
                 @foreach($entertainments as $entertainment)

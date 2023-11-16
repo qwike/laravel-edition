@@ -21,7 +21,7 @@
                             <div class="card_title">{{ $excursion->name }}</div>
                             <div class="card_description">{{ $excursion->description }}</div>
                             <div class="card_line">
-                                <div class="card_price">{{ $excursion->price }} ₽</div>
+                                <div class="card_price">{{ $excursion->price > 0? $excursion->price . '₽ ' : 'БЕСПЛАТНО' }}</div>
                                 <button class="card_button">
                                     Оставить заявку
                                     <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">

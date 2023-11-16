@@ -1,10 +1,10 @@
 <header>
     <div class="container">
         <div class="header_top">
-            <div class="logo_group">
+            <a class="logo_group" href="{{ route('home') }}">
                 <img src="{{ asset('/images/logo.png') }}" alt="Мувыр" class="logo_img">
                 <div class="logo_text">Открываем Мувыр</div>
-            </div>
+            </a>
             <div class="socials_group">
                 <div class="socials_text">Наши страницы в соц. сетях</div>
                 <div class="socials">

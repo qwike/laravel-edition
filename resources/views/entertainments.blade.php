@@ -3,31 +3,43 @@
 @section('title', 'Развлечения')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('/css/catalog.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
 @endsection
 
 @section('content')
-    <div class="container mt">
-        <div class="page_content">
-            <h2>@lang('pages.entertainments.title')</h2>
+    <div class="welcome_catalog" id="welcome_entertainments">
+        <div class="container">
+            <div class="welcome_title">@lang('pages.entertainments.title')</div>
+            <div class="welcome_text">В нашей деревне есть всё: от спокойного плавания на лодках до экстремальных прогулок по лесу</div>
+            <div class="welcome_buttons">
+                <a href="#entertainments_catalog" class="welcome_excursions_button">Посмотреть все</a>
+            </div>
+        </div>
+    </div>
+    <section id="entertainments_catalog">
+        <div class="container mt">
             <div class="catalog">
                 @if($entertainments->isEmpty())
-                    <div>@lang('pages.entertainments.empty')</div>
+                    <div>@lang('pages.main.entertainments.empty')</div>
                 @else
                     @foreach($entertainments as $entertainment)
-                        <div class="item wow animate__animated animate__fadeInUp">
-                            <div class="item_img_container">
-                                <img src="{{ $entertainment->getEntertainmentImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Фото развлечения">
+                        <div class="card">
+                            <div class="card_img_box">
+                                <img src="{{ $entertainment->getEntertainmentImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="{{ $entertainment->name }}">
                             </div>
-                            <div class="item_name">{{ $entertainment->name }}</div>
-                            <div class="item_desc">{{ $entertainment->description }}</div>
-                            <div class="item_price">{{ $entertainment->price > 0? $entertainment->price . ' ' . $entertainment->unit->label() : 'Бесплатно' }}</div>
+                            <div class="card_info">
+                                <div class="card_title">{{ $entertainment->name }}</div>
+                                <div class="card_description">{{ $entertainment->description }}</div>
+                                <div class="card_line">
+                                    <div class="card_price">{{ $entertainment->price == 0? 'БЕСПЛАТНО' : $entertainment->price . ' ' . $entertainment->unit->label() }}</div>
+                                </div>
+                            </div>
                         </div>
                     @endforeach
                 @endif
             </div>
         </div>
-    </div>
+    </section>
     <script>
         $(".b_entertainments").addClass("active_btn");
         $(document).ready(() => {
