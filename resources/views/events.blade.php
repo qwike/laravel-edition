@@ -7,17 +7,17 @@
 @endsection
 
 @section('content')
-    <div class="welcome_catalog" id="welcome_events">
+    <div class="page_header" id="page_header_events">
         <div class="container">
-            <div class="welcome_title">@lang('pages.events.title')</div>
-            <div class="welcome_text">Ежегодно на нашей базе отдыха проводятся разного рода мероприятия в честь народных праздников</div>
-            <div class="welcome_buttons">
-                <a href="#events_catalog" class="welcome_excursions_button">Посмотреть все</a>
+            <div class="page_header_title">@lang('pages.events.title')</div>
+            <div class="page_header_text">Ежегодно на нашей базе отдыха проводятся разного рода мероприятия в честь народных праздников</div>
+            <div class="page_header_buttons">
+                <a href="#events_catalog" class="page_header_excursions_button">Посмотреть все</a>
             </div>
         </div>
     </div>
     <section id="events_catalog">
-        <div class="container mt">
+        <div class="container">
             <div class="catalog">
                 @if($events->isEmpty())
                     <div>@lang('pages.main.events.empty')</div>
@@ -42,8 +42,8 @@
     </section>
     @include('partials.formModal')
     <script>
-        $(".b_events").addClass("active_btn")
         $(document).ready(() => {
+            $('.events_button').addClass('active_header_button');
             new WOW().init();
         })
     </script>

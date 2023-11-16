@@ -26,7 +26,9 @@
         </div>
     </div>
     <script>
-        $(".b_projects").addClass("active_btn")
-        new WOW().init();
+        $(document).ready(() => {
+            $('.projects_button').addClass('active_header_button');
+            new WOW().init();
+        });
     </script>
 @endsection

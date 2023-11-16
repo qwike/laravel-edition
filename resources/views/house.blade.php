@@ -31,9 +31,9 @@
                 <p>{{ $house->description }}</p>
                 <p>{{ $house->price . ' ' . $house->unit->label() }}</p>
                 <button
-                    class="btn_order item_btn"
+                    class="btn_order orderable"
                     data-position-name="{{ $house->name }}"
-                    data-position-price="{{ $house->price }} руб."
+                    data-position-price="{{ $house->price . ' ' . $house->unit->label() }}"
                     data-orderable-type="houses"
                     data-orderable-id="{{ $house->id }}">
                         @lang('pages.house.button')

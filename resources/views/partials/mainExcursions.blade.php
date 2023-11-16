@@ -22,7 +22,11 @@
                             <div class="card_description">{{ $excursion->description }}</div>
                             <div class="card_line">
                                 <div class="card_price">{{ $excursion->price > 0? $excursion->price . '₽ ' : 'БЕСПЛАТНО' }}</div>
-                                <button class="card_button">
+                                <button class="card_button orderable"
+                                        data-position-name="{{ $excursion->name }}"
+                                        data-position-price="{{ $excursion->price > 0? $excursion->price . '₽ ' : 'БЕСПЛАТНО' }}"
+                                        data-orderable-type="excursions"
+                                        data-orderable-id="{{ $excursion->id }}">
                                     Оставить заявку
                                     <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">
                                 </button>

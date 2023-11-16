@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    $(".item_btn").click(function(e){
+    $(".orderable").click(function(e){
         e.preventDefault();
 
         $('#modal_title').html($(this).data('position-name'));

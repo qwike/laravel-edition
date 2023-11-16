@@ -76,10 +76,9 @@
             </div>
         </div>
     </div>
-    <script src="assets/js/wow.min.js"></script>
     <script>
-        $(".b_history").addClass("active_btn")
         $(document).ready(() => {
+            $('.history_button').addClass('active_header_button');
             new WOW().init();
         })
     </script>

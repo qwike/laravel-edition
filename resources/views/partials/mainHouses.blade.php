@@ -25,7 +25,11 @@
                             </div>
                             <div class="card_line">
                                 <div class="card_price">{{ $house->price }} {{ $house->unit->label() }}</div>
-                                <button class="card_button">
+                                <button class="card_button orderable"
+                                        data-position-name="{{ $house->name }}"
+                                        data-position-price="{{ $house->price }} {{ $house->unit->label() }}"
+                                        data-orderable-type="houses"
+                                        data-orderable-id="{{ $house->id }}">
                                     Оставить заявку
                                     <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">
                                 </button>

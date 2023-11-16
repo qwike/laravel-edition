@@ -7,17 +7,17 @@
 @endsection
 
 @section('content')
-    <div class="welcome_catalog" id="welcome_entertainments">
+    <div class="page_header" id="page_header_entertainments">
         <div class="container">
-            <div class="welcome_title">@lang('pages.entertainments.title')</div>
-            <div class="welcome_text">В нашей деревне есть всё: от спокойного плавания на лодках до экстремальных прогулок по лесу</div>
-            <div class="welcome_buttons">
-                <a href="#entertainments_catalog" class="welcome_excursions_button">Посмотреть все</a>
+            <div class="page_header_title">@lang('pages.entertainments.title')</div>
+            <div class="page_header_text">В нашей деревне есть всё: от спокойного плавания на лодках до экстремальных прогулок по лесу</div>
+            <div class="page_header_buttons">
+                <a href="#entertainments_catalog" class="page_header_excursions_button">Посмотреть все</a>
             </div>
         </div>
     </div>
     <section id="entertainments_catalog">
-        <div class="container mt">
+        <div class="container">
             <div class="catalog">
                 @if($entertainments->isEmpty())
                     <div>@lang('pages.main.entertainments.empty')</div>
@@ -41,8 +41,8 @@
         </div>
     </section>
     <script>
-        $(".b_entertainments").addClass("active_btn");
         $(document).ready(() => {
+            $('.entertainments_button').addClass('active_header_button');
             new WOW().init();
         });
     </script>

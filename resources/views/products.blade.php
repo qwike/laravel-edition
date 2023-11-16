@@ -38,10 +38,9 @@
             @endif
         </div>
     </div>
-    <script src="assets/js/wow.min.js"></script>
     <script>
-        $(".b_products").addClass("active_btn")
         $(document).ready(() => {
+            $('.products_button').addClass('active_header_button');
             new WOW().init();
         })
     </script>

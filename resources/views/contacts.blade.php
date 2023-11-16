@@ -39,8 +39,8 @@
         </div>
     </div>
     <script>
-        $(".b_contacts").addClass("active_btn")
         $(document).ready(() => {
+            $('.contacts_button').addClass('active_header_button');
             new WOW().init();
         })
     </script>

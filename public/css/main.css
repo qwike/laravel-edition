@@ -1,29 +1,32 @@
-.welcome, .welcome_catalog{
+.page_header {
     width: 100%;
-    height: 800px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/welcome.png);
+    height: 540px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     align-items: center;
 }
-.welcome_catalog{
-    height: 540px;
+#page_header_home {
+    height: 800px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/welcome.png);
 }
-#welcome_entertainments{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/entertainments.png);
+#page_header_entertainments {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/entertainments.png);
 }
-#welcome_excursions{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/excursions.png);
+#page_header_excursions {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/excursions.png);
 }
-#welcome_houses{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/houses.png);
+#page_header_houses {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(../images/houses.png);
 }
-#welcome_events{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/events.png);
+#page_header_events {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/events.png);
 }
-.welcome_block {
+.page_header_block {
     max-width: 50%;
 }
-.welcome_title {
+.page_header_title {
     color: var(--color-white);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
     font-family: Oswald;
@@ -31,7 +34,7 @@
     font-weight: 700;
     text-transform: uppercase;
 }
-.welcome_text {
+.page_header_text {
     color: var(--color-white);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: Inter;
@@ -39,10 +42,10 @@
     line-height: 150%;
     margin-top: 25px;
 }
-.welcome_buttons {
+.page_header_buttons {
     margin-top: 75px;
 }
-.welcome_excursions_button {
+.page_header_excursions_button {
     color: var(--color-white);
     font-family: Oswald;
     font-size: 18px;
@@ -56,10 +59,10 @@
     box-shadow: 0px 5px 0px -2px rgba(120, 215, 125, 0.80), 0px 25px 45px -20px rgba(0, 0, 0, 0.65), 0px 0px 10px 0px rgba(255, 255, 255, 0.35) inset;
     transition: background .3s;
 }
-.welcome_excursions_button:hover {
+.page_header_excursions_button:hover {
     background: var(--color-light-green);
 }
-.welcome_history_button {
+.page_header_history_button {
     margin-left: 35px;
     position: relative;
     color: var(--color-white);
@@ -71,7 +74,7 @@
     text-decoration: none;
     cursor: pointer;
 }
-.welcome_history_button::after {
+.page_header_history_button::after {
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -83,7 +86,7 @@
     background: var(--color-white);
     transition: width .3s;
 }
-.welcome_history_button:hover::after {
+.page_header_history_button:hover::after {
     width: 100%;
 }
 section {

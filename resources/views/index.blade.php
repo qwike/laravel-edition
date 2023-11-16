@@ -4,6 +4,7 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/modal.css') }}">
 @endsection
 
 @section('content')
@@ -17,7 +18,11 @@
         @include('partials.mainHistory')
     </section>
     @include('partials.mainContacts')
+    @include('partials.formModal')
     <script>
-        new WOW().init();
+        $(document).ready(() => {
+            $('.home_button').addClass('active_header_button');
+            new WOW().init();
+        });
     </script>
 @endsection
