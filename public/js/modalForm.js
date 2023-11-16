@@ -1,3 +1,5 @@
+function a() {}
+
 $(document).ready(() => {
     $(".orderable").click(function(e){
         e.preventDefault();
@@ -10,14 +12,17 @@ $(document).ready(() => {
         $('.modal_body').fadeIn();
         $('#form_result').fadeOut();
     });
+
     $('#modal_backdrop').click(function (e) {
         if(e.target.id === 'modal_backdrop') {
             $('#modal_backdrop').fadeOut();
         }
     });
+
     $('.modal_close').click(function () {
         $('#modal_backdrop').fadeOut();
     });
+
     $('#modalForm').submit(function (e) {
         e.preventDefault();
 
@@ -28,6 +33,7 @@ $(document).ready(() => {
         const formData = new FormData(this);
 
         formData.append('phone', phoneValue);
+        formData.append('g-recaptcha-response', $('textarea[name="g-recaptcha-response"]').val());
 
         $.ajax({
             type: 'POST',

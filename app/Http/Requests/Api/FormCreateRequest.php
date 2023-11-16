@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Api;
 
 use App\Enums\OrderTypeEnum;
+use App\Rules\CaptchaValidator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rules\Enum;
 
@@ -33,6 +34,7 @@ class FormCreateRequest extends FormRequest
             'name' => 'required|string|max:255',
             'phone' => 'required|string|regex:/^\\+7\d{10}$/',
             'comment' => 'nullable|string|max:3000',
+            'g-recaptcha-response' => 'required|captcha',
         ];
     }
 }

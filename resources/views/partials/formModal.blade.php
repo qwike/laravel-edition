@@ -26,6 +26,7 @@
                 <input type="hidden" name="orderable_type" id="form_orderable_type" />
                 <input type="hidden" name="orderable_id" id="form_orderable_id" />
                 <button class="modal_confirm">Отправить заявку</button>
+                {!! Captcha::display() !!}
             </form>
         </div>
         <div id="form_result" style="display: none;"></div>
