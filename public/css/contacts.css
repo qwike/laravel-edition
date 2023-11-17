@@ -12,8 +12,17 @@
 .t396__carrier{
     height: 0px !important;
 }
+.information_block{
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+}
 .information_block span {
-    font-weight: 600;
+    font-family: Oswald;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 59px;
 }
 .map {
     width: 100%;
