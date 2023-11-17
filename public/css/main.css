@@ -265,13 +265,12 @@ section:nth-child(odd) {
 }
 .history_container {
     margin-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
 }
 .history_image_box {
-    width: 50%;
-    height: 430px;
+    height: 100%;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -280,9 +279,6 @@ section:nth-child(odd) {
     height: 100%;
     object-fit: cover;
     object-position: center;
-}
-.history_info {
-    width: 45%;
 }
 .history_text {
     margin: 20px 0px 30px;
@@ -293,7 +289,7 @@ section:nth-child(odd) {
 }
 .contacts_container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 2fr;
     column-gap: 30px;
 }
 .contacts_address {
@@ -308,4 +304,120 @@ section:nth-child(odd) {
 }
 .contacts_address img {
     margin-right: 10px;
+}
+.contacts_map {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+@media (max-width:1281px) {
+    .container {
+        width: 1000px;
+    }
+    .card_price {
+        font-size: 18px;
+    }
+    .card_button {
+        font-size: 16px;
+    }
+}
+@media (max-width:1025px) {
+    .container {
+        width: 770px;
+    }
+    .catalog {
+        grid-template-columns: 1fr 1fr;
+    }
+    .card_noshadow:nth-child(3n) {
+        display: none;
+    }
+    .card:nth-child(3n) {
+        display: none;
+    }
+}
+@media (max-width:801px) {
+    .container {
+        width: calc(100% - 40px);
+    }
+    .section_description {
+        width: 100%;
+    }
+    .history_container {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+    .history_image_box {
+        height: 300px;
+    }
+    .contacts_container {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+    .contacts_map {
+        height: 400px;
+    }
+    .contacts_info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+}
+@media (max-width:600px) {
+    .container {
+        width: calc(100% - 10px);
+    }
+    .catalog {
+        grid-template-columns: 1fr;
+    }
+    .page_header_excursions_button {
+        padding: 20px 40px;
+    }
+    .page_header_history_button {
+        margin-left: 15px;
+    }
+    .products_images {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "a b" "c d";
+    }
+}
+@media (max-width:550px) {
+    .contacts_info {
+        display: block;
+    }
+}
+@media (max-width:480px) {
+    .section_title {
+        font-size: 32px;
+    }
+    .page_header_title {
+        font-size: 42px;
+    }
+    .page_header_excursions_button {
+        text-align: center;
+    }
+    .page_header_buttons {
+        display: grid;
+        row-gap: 20px;
+    }
+    .page_header_title {
+        font-size: 36px;
+    }
+    .section_header {
+        flex-direction: column;
+    }
+    .section_title {
+        text-align: center;
+    }
+    section {
+        padding: 50px 0px;
+    }
+    .products_images {
+        grid-template-rows: 200px 200px;
+    }
+}
+@media (max-width:320px) {
+    .page_header_title {
+        font-size: 32px;
+    }
 }

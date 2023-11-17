@@ -89,3 +89,7 @@ section:nth-child(odd) {
 .contacts_address img {
     margin-right: 10px;
 }
+.contacts_map {
+    border-radius: 8px;
+    overflow: hidden;
+}

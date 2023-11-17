@@ -32,8 +32,8 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="header_menu">
+    <div class="container header_menu">
+        <div class="header_menu_buttons">
             <a href="{{ route('home') }}" class="header_button home_button">Главная</a>
             <a href="{{ route('history') }}" class="header_button history_button">История</a>
             <a href="{{ route('excursions') }}" class="header_button excursions_button">Экскурсии</a>
@@ -47,3 +47,4 @@
         </div>
     </div>
 </header>
+<script src="{{ asset('/js/header.js') }}"></script>

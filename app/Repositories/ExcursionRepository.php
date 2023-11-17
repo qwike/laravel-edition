@@ -9,7 +9,7 @@ class ExcursionRepository
 {
     public function getMainExcursions(): Collection
     {
-        return Excursion::query()->limit(6)->get();
+        return Excursion::query()->limit(3)->get();
     }
 
     public function getExcursions(): Collection
