@@ -1,89 +1,91 @@
-.about_content_block{
-    margin-bottom: 50px;
-    text-indent: 30px;
-}
-.about_content h2{
-	position: relative;
-}
-.about_content_info{
-    width: 500px;
-    letter-spacing: 2px;
-	line-height: 20px;
-}
-.about_content{
-    display: flex;
-    justify-content: center;
-	flex-direction: column;
-	align-items: center;	
-}
-.about_image{
+.page_header {
     width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
-.about_image img, .about_image_side_box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 20px;
-}
-.about_image_side_box{
-    height: 300px;
-    width: 400px;
-    overflow: hidden;
-    border-radius: 20px;
-}
-.about_content_img_side{
+    height: 540px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/muvir_story.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    letter-spacing: normal;
 }
-.about_imgs {
+.page_header_block {
+    max-width: 50%;
+}
+.page_header_title {
+    color: var(--color-white);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+    font-family: Oswald;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.page_header_text {
+    color: var(--color-white);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 150%;
+    margin-top: 25px;
+}
+.page_header_buttons {
+    margin-top: 75px;
+}
+.page_header_excursions_button {
+    color: var(--color-white);
+    font-family: Oswald;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.36px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 30px 70px;
+    border-radius: 12px;
+    background: var(--color-green);
+    box-shadow: 0px 5px 0px -2px rgba(120, 215, 125, 0.80), 0px 25px 45px -20px rgba(0, 0, 0, 0.65), 0px 0px 10px 0px rgba(255, 255, 255, 0.35) inset;
+    transition: background .3s;
+}
+.page_header_excursions_button:hover {
+    background: var(--color-light-green);
+}
+section {
+    padding: 100px 0px;
+    background: var(--color-white);
+}
+section:nth-child(odd) {
+    background: var(--color-light-gray);
+}
+.section_title {
+    color: var(--color-black);
+    font-family: Oswald;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.history_text {
+    font-family: Inter;
+    color: var(--color-black);
+    font-size: 18px;
+    line-height: 27px;
+}
+.history_text p {
+    text-indent: 30px;
+    margin: 30px 0px;
+}
+.contacts_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 30px;
+}
+.contacts_address {
+    margin-top: 40px;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    color: var(--color-black);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
 }
-.about_text_block {
-    width: 50%;
-}
-h3 {
-    text-align: center;
-    font-family: 'Montserrat Alternates', sans-serif;
-    text-indent: 0px;
-}
-h2 {
-    margin-bottom: 25px;
-}
-.flex_space_between .about_content_img_side {
-    width: 40%;
-}
-.ILoveMuvyr {
-    width: 700px;
-}
-.about_image_side {
-    margin: 0px auto;
-}
-@media (max-width: 950px) {
-    .about_imgs {
-        flex-direction: column;
-    }
-    .about_content_img_side {
-        width: 100% !important;
-    }
-    .about_text_block {
-        width: 100%;
-    }
-    .about_image_side_box {
-        margin: 0px auto;
-    }
-    .ILoveMuvyr {
-        width: 100%;
-    }
-}
-@media (max-width: 650px) {
-    .about_image_side_box {
-        width: 100%;
-    }
+.contacts_address img {
+    margin-right: 10px;
 }

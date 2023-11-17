@@ -10,7 +10,7 @@
     <div class="page_header">
         <div class="container">
             <div class="page_header_title">Кафе</div>
-            <div class="page_header_text">Ежегодно на нашей базе отдыха проводятся разного рода мероприятия в честь народных праздников</div>
+            <div class="page_header_text">В нашем уютном кафе вы можете провести любой праздник. Наша команда профессионалов позаботиться об организации и устроит все так, что у вас не будет времени заскучать</div>
             <div class="page_header_buttons">
                 <a href="#events_catalog" class="page_header_excursions_button">Посмотреть все</a>
             </div>
@@ -73,7 +73,7 @@
     @include('partials.formModal')
     <script>
         $(document).ready(() => {
-            $('.events_button').addClass('active_header_button');
+            $('.cafe_button').addClass('active_header_button');
             new WOW().init();
         })
     </script>
