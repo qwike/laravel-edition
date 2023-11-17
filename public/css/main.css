@@ -289,7 +289,9 @@ section:nth-child(odd) {
     line-height: 150%;
 }
 .contacts_container {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 30px;
 }
 .contacts_address {
     margin-top: 40px;

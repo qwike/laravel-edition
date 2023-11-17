@@ -33,6 +33,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad32682fb2ecf10b964866198faeb1f2ff8883488ef7eda2b3a84ac1541dfc4c6&amp;width=770&amp;height=363&amp;lang=ru_RU&amp;scroll=true"></script>        </div>
     </div>
 </section>
