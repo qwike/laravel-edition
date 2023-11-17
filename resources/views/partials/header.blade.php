@@ -37,8 +37,9 @@
             <a href="{{ route('home') }}" class="header_button home_button">Главная</a>
             <a href="{{ route('history') }}" class="header_button history_button">История</a>
             <a href="{{ route('excursions') }}" class="header_button excursions_button">Экскурсии</a>
+            <a href="{{ route('cafe') }}" class="header_button events_button">Кафе</a>
             <a href="{{ route('events') }}" class="header_button events_button">Мероприятия</a>
-            <a href="{{ route('houses') }}" class="header_button houses_button">Гостевые домики</a>
+            <a href="{{ route('houses') }}" class="header_button houses_button">Домики и беседки</a>
             <a href="{{ route('entertainments') }}" class="header_button entertainments_button">Развлечения</a>
             <a href="{{ route('products') }}" class="header_button products_button">Продукция</a>
             <a href="{{ route('projects') }}" class="header_button projects_button">Инвесторам</a>

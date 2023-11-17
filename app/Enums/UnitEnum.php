@@ -4,6 +4,8 @@ namespace App\Enums;
 
 enum UnitEnum: string
 {
+    case rub5minutes = 'rub5minutes';
+    case rub10minutes = 'rub10minutes';
     case rub30minutes = 'rub30minutes';
     case rub1hour = 'rub1hour';
     case rub2hours = 'rub2hours';
@@ -13,6 +15,8 @@ enum UnitEnum: string
     case rub12hours = 'rub12hours';
     case rub16hours = 'rub16hours';
     case rub1day = 'rub1day';
+    case rub3day = 'rub3day';
+    case rub1week = 'rub1week';
 
     public function label(): string
     {
@@ -23,6 +27,8 @@ enum UnitEnum: string
     public static function options(): array
     {
         return [
+            UnitEnum::rub5minutes->value => '₽/5 минут',
+            UnitEnum::rub10minutes->value => '₽10 минут',
             UnitEnum::rub30minutes->value => '₽/30 минут',
             UnitEnum::rub1hour->value => '₽/час',
             UnitEnum::rub2hours->value => '₽/2 часа',
@@ -32,6 +38,8 @@ enum UnitEnum: string
             UnitEnum::rub12hours->value => '₽/12 часов',
             UnitEnum::rub16hours->value => '₽/16 часов',
             UnitEnum::rub1day->value => '₽/день',
+            UnitEnum::rub3day->value => '₽/3 дня',
+            UnitEnum::rub1week->value => '₽/неделю',
         ];
     }
 }

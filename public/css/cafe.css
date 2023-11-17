@@ -1,0 +1,231 @@
+.page_header {
+    width: 100%;
+    height: 540px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/marry.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.page_header_block {
+    max-width: 50%;
+}
+.page_header_title {
+    color: var(--color-white);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+    font-family: Oswald;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.page_header_text {
+    color: var(--color-white);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 150%;
+    margin-top: 25px;
+}
+.page_header_buttons {
+    margin-top: 75px;
+}
+.page_header_excursions_button {
+    color: var(--color-white);
+    font-family: Oswald;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.36px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 30px 70px;
+    border-radius: 12px;
+    background: var(--color-green);
+    box-shadow: 0px 5px 0px -2px rgba(120, 215, 125, 0.80), 0px 25px 45px -20px rgba(0, 0, 0, 0.65), 0px 0px 10px 0px rgba(255, 255, 255, 0.35) inset;
+    transition: background .3s;
+}
+.page_header_excursions_button:hover {
+    background: var(--color-light-green);
+}
+.page_header_history_button {
+    margin-left: 35px;
+    position: relative;
+    color: var(--color-white);
+    font-family: Oswald;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.36px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+.page_header_history_button::after {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    display: block;
+    content: "";
+    width: 0px;
+    height: 3px;
+    border-radius: 10px;
+    background: var(--color-white);
+    transition: width .3s;
+}
+.page_header_history_button:hover::after {
+    width: 100%;
+}
+section {
+    padding: 100px 0px;
+    background: var(--color-white);
+}
+section:nth-child(odd) {
+    background: var(--color-light-gray);
+}
+.section_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.section_title {
+    color: var(--color-black);
+    font-family: Oswald;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.button_section_more, .card_button {
+    position: relative;
+    background: transparent;
+    border: none;
+    color: var(--color-green);
+    font-family: Oswald;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.36px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+.button_section_more::after, .card_button::after {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    display: block;
+    content: "";
+    width: 0px;
+    height: 3px;
+    border-radius: 10px;
+    background: var(--color-green);
+    transition: width .3s;
+}
+.button_section_more:hover::after, .card_button:hover::after {
+    width: 100%;
+}
+.section_description {
+    width: 50%;
+    color: var(--color-gray);
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 150%;
+    margin-bottom: 30px;
+}
+.catalog {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+}
+.card {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    column-gap: 30px;
+    border-radius: 8px;
+    background: transparent;
+    background: var(--color-white);
+    box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.10);
+}
+.card_img_box {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.card_img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.card_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 20px 24px;
+    height: 100%;
+}
+.card_title {
+    color: var(--color-black);
+    font-family: Oswald;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.card_description {
+    color: var(--color-gray);
+    font-family: Inter;
+    font-size: 16px;
+    line-height: 150%;
+}
+.card_line {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card_price {
+    color: var(--color-red);
+    font-family: Oswald;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 150%;
+}
+.card_line_label {
+    color: var(--color-gray);
+    font-family: Inter;
+    font-size: 16px;
+    line-height: 150%;
+}
+.card_line_value {
+    color: var(--color-black);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+}
+.card_a{
+    text-decoration: none;
+    color: var(--color-green);
+}
+.contacts_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 30px;
+}
+.contacts_address {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    color: var(--color-black);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+.contacts_address img {
+    margin-right: 10px;
+}

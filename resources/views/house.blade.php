@@ -28,8 +28,9 @@
             </div>
             <div class="house_info">
                 <h2>{{ $house->name }}</h2>
-                <p>{{ $house->description }}</p>
+                <pre>{{ $house->description }}</pre>
                 <p>{{ $house->price . ' ' . $house->unit->label() }}</p>
+                <p>Вместимость: до {{ $house->capacity }} человек</p>
                 <button
                     class="btn_order orderable"
                     data-position-name="{{ $house->name }}"

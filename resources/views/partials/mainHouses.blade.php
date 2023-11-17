@@ -21,7 +21,7 @@
                             <div class="card_title">{{ $house->name }}</div>
                             <div class="card_line">
                                 <div class="card_line_label">Вместимость:</div>
-                                <div class="card_line_value">до 4 человек</div>
+                                <div class="card_line_value">до {{ $house->capacity }} человек</div>
                             </div>
                             <div class="card_line">
                                 <div class="card_price">{{ $house->price }} {{ $house->unit->label() }}</div>

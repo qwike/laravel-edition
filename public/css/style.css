@@ -116,7 +116,7 @@ header {
     width: 100%;
     display: grid;
     column-gap: 30px;
-    grid-template-columns: repeat(9, auto);
+    grid-template-columns: repeat(10, auto);
 }
 .header_button {
     position: relative;

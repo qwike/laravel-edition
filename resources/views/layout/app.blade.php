@@ -13,8 +13,9 @@
     <script src="{{ asset('/js/wow.min.js') }}"></script>
 </head>
 <body class="antialiased">
-    @include('partials.header')
-    @yield('content')
-    @include('partials.footer')
+@include('partials.header')
+@yield('content')
+@include('partials.contacts')
+@include('partials.footer')
 </body>
 </html>

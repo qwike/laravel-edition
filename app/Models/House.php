@@ -21,6 +21,7 @@ class House extends Model implements HasMedia
 
     protected $fillable = [
         'name',
+        'capacity',
         'description',
         'price',
         'unit',

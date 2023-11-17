@@ -17,7 +17,6 @@
         @include('partials.mainProducts')
         @include('partials.mainHistory')
     </section>
-    @include('partials.mainContacts')
     @include('partials.formModal')
     <script>
         $(document).ready(() => {

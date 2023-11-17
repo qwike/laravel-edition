@@ -18,6 +18,7 @@ class HouseRequest extends FormRequest
     {
         return [
             'name' => 'required|min:5|max:255',
+            'capacity' => 'required|gt:0',
             'description' => 'nullable|string|max:3000',
             'price' => 'required|gt:0',
             'image' => [
