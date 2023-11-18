@@ -42,7 +42,7 @@
             </div>
         </div>
     </div>
-    @include('partials.formModal')
+    @include('partials.formModalContainer')
     <script src="{{ asset('/js/slick.js') }}"></script>
     <script src="{{ asset('/js/houseSlider.js') }}"></script>
     <script src="{{ asset('/js/focusImage.js') }}"></script>

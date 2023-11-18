@@ -17,7 +17,7 @@
         @include('partials.mainProducts')
         @include('partials.mainHistory')
     </section>
-    @include('partials.formModal')
+    @include('partials.formModalContainer')
     <script>
         $(document).ready(() => {
             $('.home_button').addClass('active_header_button');

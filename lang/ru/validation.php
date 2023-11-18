@@ -169,6 +169,7 @@ return [
         'excerpt'                  => 'выдержка',
         'filter'                   => 'фильтр',
         'first_name'               => 'имя',
+        'g-recaptcha-response'     => '«Я не робот»',
         'gender'                   => 'пол',
         'group'                    => 'группа',
         'hour'                     => 'час',

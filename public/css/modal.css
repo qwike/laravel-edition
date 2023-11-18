@@ -9,25 +9,33 @@
 }
 .modal_content {
     background: #fff;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-family: Inter;
+    color: var(--color-black);
 }
 .modal_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: Oswald;
 }
 .modal_close {
     cursor: pointer;
     transition: all .3s;
 }
 .modal_close:hover {
-    color: var(--color-yellow);
+    color: var(--color-red);
 }
 .modal_input_wrapper {
     display: flex;
     flex-direction: column;
     margin-block: 10px;
+}
+.modal_input_wrapper label, .price_title {
+    font-family: Oswald;
+    font-weight: 500;
+    font-size: 18px;
 }
 .modal_header {
     font-size: 24px;
@@ -36,10 +44,6 @@
 }
 .modal_price {
     color: #444;
-}
-.price_title {
-    font-weight: 500;
-    color: var(--color-black);
 }
 .modal_confirm {
     width: 100%;
@@ -56,7 +60,7 @@
 }
 .modal_confirm:hover {
     color: var(--color-black);
-    background: var(--color-yellow);
+    background: var(--color-light-green);
 }
 .modal_hint {
     font-size: 16px;

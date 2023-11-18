@@ -25,13 +25,24 @@
                 </div>
                 <input type="hidden" name="orderable_type" id="form_orderable_type" />
                 <input type="hidden" name="orderable_id" id="form_orderable_id" />
+                <div style="display: flex; justify-content: center; margin: 15px 0px">
+                    {!! Captcha::display() !!}
+                </div>
                 <button class="modal_confirm">Отправить заявку</button>
-                {!! Captcha::display() !!}
             </form>
         </div>
         <div id="form_result" style="display: none;"></div>
     </div>
 </div>
 <script src="{{ asset('js/jquery.mask.js') }}"></script>
-<script> $('#input_phone').mask('+7 (000) 000 00 00') </script>
+<script>
+    $('#modal_title').html(positionName);
+    $('#form_position_price').html(positionPrice);
+    $('#form_orderable_type').val(orderableType);
+    $('#form_orderable_id').val(orderableId);
+    $('#modal_backdrop').fadeIn();
+    $('.modal_body').fadeIn();
+    $('#form_result').fadeOut();
+    $('#input_phone').mask('+7 (000) 000 00 00');
+</script>
 <script src="{{ asset('/js/modalForm.js') }}"></script>

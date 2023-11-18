@@ -1,18 +1,4 @@
-function a() {}
-
 $(document).ready(() => {
-    $(".orderable").click(function(e){
-        e.preventDefault();
-
-        $('#modal_title').html($(this).data('position-name'));
-        $('#form_position_price').html($(this).data('position-price'));
-        $('#form_orderable_type').val($(this).data('orderable-type'));
-        $('#form_orderable_id').val($(this).data('orderable-id'));
-        $('#modal_backdrop').fadeIn();
-        $('.modal_body').fadeIn();
-        $('#form_result').fadeOut();
-    });
-
     $('#modal_backdrop').click(function (e) {
         if(e.target.id === 'modal_backdrop') {
             $('#modal_backdrop').fadeOut();

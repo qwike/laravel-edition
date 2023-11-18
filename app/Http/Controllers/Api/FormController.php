@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\FormCreateRequest;
 use App\Repositories\OrderRepository;
 use Illuminate\Http\JsonResponse;
+use Illuminate\View\View;
 
 class FormController extends Controller
 {
@@ -15,5 +16,10 @@ class FormController extends Controller
         return response()->json([
             'status' => true,
         ]);
+    }
+
+    public function getForm(): View
+    {
+        return view('partials.formModal');
     }
 }

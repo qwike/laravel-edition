@@ -287,33 +287,8 @@ section:nth-child(odd) {
     font-size: 18px;
     line-height: 150%;
 }
-.contacts_container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 30px;
-}
-.contacts_address {
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    color: var(--color-black);
-    font-family: Inter;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 150%;
-}
-.contacts_address img {
-    margin-right: 10px;
-}
-.contacts_map {
-    border-radius: 8px;
-    overflow: hidden;
-}
 
 @media (max-width:1281px) {
-    .container {
-        width: 1000px;
-    }
     .card_price {
         font-size: 18px;
     }
@@ -322,9 +297,6 @@ section:nth-child(odd) {
     }
 }
 @media (max-width:1025px) {
-    .container {
-        width: 770px;
-    }
     .catalog {
         grid-template-columns: 1fr 1fr;
     }
@@ -336,9 +308,6 @@ section:nth-child(odd) {
     }
 }
 @media (max-width:801px) {
-    .container {
-        width: calc(100% - 40px);
-    }
     .section_description {
         width: 100%;
     }
@@ -349,24 +318,8 @@ section:nth-child(odd) {
     .history_image_box {
         height: 300px;
     }
-    .contacts_container {
-        grid-template-columns: 1fr;
-        row-gap: 30px;
-    }
-    .contacts_map {
-        height: 400px;
-    }
-    .contacts_info {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 20px;
-        row-gap: 20px;
-    }
 }
 @media (max-width:600px) {
-    .container {
-        width: calc(100% - 10px);
-    }
     .catalog {
         grid-template-columns: 1fr;
     }
@@ -379,11 +332,6 @@ section:nth-child(odd) {
     .products_images {
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "a b" "c d";
-    }
-}
-@media (max-width:550px) {
-    .contacts_info {
-        display: block;
     }
 }
 @media (max-width:480px) {

@@ -40,7 +40,6 @@
             </div>
         </div>
     </section>
-    @include('partials.formModal')
     <script>
         $(document).ready(() => {
             $('.events_button').addClass('active_header_button');
