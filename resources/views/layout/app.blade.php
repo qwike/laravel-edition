@@ -13,7 +13,10 @@
     <script src="{{ asset('/js/wow.min.js') }}"></script>
 </head>
 <body class="antialiased">
-@include('partials.header')
+<header>
+    @include('partials.header')
+    <script src="{{ asset('/js/header.js') }}"></script>
+</header>
 @yield('content')
 @include('partials.contacts')
 @include('partials.footer')

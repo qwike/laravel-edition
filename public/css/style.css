@@ -92,6 +92,7 @@ header {
     font-size: 18px;
     line-height: 150%;
     text-transform: uppercase;
+    text-decoration: none;
     cursor: pointer;
     transition: background .3s;
 }
@@ -111,6 +112,9 @@ header {
     font-family: Inter;
     font-size: 14px;
     line-height: 150%;
+}
+.burger_box {
+    display: none;
 }
 .header_menu_buttons {
     display: grid;
@@ -189,10 +193,22 @@ footer {
     .container {
         width: 1000px;
     }
+    .sticky {
+        width: 100%;
+    }
 }
 @media (max-width:1025px) {
     .container {
         width: 770px;
+    }
+    .header_top {
+        flex-wrap: wrap;
+    }
+    .header_menu_buttons {
+        grid-template-columns: repeat(5, auto);
+    }
+    .sticky {
+        width: 100%;
     }
 }
 @media (max-width:801px) {
@@ -212,10 +228,59 @@ footer {
         column-gap: 20px;
         row-gap: 20px;
     }
+    .sticky {
+        width: 100%;
+    }
 }
 @media (max-width:600px) {
     .container {
         width: calc(100% - 10px);
+    }
+    .free_call {
+        display: none;
+    }
+    .socials_group {
+        display: none;
+    }
+    .phone_group {
+        display: none;
+    }
+    .header_menu_buttons {
+        grid-template-columns: repeat(2, auto);
+    }
+    header .burger_box {
+        display: block;
+    }
+    header .header_menu_buttons {
+        position: fixed;
+        top: 65px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.8);
+        padding-top: 15px;
+        transition: all .3s;
+        z-index: 999;
+    }
+    header .container:nth-child(1) {
+        position: fixed;
+        width: 100%;
+        background: var(--color-white);
+        z-index: 999;
+        box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2);
+        transition: top .5s;
+        padding: 0 10px;
+    }
+    .header_button {
+        font-weight: 600;
+    }
+    .contacts_info > div {
+        display: flex;
+    }
+    .contacts_info .phone_group {
+        display: block;
     }
 }
 @media (max-width:550px) {
