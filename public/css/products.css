@@ -1,0 +1,24 @@
+.map {
+    border-radius: 8px;
+    overflow: hidden;
+}
+.addresses_catalog {
+    row-gap: 15px;
+    column-gap: 50px;
+    margin-top: 50px;
+}
+.address {
+    position: relative;
+    padding-left: 20px;
+}
+.address::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: block;
+    content: "";
+    padding: 5px;
+    border-radius: 50%;
+    background: var(--color-green);
+    transform: translateY(-50%);
+}

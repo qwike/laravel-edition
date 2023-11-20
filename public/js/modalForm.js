@@ -29,7 +29,7 @@ $(document).ready(() => {
             processData: false,
             success: (response) => {
                 $('.modal_body').fadeOut();
-                $('#form_result').html('Спасибо за заявку<br>Мы перезвоним в ближайшее время').css('color', 'black').fadeIn();
+                $('#form_result').html('<div class="thanks"><p><img src="../images/success.svg" alt="успех"></p><p>Спасибо за заявку</p><p>Мы перезвоним в ближайшее время</p></div>').css('color', 'black').fadeIn();
             },
             error: function(response) {
                 console.log(response);

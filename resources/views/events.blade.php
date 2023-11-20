@@ -3,7 +3,9 @@
 @section('title', 'Мероприятия')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/page_header.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/section.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/catalog.css') }}">
 @endsection
 
 @section('content')
@@ -12,7 +14,7 @@
             <div class="page_header_title">@lang('pages.events.title')</div>
             <div class="page_header_text">Ежегодно на нашей базе отдыха проводятся разного рода мероприятия в честь народных праздников</div>
             <div class="page_header_buttons">
-                <a href="#events_catalog" class="page_header_excursions_button">Посмотреть все</a>
+                <a href="#events_catalog" class="page_header_button">Посмотреть все</a>
             </div>
         </div>
     </div>

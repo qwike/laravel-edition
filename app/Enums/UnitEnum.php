@@ -28,7 +28,7 @@ enum UnitEnum: string
     {
         return [
             UnitEnum::rub5minutes->value => '₽/5 минут',
-            UnitEnum::rub10minutes->value => '₽10 минут',
+            UnitEnum::rub10minutes->value => '₽/10 минут',
             UnitEnum::rub30minutes->value => '₽/30 минут',
             UnitEnum::rub1hour->value => '₽/час',
             UnitEnum::rub2hours->value => '₽/2 часа',

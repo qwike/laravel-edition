@@ -3,6 +3,9 @@
 @section('title', 'Деревня Мувыр')
 
 @section('css')
+    <link rel="stylesheet" href="{{ asset('/css/page_header.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/section.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/catalog.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/modal.css') }}">
 @endsection

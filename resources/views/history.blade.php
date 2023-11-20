@@ -3,17 +3,19 @@
 @section('title', 'История Мувыра')
 
 @section('css')
+    <link rel="stylesheet" href="{{ asset('/css/page_header.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/section.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/history.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/twentytwenty.css') }}">
 @endsection
 
 @section('content')
-    <div class="page_header">
+    <div class="page_header" id="page_header_history">
         <div class="container">
             <div class="page_header_title">История Мувыра</div>
             <div class="page_header_text">История Александра Корепанова, который восстанавливает свою родную деревню Мувыр, впечатляет своей настойчивостью и преданностью. Несмотря на трудности и неприятности, он несгибаемо привлекает внимание к деревне</div>
             <div class="page_header_buttons">
-                <a href="#history" class="page_header_excursions_button">Читать</a>
+                <a href="#history" class="page_header_button">Читать</a>
             </div>
         </div>
     </div>

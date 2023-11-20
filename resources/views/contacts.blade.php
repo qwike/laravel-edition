@@ -3,8 +3,9 @@
 @section('title', 'Контакты')
 
 @section('css')
+    <link rel="stylesheet" href="{{ asset('/css/page_header.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/section.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/contacts.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
 @endsection
 
 @section('content')
@@ -13,14 +14,16 @@
             <div class="page_header_title">@lang('pages.contacts.title')</div>
             <div class="page_header_text">@lang('pages.contacts.description_block_1')</div>
             <div class="page_header_buttons">
-                <a href="#contacts_catalog" class="page_header_excursions_button">Посмотреть контакты</a>
+                <a href="#contacts_catalog" class="page_header_button">Посмотреть контакты</a>
             </div>
         </div>
     </div>
     <section id="contacts_catalog">
         <div class="container">
-            <div class="information_block" style="margin-top: 25px;">
+            <div class="information_block">
                 @lang('pages.contacts.description_block_2')
+            </div>
+            <div class="information_block" style="margin-top: 25px;">
                 <span>@lang('pages.contacts.operation')</span>
             </div>
             <div class="information_block wow animate__animated animate__fadeInLeft" data-wow-delay="0.1s" style="margin-top: 25px;">

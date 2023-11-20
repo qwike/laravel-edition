@@ -3,17 +3,20 @@
 @section('title', 'Кафе')
 
 @section('css')
+    <link rel="stylesheet" href="{{ asset('/css/page_header.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/section.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/catalog.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/cafe.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/modal.css') }}">
 @endsection
 
 @section('content')
-    <div class="page_header">
+    <div class="page_header" id="page_header_cafe">
         <div class="container">
             <div class="page_header_title">Кафе</div>
             <div class="page_header_text">В нашем уютном кафе вы можете провести любой праздник. Наша команда профессионалов позаботиться об организации и устроит все так, что у вас не будет времени заскучать</div>
             <div class="page_header_buttons">
-                <a href="#events_catalog" class="page_header_excursions_button">Посмотреть все</a>
+                <a href="#events_catalog" class="page_header_button">Посмотреть все</a>
             </div>
         </div>
     </div>

@@ -20,6 +20,7 @@ class Project extends Model implements HasMedia
     protected $fillable = [
         'name',
         'description',
+        'date',
     ];
 
     public function getProjectImage(): ?Media

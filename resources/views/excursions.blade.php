@@ -3,7 +3,9 @@
 @section('title', 'Экскурсии')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/page_header.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/section.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/catalog.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/modal.css') }}">
 @endsection
 
@@ -13,7 +15,7 @@
             <div class="page_header_title">@lang('pages.excursions.title')</div>
             <div class="page_header_text">В нашей деревне есть всё: от спокойного плавания на лодках до экстремальных прогулок по лесу</div>
             <div class="page_header_buttons">
-                <a href="#excursions_catalog" class="page_header_excursions_button">Выбрать экскурсию</a>
+                <a href="#excursions_catalog" class="page_header_button">Выбрать экскурсию</a>
             </div>
         </div>
     </div>

@@ -38,6 +38,11 @@ class ProjectCrudController extends CrudController
                 'limit' => 30,
             ],
             [
+                'name' => 'date',
+                'label' => 'Дата',
+                'type' => 'text',
+            ],
+            [
                 'name' => 'created_at',
                 'label' => 'Создано',
                 'type' => 'date'
@@ -65,6 +70,12 @@ class ProjectCrudController extends CrudController
                 'type' => 'textarea',
             ],
             [
+                'name' => 'date',
+                'label' => 'Дата',
+                'type' => 'text',
+                'hint' => 'Например: год или конкретная дата (03.09.2023 или 2023 г.)',
+            ],
+            [
                 'name' => 'image',
                 'label' => 'Изображение',
                 'type' => 'upload',
@@ -89,6 +100,11 @@ class ProjectCrudController extends CrudController
                 'name' => 'description',
                 'label' => 'Описание',
                 'type' => 'textarea',
+            ],
+            [
+                'name' => 'date',
+                'label' => 'Дата',
+                'type' => 'text',
             ],
             [
                 'name' => 'image',
