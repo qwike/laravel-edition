@@ -287,4 +287,8 @@ footer {
     .contacts_info {
         display: block;
     }
+    .contacts_info .socials_group {
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -29,6 +29,7 @@
                             </div>
                             <div class="card_info_10">
                                 <div class="card_title">{{ $event->name }}</div>
+                                <div class="card_description">{{ $event->description }}</div>
                                 <div class="card_line">
                                     <div class="card_line_label">Дата проведения:</div>
                                     <div class="card_line_value">{{ $event->date }}</div>

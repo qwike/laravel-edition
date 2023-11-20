@@ -35,7 +35,7 @@
                     class="btn_order orderable"
                     data-position-name="{{ $house->name }}"
                     data-position-price="{{ $house->price . ' ' . $house->unit->label() }}"
-                    data-orderable-type="houses"
+                    data-orderable-type="{{ \App\Enums\OrderTypeEnum::from(\App\Models\House::class)->name }}"
                     data-orderable-id="{{ $house->id }}">
                         @lang('pages.house.button')
                 </button>

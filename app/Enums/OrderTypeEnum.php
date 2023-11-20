@@ -2,13 +2,13 @@
 
 namespace App\Enums;
 
-use App\Models\Event;
+use App\Models\CafeEvent;
 use App\Models\Excursion;
 use App\Models\House;
 
 enum OrderTypeEnum: string
 {
-    case events = Event::class;
+    case cafe_events = CafeEvent::class;
     case excursions = Excursion::class;
     case houses = House::class;
 
@@ -21,7 +21,7 @@ enum OrderTypeEnum: string
     public static function options(): array
     {
         return [
-            OrderTypeEnum::events->value => 'Мероприятия',
+            OrderTypeEnum::cafe_events->value => 'Мероприятия',
             OrderTypeEnum::excursions->value => 'Экскурсии',
             OrderTypeEnum::houses->value => 'Домики',
         ];

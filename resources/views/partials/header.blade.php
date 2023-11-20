@@ -37,7 +37,7 @@
 <div class="container header_menu">
     <div class="header_menu_buttons">
         <a href="{{ route('home') }}" class="header_button home_button">Главная</a>
-        <a href="{{ route('history') }}" class="header_button history_button">История</a>
+        <a href="{{ route('history') }}" class="header_button history_button">О Нас</a>
         <a href="{{ route('excursions') }}" class="header_button excursions_button">Экскурсии</a>
         <a href="{{ route('cafe') }}" class="header_button cafe_button">Кафе</a>
         <a href="{{ route('events') }}" class="header_button events_button">Мероприятия</a>

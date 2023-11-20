@@ -28,7 +28,7 @@
                                 <button class="card_button orderable"
                                         data-position-name="{{ $house->name }}"
                                         data-position-price="{{ $house->price }} {{ $house->unit->label() }}"
-                                        data-orderable-type="houses"
+                                        data-orderable-type="{{ \App\Enums\OrderTypeEnum::from(\App\Models\House::class)->name }}"
                                         data-orderable-id="{{ $house->id }}">
                                     Оставить заявку
                                     <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">

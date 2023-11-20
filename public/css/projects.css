@@ -1,31 +1,12 @@
 .page_header {
     width: 100%;
-    min-height: 540px;
+    height: 540px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/about5.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
-    padding: 100px 0px 50px;
-}
-#page_header_home {
-    min-height: 800px;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/welcome.png);
-}
-#page_header_entertainments {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/entertainments.png);
-}
-#page_header_excursions {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/excursions.png);
-}
-#page_header_houses {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(../images/houses.png);
-}
-#page_header_events {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/events.png);
-}
-#page_header_contacts {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/contacts.png);
 }
 .page_header_block {
     max-width: 50%;
@@ -150,42 +131,42 @@ section:nth-child(odd) {
     margin-bottom: 30px;
 }
 .catalog {
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 30px;
+    grid-template-columns: 1fr;
     row-gap: 30px;
 }
-.card, .card_noshadow {
+.card {
     width: 100%;
     height: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    column-gap: 30px;
     border-radius: 8px;
     background: transparent;
-}
-.card {
     background: var(--color-white);
     box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.10);
 }
 .card_img_box {
     width: 100%;
-    height: 200px;
-    border-radius: 8px;
+    height: 350px;
     overflow: hidden;
+    padding: 5px;
+    margin: auto;
 }
 .card_img_box img {
     width: 100%;
     height: 100%;
+    border-radius: 8px;
     object-fit: cover;
     object-position: center;
 }
-.card_info, .card_info_10 {
+.card_info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 15px 20px 24px;
-    height: calc(100% - 200px);
-}
-.card_info_10 {
-    padding: 10px 0px 0px 0px;
+    height: 100%;
 }
 .card_title {
     color: var(--color-black);
@@ -201,6 +182,7 @@ section:nth-child(odd) {
     font-family: Inter;
     font-size: 16px;
     line-height: 150%;
+    margin-bottom: 15px;
 }
 .card_line {
     margin-top: 20px;
@@ -233,64 +215,10 @@ section:nth-child(odd) {
     color: var(--color-green);
 }
 
-.products_images {
-    display: grid;
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-    grid-template-rows: 270px 270px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "a a b" "c d b";
-}
-.product_image_box {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-}
-.product_image_box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-.product_image_box:nth-child(1) {
-    grid-area: a;
-}
-.product_image_box:nth-child(2) {
-    grid-area: b;
-}
-.product_image_box:nth-child(3) {
-    grid-area: c;
-}
-.product_image_box:nth-child(4) {
-    grid-area: d;
-}
-.history_container {
-    margin-top: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 30px;
-}
-.history_image_box {
-    height: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-}
-.history_image_box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-.history_text {
-    margin: 20px 0px 30px;
-    color: var(--color-gray);
-    font-family: Inter;
-    font-size: 18px;
-    line-height: 150%;
-}
-
 @media (max-width:1281px) {
+    .card {
+        grid-template-columns: 1fr 1fr;
+    }
     .card_price {
         font-size: 18px;
     }
@@ -298,76 +226,19 @@ section:nth-child(odd) {
         font-size: 16px;
     }
 }
-@media (max-width:1025px) {
-    .catalog {
-        grid-template-columns: 1fr 1fr;
-    }
-    .card_noshadow:nth-child(3n) {
-        display: none;
-    }
-    .card:nth-child(3n) {
-        display: none;
-    }
-}
 @media (max-width:801px) {
-    .section_description {
-        width: 100%;
+    .card {
+        grid-template-columns: 1fr 1.5fr;
     }
-    .history_container {
-        grid-template-columns: 1fr;
-        row-gap: 30px;
-    }
-    .history_image_box {
-        height: 300px;
+    .card_img_box {
+        max-height: 400px;
     }
 }
 @media (max-width:600px) {
-    .catalog {
+    .card {
         grid-template-columns: 1fr;
     }
-    .page_header_excursions_button {
-        padding: 20px 40px;
-    }
-    .page_header_history_button {
-        margin-left: 15px;
-    }
-    .products_images {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "a b" "c d";
-    }
-}
-@media (max-width:480px) {
-    .section_title {
-        font-size: 32px;
-    }
-    .page_header_title {
-        font-size: 42px;
-    }
-    .page_header_excursions_button {
-        text-align: center;
-    }
-    .page_header_buttons {
-        display: grid;
-        row-gap: 20px;
-    }
-    .page_header_title {
-        font-size: 36px;
-    }
-    .section_header {
-        flex-direction: column;
-    }
-    .section_title {
-        text-align: center;
-    }
-    section {
-        padding: 50px 0px;
-    }
-    .products_images {
-        grid-template-rows: 200px 200px;
-    }
-}
-@media (max-width:320px) {
-    .page_header_title {
-        font-size: 32px;
+    .card_img_box {
+        max-height: 300px;
     }
 }
