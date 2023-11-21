@@ -15,6 +15,7 @@
     @include('partials.mainExcursions')
     @include('partials.mainEntertainments')
     @include('partials.mainEvents')
+    @include('partials.mainCafeEvents')
     @include('partials.mainHouses')
     <section>
         @include('partials.mainProducts')

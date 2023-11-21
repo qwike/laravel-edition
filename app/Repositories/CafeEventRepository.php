@@ -11,7 +11,7 @@ class CafeEventRepository
 {
     public function getMainCafeEvents(): Collection
     {
-        return CafeEvent::query()->orderBy('created_at', 'DESC')->limit(3)->get();
+        return CafeEvent::query()->limit(1)->get();
     }
 
     public function getCafeEvents(): Collection

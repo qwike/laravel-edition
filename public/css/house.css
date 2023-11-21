@@ -16,7 +16,7 @@
 }
 .house_slider_img_box {
     width: 100%;
-    height: 100%;
+    height: 400px;
     padding: 5px;
 }
 .house_slider_img_box img {
@@ -41,7 +41,7 @@
     font-weight: 700;
     background: var(--color-white);
     border-radius: 50%;
-    z-index: 999;
+    z-index: 998;
     cursor: pointer;
     transition: background-color .3s;
 }
@@ -108,5 +108,15 @@ p {
     .columns_container {
         grid-template-columns: 100%;
         row-gap: 30px;
+    }
+}
+@media (max-width:801px) {
+    .house_slider_img_box {
+        height: 350px;
+    }
+}
+@media (max-width:600px) {
+    .house_slider_img_box {
+        height: 300px;
     }
 }
