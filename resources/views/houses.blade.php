@@ -12,7 +12,7 @@
     <div class="page_header" id="page_header_houses">
         <div class="container">
             <div class="page_header_title">@lang('pages.houses.title')</div>
-            <div class="page_header_text">Мы предлагаем вам остановиться в наших уютных гостевых домиках</div>
+            <div class="page_header_text">Мы предлагаем вам остановиться в наших уютных гостевых домиках и отдохнуть в наших замечательных беседках</div>
             <div class="page_header_buttons">
                 <a href="#houses_catalog" class="page_header_button">Посмотреть все</a>
             </div>

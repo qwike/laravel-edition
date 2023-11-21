@@ -7,7 +7,7 @@
                 <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">
             </a>
         </div>
-        <div class="section_description">В нашем уютном кафе вы можете провести любой праздник. Наша команда профессионалов позаботиться об организации</div>
+        <div class="section_description">В нашем уютном кафе вы можете провести любое мероприятие. Наша команда профессионалов позаботиться об организации</div>
         <div class="catalog cafe_catalog">
             @if($cafeEvents->isEmpty())
                 <div>@lang('pages.main.events.empty')</div>

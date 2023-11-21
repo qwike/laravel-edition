@@ -7,7 +7,7 @@
                 <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">
             </a>
         </div>
-        <div class="section_description">В нашей деревне есть всё: от спокойного плавания на лодках до экстремальных прогулок по лесу</div>
+        <div class="section_description">В нашей деревне есть всё: от спокойного плавания на лодках до увлекательных прогулок по лесу</div>
         <div class="catalog">
             @if($excursions->isEmpty())
                 <div>@lang('pages.main.excursions.empty')</div>

@@ -7,7 +7,7 @@
                 <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">
             </a>
         </div>
-        <div class="section_description">Ежегодно на нашей базе отдыха проводятся разного рода мероприятия в честь народных праздников</div>
+        <div class="section_description">Ежегодно в нашей деревне проводятся разного рода мероприятия</div>
         <div class="catalog">
             @if($events->isEmpty())
                 <div>@lang('pages.main.events.empty')</div>

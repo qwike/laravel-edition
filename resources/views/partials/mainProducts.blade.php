@@ -9,7 +9,7 @@
     <div class="section_description">На нашей базе отдыха вы сможете приобрести молочную продукцию собственного производства</div>
     <div class="products_images">
         <div class="product_image_box">
-            <img src="{{ asset('/images/milk1.jpg') }}" alt="Продукция">
+            <img src="{{ asset('/images/milk.jpg') }}" alt="Продукция">
         </div>
         <div class="product_image_box">
             <img src="{{ asset('/images/milk2.jpg') }}" alt="Продукция">
