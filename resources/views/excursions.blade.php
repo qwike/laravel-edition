@@ -3,44 +3,58 @@
 @section('title', 'Экскурсии')
 
 @section('css')
+    <link rel="stylesheet" href="{{ asset('/css/page_header.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/section.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/catalog.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/modal.css') }}">
 @endsection
 
 @section('content')
-    <div class="container mt">
-        <div class="header">@lang('pages.excursions.title')</div>
-        <div class="catalog">
-            @if($excursions->isEmpty())
-                <div>@lang('pages.excursions.empty')</div>
-            @else
-                @foreach($excursions as $excursion)
-                    <div class="item wow animate__animated animate__fadeInUp">
-                        <div class="item_img_container">
-                            <img src="{{ $excursion->getExcursionImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="Фото домика">
-                        </div>
-                        <div class="item_title">{{ $excursion->name }}</div>
-                        <div class="item_price">{{ $excursion->price > 0? $excursion->price .' руб.' : 'Бесплатно' }}</div>
-                        <div class="item_desc">
-                            {{ $excursion->description }}
-                        </div>
-                        <div
-                            class="item_btn"
-                            data-position-name="{{ $excursion->name }}"
-                            data-position-price="{{ $excursion->price }} руб."
-                            data-orderable-type="excursions"
-                            data-orderable-id="{{ $excursion->id }}">
-                                @lang('pages.excursions.button')
-                        </div>
-                    </div>
-                @endforeach
-            @endif
+    <div class="page_header" id="page_header_excursions">
+        <div class="container">
+            <div class="page_header_title">@lang('pages.excursions.title')</div>
+            <div class="page_header_text">В нашей деревне есть всё: от спокойного плавания на лодках до экстремальных прогулок по лесу</div>
+            <div class="page_header_buttons">
+                <a href="#excursions_catalog" class="page_header_button">Выбрать экскурсию</a>
+            </div>
         </div>
     </div>
-    @include('partials.formModal')
+    <section id="excursions_catalog">
+        <div class="container">
+            <div class="catalog">
+                @if($excursions->isEmpty())
+                    <div>@lang('pages.main.excursions.empty')</div>
+                @else
+                    @foreach($excursions as $excursion)
+                        <div class="card">
+                            <div class="card_img_box">
+                                <img src="{{ $excursion->getExcursionImage()?->getUrl() ?? \App\Helpers\MediaHelper::defaultImage() }}" alt="{{ $excursion->name }}">
+                            </div>
+                            <div class="card_info">
+                                <div class="card_title">{{ $excursion->name }}</div>
+                                <div class="card_description">{{ $excursion->description }}</div>
+                                <div class="card_line">
+                                    <div class="card_price">{{ $excursion->price > 0? $excursion->price . '₽ ' : 'БЕСПЛАТНО' }}</div>
+                                    <button class="card_button orderable"
+                                            data-position-name="{{ $excursion->name }}"
+                                            data-position-price="{{ $excursion->price > 0? $excursion->price . '₽ ' : 'БЕСПЛАТНО' }}"
+                                            data-orderable-type="{{ \App\Enums\OrderTypeEnum::from(\App\Models\Excursion::class)->name }}"
+                                            data-orderable-id="{{ $excursion->id }}">
+                                        Оставить заявку
+                                        <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
+            </div>
+        </div>
+    </section>
+    @include('partials.formModalContainer')
     <script>
-        $(".b_excursions").addClass("active_btn")
         $(document).ready(() => {
+            $('.excursions_button').addClass('active_header_button');
             new WOW().init();
         })
     </script>

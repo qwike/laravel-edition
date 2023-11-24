@@ -11,9 +11,12 @@ return new class extends Migration
         Schema::create('houses', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->unsignedInteger('capacity');
             $table->text('description')->nullable();
-            $table->decimal('price');
+            $table->unsignedDecimal('price');
             $table->enum('unit', [
+                'rub5minutes',
+                'rub10minutes',
                 'rub30minutes',
                 'rub1hour',
                 'rub2hours',
@@ -23,6 +26,8 @@ return new class extends Migration
                 'rub12hours',
                 'rub16hours',
                 'rub1day',
+                'rub3day',
+                'rub1week',
             ]);
             $table->timestamps();
         });

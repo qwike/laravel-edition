@@ -9,7 +9,7 @@ class EventRepository
 {
     public function getMainEvents(): Collection
     {
-        return Event::query()->orderBy('created_at', 'DESC')->limit(2)->get();
+        return Event::query()->orderBy('created_at', 'DESC')->limit(3)->get();
     }
 
     public function getEvents(): Collection

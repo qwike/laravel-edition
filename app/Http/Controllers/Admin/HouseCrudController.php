@@ -68,6 +68,11 @@ class HouseCrudController extends CrudController
                 'type' => 'text',
             ],
             [
+                'name' => 'capacity',
+                'label' => 'Вместимость',
+                'type' => 'number',
+            ],
+            [
                 'name' => 'description',
                 'label' => 'Описание',
                 'type' => 'textarea',
@@ -87,12 +92,12 @@ class HouseCrudController extends CrudController
             ],
             [
                 'name' => 'image',
-                'label' => 'Изображение',
+                'label' => 'Изображение(-я)',
                 'type' => 'upload_multiple',
                 'withMedia' => [
                     'collection' => House::COLLECTION_NAME_HOUSE,
                 ],
-                'hint' => 'Формат: jpeg, jpg, png, webp. Максимальный размер: 2MB',
+                'hint' => 'Формат: jpeg, jpg, png, webp. Максимальный размер: 2MB. До 5 изображений',
             ],
         ]);
     }
@@ -104,6 +109,11 @@ class HouseCrudController extends CrudController
                 'name' => 'name',
                 'label' => 'Наименование',
                 'type' => 'text',
+            ],
+            [
+                'name' => 'capacity',
+                'label' => 'Вместимость',
+                'type' => 'number',
             ],
             [
                 'name' => 'description',

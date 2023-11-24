@@ -12,8 +12,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();
-            $table->decimal('price');
+            $table->unsignedDecimal('price');
             $table->enum('unit', [
+                'rub5minutes',
+                'rub10minutes',
                 'rub30minutes',
                 'rub1hour',
                 'rub2hours',

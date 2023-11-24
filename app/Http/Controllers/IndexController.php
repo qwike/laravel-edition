@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\CafeEventRepository;
 use App\Repositories\EventRepository;
 use App\Repositories\EntertainmentRepository;
 use App\Repositories\ExcursionRepository;
@@ -12,6 +13,7 @@ class IndexController extends Controller
 {
     public function __construct(
         protected EventRepository $eventRepository,
+        protected CafeEventRepository $cafeEventRepository,
         protected EntertainmentRepository $entertainmentRepository,
         protected HouseRepository $houseRepository,
         protected ProjectRepository $projectRepository,
@@ -24,6 +26,7 @@ class IndexController extends Controller
         $excursions = $this->excursionRepository->getMainExcursions();
         $entertainments = $this->entertainmentRepository->getMainEntertainments();
         $events = $this->eventRepository->getMainEvents();
+        $cafeEvents = $this->cafeEventRepository->getMainCafeEvents();
         $houses = $this->houseRepository->getMainHouses();
         $projects = $this->projectRepository->getMainProjects();
 
@@ -31,6 +34,7 @@ class IndexController extends Controller
             'excursions' => $excursions,
             'entertainments' => $entertainments,
             'events' => $events,
+            'cafeEvents' => $cafeEvents,
             'houses' => $houses,
             'projects' => $projects,
         ]);

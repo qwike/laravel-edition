@@ -3,6 +3,7 @@
 
 <x-backpack::menu-item title="Экскурсии" icon="la la-route" :link="backpack_url('excursion')" />
 <x-backpack::menu-item title="Мероприятия" icon="la la-birthday-cake" :link="backpack_url('event')" />
+<x-backpack::menu-item title="Кафе" icon="la la-coffee" :link="backpack_url('cafe-event')" />
 <x-backpack::menu-item title="Гостевые домики" icon="la la-home" :link="backpack_url('house')" />
 <x-backpack::menu-item title="Развлечения" icon="la la-smile" :link="backpack_url('entertainment')" />
 <x-backpack::menu-item title="Продукты" icon="la la-shopping-cart" :link="backpack_url('product')" />

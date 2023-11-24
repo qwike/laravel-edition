@@ -1,23 +1,14 @@
 $(document).ready(() => {
-    $(".item_btn").click(function(e){
-        e.preventDefault();
-
-        $('#modal_title').html($(this).data('position-name'));
-        $('#form_position_price').html($(this).data('position-price'));
-        $('#form_orderable_type').val($(this).data('orderable-type'));
-        $('#form_orderable_id').val($(this).data('orderable-id'));
-        $('#modal_backdrop').fadeIn();
-        $('.modal_body').fadeIn();
-        $('#form_result').fadeOut();
-    });
     $('#modal_backdrop').click(function (e) {
         if(e.target.id === 'modal_backdrop') {
             $('#modal_backdrop').fadeOut();
         }
     });
+
     $('.modal_close').click(function () {
         $('#modal_backdrop').fadeOut();
     });
+
     $('#modalForm').submit(function (e) {
         e.preventDefault();
 
@@ -28,6 +19,7 @@ $(document).ready(() => {
         const formData = new FormData(this);
 
         formData.append('phone', phoneValue);
+        formData.append('g-recaptcha-response', $('textarea[name="g-recaptcha-response"]').val());
 
         $.ajax({
             type: 'POST',
@@ -37,7 +29,7 @@ $(document).ready(() => {
             processData: false,
             success: (response) => {
                 $('.modal_body').fadeOut();
-                $('#form_result').html('Спасибо за заявку<br>Мы перезвоним в ближайшее время').css('color', 'black').fadeIn();
+                $('#form_result').html('<div class="thanks"><p><img src="../images/success.svg" alt="успех"></p><p>Спасибо за заявку</p><p>Мы перезвоним в ближайшее время</p></div>').css('color', 'black').fadeIn();
             },
             error: function(response) {
                 console.log(response);

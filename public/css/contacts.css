@@ -1,26 +1,12 @@
-#rec590986084 .tn-elem[data-elem-id="1684089518676"] .tn-atom{
-    height: 700px !important;
-}
-.tn-atom .tn-atom__html{
-    height: 400px !important;
-    width: 500px;
-}
-
-.t396__filter{
-    height: 0px !important;
-}
-.t396__carrier{
-    height: 0px !important;
+.information_block{
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
 }
 .information_block span {
-    font-weight: 600;
-}
-.map {
-    width: 100%;
-    overflow: hidden;
-}
-@media (max-width: 650px) {
-    #rec590986084 .tn-elem[data-elem-id="1684089518676"] .tn-atom{
-        height: 400px !important;
-    }
+    font-family: Oswald;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 59px;
 }
