@@ -20,8 +20,8 @@ return [
      * receives a new webhook call.
      *
      * For reference, see https://defstudio.github.io/telegraph/webhooks/overview
-    */
-    'webhook_handler' => App\Telegram\Handler::class,
+     */
+    'webhook_handler' => \App\Telegram\Handler::class,
 
     /*
      * Sets a custom domain when registering a webhook. This will allow a local telegram bot api server
@@ -29,7 +29,7 @@ return [
      *
      * For reference, see https://core.telegram.org/bots/api#using-a-local-bot-api-server
      */
-     'custom_webhook_domain' => 'https://70d2-84-201-246-215.ngrok-free.app',
+    // 'custom_webhook_domain' => 'http://my.custom.domain',
 
     /*
      * If enabled, Telegraph dumps received

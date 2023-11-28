@@ -14,7 +14,7 @@
     <div class="page_header" id="page_header_cafe">
         <div class="container">
             <div class="page_header_title">Кафе</div>
-            <div class="page_header_text">В нашем уютном кафе вы можете провести любой праздник. Наша команда профессионалов позаботиться об организации и устроит все так, что у вас не будет времени заскучать</div>
+            <div class="page_header_text">В нашем уютном кафе вы можете провести свадьбу, день рождения, корпоратив, вечер встречи и многое другое. Наша команда профессионалов позаботится об организации вашего мероприятия и устроит все так, что у вас не будет времени заскучать</div>
             <div class="page_header_buttons">
                 <a href="#events_catalog" class="page_header_button">Посмотреть все</a>
             </div>

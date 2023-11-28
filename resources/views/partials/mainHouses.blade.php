@@ -25,12 +25,8 @@
                             </div>
                             <div class="card_line">
                                 <div class="card_price">{{ $house->price }} {{ $house->unit->label() }}</div>
-                                <button class="card_button orderable"
-                                        data-position-name="{{ $house->name }}"
-                                        data-position-price="{{ $house->price }} {{ $house->unit->label() }}"
-                                        data-orderable-type="{{ \App\Enums\OrderTypeEnum::from(\App\Models\House::class)->name }}"
-                                        data-orderable-id="{{ $house->id }}">
-                                    Оставить заявку
+                                <button class="card_button">
+                                    <a href="{{ route('house', ['id' => $house->id]) }}" class="card_a">@lang('pages.houses.button')</a>
                                     <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">
                                 </button>
                             </div>

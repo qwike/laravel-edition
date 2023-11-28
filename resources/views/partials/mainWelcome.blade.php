@@ -1,7 +1,7 @@
 <div class="page_header" id="page_header_home">
     <div class="container">
-        <div class="page_header_title">Культурный отдых в возрождённой деревне Игринского Района</div>
-        <div class="page_header_text">Свадьбы, дни рождения и другие праздники в удивительном месте Удмуртской Республики</div>
+        <div class="page_header_title">Прекрасный отдых в возрождённой деревне Игринского Района</div>
+        <div class="page_header_text">Удивительное место Удмуртской Республики - Возрождённая деревня Мувыр</div>
         <div class="page_header_buttons">
             <a href="{{ route('excursions') }}" class="page_header_button">Выбрать экскурсию</a>
             <a href="{{ route('history') }}" class="page_header_arrow_button">

@@ -21,10 +21,10 @@
                             <div class="card_title">{{ $excursion->name }}</div>
                             <div class="card_description">{{ $excursion->description }}</div>
                             <div class="card_line">
-                                <div class="card_price">{{ $excursion->price > 0? $excursion->price . '₽ ' : 'БЕСПЛАТНО' }}</div>
+                                <div class="card_price">{{ $excursion->price > 0? 'От ' . $excursion->price . '₽ ' : 'БЕСПЛАТНО' }}</div>
                                 <button class="card_button orderable"
                                         data-position-name="{{ $excursion->name }}"
-                                        data-position-price="{{ $excursion->price > 0? $excursion->price . '₽ ' : 'БЕСПЛАТНО' }}"
+                                        data-position-price="{{ 'От ' . $excursion->price > 0? $excursion->price . '₽ ' : 'БЕСПЛАТНО' }}"
                                         data-orderable-type="{{ \App\Enums\OrderTypeEnum::from(\App\Models\Excursion::class)->name }}"
                                         data-orderable-id="{{ $excursion->id }}">
                                     Оставить заявку

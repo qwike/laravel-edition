@@ -19,18 +19,26 @@
                     <div class="socials_group" style="margin-top: 30px;">
                         <div class="socials_text">Наши страницы в соц. сетях</div>
                         <div class="socials">
-                            <div class="social_box vk_box">
-                                <img src="{{ asset('/images/vk.svg') }}" alt="Группа вконтакте">
-                            </div>
-                            <div class="social_box telegram_box">
-                                <img src="{{ asset('/images/telegram.svg') }}" alt="Телеграм">
-                            </div>
-                            <div class="social_box whatsapp_box">
-                                <img src="{{ asset('/images/whatsapp.svg') }}" alt="Ватсапп">
-                            </div>
-                            <div class="social_box viber_box">
-                                <img src="{{ asset('/images/viber.svg') }}" alt="Вайбер">
-                            </div>
+                            <a href="https://vk.com/weekendvmywer" target="_blank">
+                                <div class="social_box vk_box">
+                                    <img src="{{ asset('/images/vk.svg') }}" alt="Группа вконтакте">
+                                </div>
+                            </a>
+                            <a href="https://t.me/mariaprokofeva" target="_blank">
+                                <div class="social_box telegram_box">
+                                    <img src="{{ asset('/images/telegram.svg') }}" alt="Телеграм">
+                                </div>
+                            </a>
+                            <a href="https://wa.me/+79018658755" target="_blank">
+                                <div class="social_box whatsapp_box">
+                                    <img src="{{ asset('/images/whatsapp.svg') }}" alt="Ватсапп">
+                                </div>
+                            </a>
+                            <a href="viber://chat?number=%2B79018658755" target="_blank">
+                                <div class="social_box viber_box">
+                                    <img src="{{ asset('/images/viber.svg') }}" alt="Вайбер">
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>

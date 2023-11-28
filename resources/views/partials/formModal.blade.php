@@ -9,7 +9,7 @@
             <form action="{{ route('createOrder') }}" id="modalForm" method="POST">
                 @csrf
                 <div class="modal_price">
-                    <span class="price_title">Стоимоть:</span> <span id="form_position_price"></span>
+                    <span class="price_title">Стоимость:</span> <span id="form_position_price"></span>
                 </div>
                 <div class="modal_input_wrapper">
                     <label for="input_name">Имя</label>

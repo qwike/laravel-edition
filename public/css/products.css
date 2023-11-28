@@ -1,3 +1,10 @@
+.card_img_box {
+    height: 350px;
+}
+.card_info {
+    justify-content: start;
+    height: calc(100% - 350px);
+}
 .map {
     border-radius: 8px;
     overflow: hidden;
@@ -10,11 +17,13 @@
 .address {
     position: relative;
     padding-left: 20px;
+    font-size: 14px;
+    font-family: Inter;
 }
 .address::before {
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 9px;
     display: block;
     content: "";
     padding: 5px;

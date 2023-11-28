@@ -1,6 +1,7 @@
 .history_text {
     font-family: Inter;
     color: var(--color-black);
+    text-align: justify;
     font-size: 18px;
     line-height: 27px;
 }

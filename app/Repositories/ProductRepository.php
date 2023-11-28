@@ -9,6 +9,6 @@ class ProductRepository
 {
     public function getProducts(): Collection
     {
-        return Product::query()->orderBy('created_at', 'DESC')->get();
+        return Product::query()->orderBy('name', 'ASC')->get();
     }
 }
