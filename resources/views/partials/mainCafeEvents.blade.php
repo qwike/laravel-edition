@@ -21,10 +21,9 @@
                             <div class="card_title">{{ $cafeEvent->name }}</div>
                             <div class="card_description">{{ $cafeEvent->description }}</div>
                             <div class="card_line">
-                                <div class="card_price">От {{ $cafeEvent->price }}₽</div>
                                 <button class="card_button orderable"
                                         data-position-name="{{ $cafeEvent->name }}"
-                                        data-position-price="от {{ $cafeEvent->price }}₽"
+                                        data-position-price="Договорная"
                                         data-orderable-type="{{ \App\Enums\OrderTypeEnum::from(\App\Models\CafeEvent::class)->name }}"
                                         data-orderable-id="{{ $cafeEvent->id }}">
                                     Оставить заявку

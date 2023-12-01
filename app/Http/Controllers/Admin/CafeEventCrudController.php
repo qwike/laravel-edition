@@ -38,11 +38,6 @@ class CafeEventCrudController extends CrudController
                 'limit' => 30,
             ],
             [
-                'name' => 'price',
-                'label' => 'Начальная Стоимость',
-                'type' => 'number',
-            ],
-            [
                 'name' => 'created_at',
                 'label' => 'Создано',
                 'type' => 'date'
@@ -70,12 +65,6 @@ class CafeEventCrudController extends CrudController
                 'type' => 'textarea',
             ],
             [
-                'name' => 'price',
-                'label' => 'Начальная Стоимость',
-                'type' => 'number',
-                'decimals' => 2,
-            ],
-            [
                 'name' => 'image',
                 'label' => 'Изображение',
                 'type' => 'upload',
@@ -99,12 +88,6 @@ class CafeEventCrudController extends CrudController
                 'name' => 'description',
                 'label' => 'Описание',
                 'type' => 'textarea',
-            ],
-            [
-                'name' => 'price',
-                'label' => 'Начальная Стоимость',
-                'type' => 'number',
-                'decimals' => 2,
             ],
             [
                 'name' => 'image',

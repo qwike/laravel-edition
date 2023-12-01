@@ -16,7 +16,6 @@ class CafeEventRequest extends FormRequest
         return [
             'name' => 'required|min:5|max:255',
             'description' => 'nullable|string|max:3000',
-            'price' => 'required|gt:0',
             'image' => 'nullable|mimes:jpeg,jpg,png,webp|max:2048',
         ];
     }

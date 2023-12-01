@@ -20,7 +20,6 @@ class CafeEvent extends Model implements HasMedia
     protected $fillable = [
         'name',
         'description',
-        'price',
     ];
 
     public function getCafeEventImage(): ?Media
