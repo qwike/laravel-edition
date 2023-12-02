@@ -21,6 +21,8 @@
         @include('partials.mainProducts')
         @include('partials.mainHistory')
     </section>
+    @include('partials.mainProjects')
+    <div></div>
     @include('partials.formModalContainer')
     <script>
         $(document).ready(() => {
