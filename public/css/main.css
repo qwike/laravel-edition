@@ -78,9 +78,6 @@
     }
 }
 @media (max-width:1025px) {
-    .catalog {
-        grid-template-columns: 1fr 1fr;
-    }
     .card_noshadow:nth-child(3n) {
         display: none;
     }

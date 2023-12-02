@@ -7,7 +7,7 @@ $(document).ready(() => {
         var header = $('.header_menu').first();
         var header_m = $('header .container').first();
 
-        if ($(window).width() > 600) {
+        if ($(window).width() > 801) {
             if (scroll > 80) {
                 header.addClass('sticky');
             }
@@ -17,7 +17,7 @@ $(document).ready(() => {
         }
         else {
             if (scroll > lastScrollTop && header.find('.header_menu_buttons').css('display') === 'none'){
-                header_m.css('top', '-100px');
+                header_m.css('top', '-160px');
             }
             else {
                 header_m.css('top', '0');

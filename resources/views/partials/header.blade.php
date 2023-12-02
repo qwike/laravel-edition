@@ -52,6 +52,7 @@
         <a href="{{ route('houses') }}" class="header_button houses_button">Домики и беседки</a>
         <a href="{{ route('entertainments') }}" class="header_button entertainments_button">Развлечения</a>
         <a href="{{ route('products') }}" class="header_button products_button">Продукция</a>
+        <a href="{{ route('gallery') }}" class="header_button gallery_button">Галерея</a>
         <a href="{{ route('projects') }}" class="header_button projects_button">Инвесторам</a>
         <a href="{{ route('contacts') }}" class="header_button contacts_button">Контакты</a>
     </div>
