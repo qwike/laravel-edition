@@ -11,10 +11,10 @@
 @section('content')
     <div class="page_header" id="page_header_events">
         <div class="container">
-            <div class="page_header_title">@lang('pages.events.title')</div>
-            <div class="page_header_text">Ежегодно на нашей базе отдыха проводятся разного рода мероприятия в честь народных праздников</div>
+            <div class="page_header_title">@lang('pages.events.header.title')</div>
+            <div class="page_header_text">@lang('pages.events.header.description')</div>
             <div class="page_header_buttons">
-                <a href="#events_catalog" class="page_header_button">Посмотреть все</a>
+                <a href="#events_catalog" class="page_header_button">@lang('pages.events.header.button')</a>
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
         <div class="container">
             <div class="catalog">
                 @if($events->isEmpty())
-                    <div>@lang('pages.main.events.empty')</div>
+                    <div>@lang('pages.events.empty')</div>
                 @else
                     @foreach($events as $event)
                         <div class="card_noshadow">
@@ -33,7 +33,7 @@
                                 <div class="card_title">{{ $event->name }}</div>
                                 <div class="card_description">{{ $event->description }}</div>
                                 <div class="card_line">
-                                    <div class="card_line_label">Время проведения:</div>
+                                    <div class="card_line_label">@lang('pages.events.time_spending')</div>
                                     <div class="card_line_value">{{ $event->date }}</div>
                                 </div>
                             </div>

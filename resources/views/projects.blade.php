@@ -12,10 +12,10 @@
 @section('content')
     <div class="page_header" id="page_header_projects">
         <div class="container">
-            <div class="page_header_title">Наши проекты</div>
-            <div class="page_header_text">Мувыр предлагает уникальные инвестиционные возможности в проекты развития деревни, где Вы сможете вложить свои средства в устойчивое развитие и создание благоприятной экосистемы.</div>
+            <div class="page_header_title">@lang('pages.investors.header.title')</div>
+            <div class="page_header_text">@lang('pages.investors.header.description')</div>
             <div class="page_header_buttons">
-                <a href="#projects_catalog" class="page_header_button">Посмотреть все</a>
+                <a href="#projects_catalog" class="page_header_button">@lang('pages.investors.header.button')</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         <div class="container">
             <div class="catalog">
                 @if($projects->isEmpty())
-                    <div>В данный момент нет проектов</div>
+                    <div>@lang('pages.investors.empty')</div>
                 @else
                     @foreach($projects as $project)
                         <div class="card">

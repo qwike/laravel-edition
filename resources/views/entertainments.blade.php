@@ -11,10 +11,10 @@
 @section('content')
     <div class="page_header" id="page_header_entertainments">
         <div class="container">
-            <div class="page_header_title">@lang('pages.entertainments.title')</div>
-            <div class="page_header_text">В нашей деревне есть всё: от спокойного плавания на лодках до экстремальных поездок по лесу</div>
+            <div class="page_header_title">@lang('pages.entertainment.header.title')</div>
+            <div class="page_header_text">@lang('pages.entertainment.header.description')</div>
             <div class="page_header_buttons">
-                <a href="#entertainments_catalog" class="page_header_button">Посмотреть все</a>
+                <a href="#entertainments_catalog" class="page_header_button">@lang('pages.entertainment.header.button')</a>
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
         <div class="container">
             <div class="catalog">
                 @if($entertainments->isEmpty())
-                    <div>@lang('pages.main.entertainments.empty')</div>
+                    <div>@lang('pages.entertainment.empty')</div>
                 @else
                     @foreach($entertainments as $entertainment)
                         <div class="card">

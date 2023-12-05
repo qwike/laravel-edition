@@ -13,10 +13,10 @@
 @section('content')
     <div class="page_header" id="page_header_cafe">
         <div class="container">
-            <div class="page_header_title">Кафе</div>
-            <div class="page_header_text">В нашем уютном кафе вы можете провести любой праздник. Наша команда профессионалов позаботиться об организации и устроит все так, что у вас не будет времени заскучать</div>
+            <div class="page_header_title">@lang('pages.cafe.header.title')</div>
+            <div class="page_header_text">@lang('pages.cafe.header.description')</div>
             <div class="page_header_buttons">
-                <a href="#events_catalog" class="page_header_button">Посмотреть все</a>
+                <a href="#events_catalog" class="page_header_button">@lang('pages.cafe.header.button')</a>
             </div>
         </div>
     </div>
@@ -24,7 +24,7 @@
         <div class="container">
             <div class="catalog">
                 @if($cafeEvents->isEmpty())
-                    <div>В данный момент мероприятий в кафе не проводится</div>
+                    <div>@lang('pages.cafe.empty')</div>
                 @else
                     @foreach($cafeEvents as $cafeEvent)
                         <div class="card">

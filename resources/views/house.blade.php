@@ -36,14 +36,14 @@
                     <div class="house_title">{{ $house->name }}</div>
                     <p class="house_description">{{ $house->description }}</p>
                     <p>{{ $house->price . ' ' . $house->unit->label() }}</p>
-                    <p>Вместимость: до {{ $house->capacity }} человек</p>
+                    <p>@lang('pages.houses.card.capacity') @lang('pages.houses.card.up') {{ $house->capacity }} @lang('pages.houses.card.people')</p>
                     <button
                             class="btn_order orderable"
                             data-position-name="{{ $house->name }}"
                             data-position-price="{{ $house->price . ' ' . $house->unit->label() }}"
                             data-orderable-type="{{ \App\Enums\OrderTypeEnum::from(\App\Models\House::class)->name }}"
                             data-orderable-id="{{ $house->id }}">
-                        @lang('pages.house.button')
+                        @lang('pages.houses.button')
                         <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">
                     </button>
                 </div>

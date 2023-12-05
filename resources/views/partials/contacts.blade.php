@@ -2,22 +2,22 @@
     <div class="container">
         <div class="contacts_container">
             <div>
-                <div class="section_title">Контакты</div>
+                <div class="section_title">@lang('pages.contact_part.title')</div>
                 <div class="contacts_info">
                     <div class="contacts_address">
                         <img src="{{ asset('/images/location.svg') }}" alt="Адрес">
-                        Игринский район, д. Мувыр
+                        @lang('pages.contact_part.address')
                     </div>
                     <div class="phone_group" style="margin-top: 30px;">
-                        <a class="phone_number" href="tel:+79018658755">+7 (901) 865-87-55</a>
-                        <p class="phone_desc">Ежедневно с 9:00 до 20:00</p>
+                        <a class="phone_number" href="@lang('pages.contact_part.phone')">@lang('pages.contact_part.phone')</a>
+                        <p class="phone_desc">@lang('pages.contact_part.phone_description')</p>
                     </div>
                     <button class="free_call" style="margin-top: 30px;">
                         <img src="{{ asset('/images/phone.svg') }}" alt="Бесплатный звонок" style="margin-right: 5px;">
-                        Бесплатный звонок
+                        @lang('pages.contact_part.button')
                     </button>
                     <div class="socials_group" style="margin-top: 30px;">
-                        <div class="socials_text">Наши страницы в соц. сетях</div>
+                        <div class="socials_text">@lang('pages.contact_part.social')</div>
                         <div class="socials">
                             <a href="https://vk.com/weekendvmywer" target="_blank">
                                 <div class="social_box vk_box">

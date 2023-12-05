@@ -1,19 +1,15 @@
 <div class="container">
     <div class="history_container">
         <div class="history_image_box">
-            <img src="{{ asset('/images/history.png') }}" alt="Старый Мувыр">
+            <img src="{{ asset('/images/history.png') }}" alt="@lang('pages.history_main.alt')">
         </div>
         <div class="history_info">
-            <div class="section_title">История Мувыра</div>
+            <div class="section_title">@lang('pages.history_main.title')</div>
             <div class="history_text">
-                В начале 1980-х родную деревню Корепанова, основанную в 1837-м, стёрли с лица земли. Дома снесли бульдозером,
-                людей перебросили в соседние сёла. «Неперспективный» Мувыр перестал существовать в документах и на картах.
-                А Александр никак не мог понять: зачем и кому это нужно? Он сидел на берегу реки, смотрел на поле, где ещё недавно кипела жизнь,
-                и у него, молодого сильного мужчины, отслужившего срочную на границе с Китаем, опускались руки. Именно тогда он пообещал себе
-                возродить малую родину.
+                @lang('pages.history_main.description')
             </div>
             <a class="button_section_more" href="{{ route('history') }}">
-                Читать полностью
+                @lang('pages.history_main.button')
                 <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">
             </a>
         </div>

@@ -1,16 +1,16 @@
 <section>
     <div class="container">
         <div class="section_header">
-            <div class="section_title">Экскурсии</div>
+            <div class="section_title">@lang('pages.excursions_main.title')</div>
             <a class="button_section_more" href="{{ route('excursions') }}">
-                Все экскурсии
+                @lang('pages.excursions_main.button')
                 <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">
             </a>
         </div>
-        <div class="section_description">В нашей деревне есть всё: от спокойного плавания на лодках до увлекательных прогулок по лесу</div>
+        <div class="section_description">@lang('pages.excursions_main.description')</div>
         <div class="catalog">
             @if($excursions->isEmpty())
-                <div>@lang('pages.main.excursions.empty')</div>
+                <div>@lang('pages.excursions_main.empty')</div>
             @else
                 @foreach($excursions as $excursion)
                     <div class="card">

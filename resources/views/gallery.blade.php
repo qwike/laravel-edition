@@ -11,10 +11,10 @@
 @section('content')
     <div class="page_header" id="page_header_gallery">
         <div class="container">
-            <div class="page_header_title">Галерея</div>
-            <div class="page_header_text">Мувыр приглашает вас на увлекательный визуальный тур, погружаясь в мир уютных домиков, разнообразных развлечений и захватывающей красоты природы</div>
+            <div class="page_header_title">@lang('pages.gallery.header.title')</div>
+            <div class="page_header_text">@lang('pages.gallery.header.description')</div>
             <div class="page_header_buttons">
-                <a href="#gallery_catalog" class="page_header_button">Смотреть</a>
+                <a href="#gallery_catalog" class="page_header_button">@lang('pages.gallery.header.button')</a>
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
         <div class="container">
             <div class="catalog">
                 @if($gallery->isEmpty())
-                    <div>@lang('pages.main.excursions.empty')</div>
+                    <div>@lang('pages.gallery.empty')</div>
                 @else
                     @foreach($gallery as $image)
                         <div class="img_box">

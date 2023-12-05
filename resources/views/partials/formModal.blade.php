@@ -5,30 +5,30 @@
             <div class="modal_close">✖</div>
         </div>
         <div class="modal_body">
-            <div class="form_description">В ближайшее время мы позвоним вам и подробно расскажем об условиях и стоимости выбранного вами вида отдыха</div>
+            <div class="form_description">@lang('pages.modal_part.description')</div>
             <form action="{{ route('createOrder') }}" id="modalForm" method="POST">
                 @csrf
                 <div class="modal_price">
-                    <span class="price_title">Стоимость:</span> <span id="form_position_price"></span>
+                    <span class="price_title">@lang('pages.modal_part.price')</span> <span id="form_position_price"></span>
                 </div>
                 <div class="modal_input_wrapper">
-                    <label for="input_name">Имя</label>
-                    <input type="text" id="input_name" name="name" class="modal_input" required minlength="4" maxlength="255" placeholder="Иван" />
+                    <label for="input_name">@lang('pages.modal_part.input.name')</label>
+                    <input type="text" id="input_name" name="name" class="modal_input" required minlength="4" maxlength="255" placeholder="@lang('pages.modal_part.input.name_placeholder')" />
                 </div>
                 <div class="modal_input_wrapper">
-                    <label for="input_phone">Номер телефона</label>
-                    <input type="text" id="input_phone" class="modal_input" required placeholder="+7 (900) 900 90 90" />
+                    <label for="input_phone">@lang('pages.modal_part.input.phone')</label>
+                    <input type="text" id="input_phone" class="modal_input" required placeholder="@lang('pages.modal_part.input.phone_placeholder')" />
                 </div>
                 <div class="modal_input_wrapper">
-                    <label for="input_comment">Комментарий</label>
-                    <textarea id="input_comment" name="comment" rows="5" maxlength="3000" placeholder="Ваши пожелания, предпочтения или другая уточняющая информация"></textarea>
+                    <label for="input_comment">@lang('pages.modal_part.input.comment')</label>
+                    <textarea id="input_comment" name="comment" rows="5" maxlength="3000" placeholder="@lang('pages.modal_part.input.comment_placeholder')"></textarea>
                 </div>
                 <input type="hidden" name="orderable_type" id="form_orderable_type" />
                 <input type="hidden" name="orderable_id" id="form_orderable_id" />
                 <div style="display: flex; justify-content: center; margin: 15px 0px">
                     {!! Captcha::display() !!}
                 </div>
-                <button class="modal_confirm">Отправить заявку</button>
+                <button class="modal_confirm">@lang('pages.modal_part.button')</button>
             </form>
         </div>
         <div id="form_result" style="display: none;"></div>

@@ -11,10 +11,10 @@
 @section('content')
     <div class="page_header" id="page_header_houses">
         <div class="container">
-            <div class="page_header_title">@lang('pages.houses.title')</div>
-            <div class="page_header_text">Мы предлагаем вам остановиться в наших уютных гостевых домиках и отдохнуть в наших замечательных беседках</div>
+            <div class="page_header_title">@lang('pages.houses.header.title')</div>
+            <div class="page_header_text">@lang('pages.houses.header.description')</div>
             <div class="page_header_buttons">
-                <a href="#houses_catalog" class="page_header_button">Посмотреть все</a>
+                <a href="#houses_catalog" class="page_header_button">@lang('pages.houses.header.button')</a>
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
         <div class="container">
             <div class="catalog">
                 @if($houses->isEmpty())
-                    <div>@lang('pages.main.houses.empty')</div>
+                    <div>@lang('pages.houses.empty')</div>
                 @else
                     @foreach($houses as $house)
                         <div class="card_noshadow">
@@ -32,8 +32,8 @@
                             <div class="card_info_10">
                                 <div class="card_title">{{ $house->name }}</div>
                                 <div class="card_line">
-                                    <div class="card_line_label">Вместимость:</div>
-                                    <div class="card_line_value">до {{ $house->capacity }} человек</div>
+                                    <div class="card_line_label">@lang('pages.houses.card.capacity')</div>
+                                    <div class="card_line_value">@lang('pages.houses.card.up') {{ $house->capacity }} @lang('pages.houses.card.people') </div>
                                 </div>
                                 <div class="card_line">
                                     <div class="card_price">{{ $house->price }} {{ $house->unit->label() }}</div>
