@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Notification;
 
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('home');
 Route::get('/houses', [App\Http\Controllers\HouseController::class, 'houses'])->name('houses');
@@ -15,6 +14,7 @@ Route::get('/gallery', [App\Http\Controllers\GalleryController::class, 'gallery'
 Route::get('/projects', [App\Http\Controllers\ProjectController::class, 'projects'])->name('projects');
 Route::get('/history', [App\Http\Controllers\HistoryController::class, 'history'])->name('history');
 Route::get('/contacts', [App\Http\Controllers\ContactsController::class, 'contacts'])->name('contacts');
-Route::get('/telegram', [App\Telegram\Handler::class , 'handler'])->name('telegram');
+
 Route::post('/form', [App\Http\Controllers\Api\FormController::class , 'create'])->name('createOrder');
 Route::get('/getForm', [App\Http\Controllers\Api\FormController::class , 'getForm'])->name('getForm');
+

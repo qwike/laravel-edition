@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\FormCreateRequest;
 use App\Notifications\Telegram;
 use App\Repositories\OrderRepository;
+use App\Repositories\TelegramChatRepository;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
@@ -15,20 +16,19 @@ use \Illuminate\Support\Facades\Notification;
 
 class FormController extends Controller
 {
-    public function create(FormCreateRequest $request, OrderRepository $orderRepository): JsonResponse
-    {
+    public function create(
+        FormCreateRequest $request,
+        OrderRepository $orderRepository,
+        TelegramChatRepository $telegramChatRepository,
+    ): JsonResponse {
         $orderRepository->create($request->validated());
+        $chatIds = $telegramChatRepository->getAll()->pluck('chat_id');
 
-        $chat_id = DB::table('telegraph_chats')->select('chat_id')->where("notified", "=", "false")->get();
-        foreach($chat_id as $chat) {
-            DB::table('telegraph_chats')->where("chat_id", "=", $chat->chat_id)->update(array("notified" => "true"));
-        }
-        Notification::send($chat_id, new Telegram());
+        Notification::send($chatIds, new Telegram());
 
         return response()->json([
             'status' => true,
         ]);
-
     }
 
     public function getForm(): View
