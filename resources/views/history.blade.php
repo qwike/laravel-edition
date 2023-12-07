@@ -80,7 +80,7 @@
                 </div>
                 <p>@lang('pages.history.text_8')</p>
                 <div class="history_img_box">
-                    <img src="{{ asset('/images/historylast.jpg') }}" alt="@lang('pages.history.image_alt_4')">
+                    <img src="{{ asset('/images/historylast.jpg') }}" alt="@lang('pages.history.image_alt_1')">
                 </div>
             </div>
         </div>
