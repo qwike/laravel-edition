@@ -19,8 +19,10 @@ class FormController extends Controller
     {
         $orderRepository->create($request->validated());
 
-        $chat_id = DB::table('telegraph_chats')->select('chat_id')->get();
-
+        $chat_id = DB::table('telegraph_chats')->select('chat_id')->where("notified", "=", "false")->get();
+        foreach($chat_id as $chat) {
+            DB::table('telegraph_chats')->where("chat_id", "=", $chat->chat_id)->update(array("notified" => "true"));
+        }
         Notification::send($chat_id, new Telegram());
 
         return response()->json([

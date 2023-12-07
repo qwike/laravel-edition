@@ -8,6 +8,7 @@ use App\Repositories\OrderRepository;
 use DefStudio\Telegraph\Facades\Telegraph;
 use DefStudio\Telegraph\Models\TelegraphChat;
 use DefStudio\Telegraph\Handlers\WebhookHandler;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Stringable;
 use DefStudio\Telegraph\Keyboard\Button;
 use DefStudio\Telegraph\Keyboard\Keyboard;
@@ -23,6 +24,10 @@ class Handler extends WebhookHandler
     {
         $orders = Order::query()->where('status', '=', 'process')->get();
         $chat = TelegraphChat::find($this->chat->id);
+        if($orders->isEmpty()){
+            $chat->message('<i>"Новых" </i> заявок нет')->send();
+            return;
+        }
         foreach($orders as $order){
             $text =
                 "Заявка №" . "<b>" . $order->id . "</b>" .
@@ -52,6 +57,10 @@ class Handler extends WebhookHandler
     {
         $orders = Order::query()->where('status', '=', 'working')->get();
         $chat = TelegraphChat::find($this->chat->id);
+        if($orders->isEmpty()){
+            $chat->message('Отсутствуют заявки <i>"В работе"</i>')->send();
+            return;
+        }
         foreach($orders as $order){
             $text =
                 "Заявка №" . "<b>" . $order->id . "</b>" .
@@ -80,6 +89,10 @@ class Handler extends WebhookHandler
     {
         $orders = Order::query()->where('status', '=', 'retention')->get();
         $chat = TelegraphChat::find($this->chat->id);
+        if($orders->isEmpty()){
+            $chat->message('Отсутствуют заявки <i>"На удержании"</i>')->send();
+            return;
+        }
         foreach($orders as $order){
             $text =
                 "Заявка №" . "<b>" . $order->id . "</b>" .
@@ -147,12 +160,19 @@ class Handler extends WebhookHandler
     protected function handleChatMessage(Stringable $text): void
     {
         $chat = TelegraphChat::find($this->chat->id);
+
+        DB::table('telegraph_chats')->where('chat_id', '=', $this->chat->chat_id)->update(array("notified" => 'false'));
+        $data = DB::table('telegraph_chats')->where('chat_id', '=', $this->chat->chat_id)->first();
+//        $this->reply($data->name);
+
         if($chat->storage()->get('comment')){
             $chat->storage()->set('comment', false);
 
+
+
             $chat->deleteMessage($chat->storage()->get('message_id'))->send();
             Order::query()->find($chat->storage()->get('order_id'))->update(array("comment_admin" => $text));
-            $order = $order = Order::query()->where('id', '=', $chat->storage()->get('order_id'))->first();
+            $order = Order::query()->where('id', '=', $chat->storage()->get('order_id'))->first();
             $text =
                 "Заявка №" . "<b>" . $order->id . "</b>" .
                 "\n<b>Статус:</b> "    . $order->status->label() .
