@@ -20,6 +20,5 @@
 @yield('content')
 @include('partials.contacts')
 @include('partials.footer')
-@include('partials.formModalContainer')
 </body>
 </html>
