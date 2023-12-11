@@ -15,12 +15,12 @@
             <div class="page_header_title">@lang('pages.excursions.header.title')</div>
             <div class="page_header_text">@lang('pages.excursions.header.description')</div>
             <div class="page_header_buttons">
-                <a href="#excursions_catalog" class="page_header_button">@lang('pages.excursions.header.button')</a>
+                <a href="#excursions_catalog" class="page_header_button animate__animated animate__fadeIn">@lang('pages.excursions.header.button')</a>
             </div>
         </div>
     </div>
     <section id="excursions_catalog">
-        <div class="container">
+        <div class="container wow animate__animated animate__fadeIn">
             <div class="catalog">
                 @if($excursions->isEmpty())
                     <div>@lang('pages.excursions.empty')</div>

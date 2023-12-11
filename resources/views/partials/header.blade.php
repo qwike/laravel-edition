@@ -5,7 +5,7 @@
             <div class="logo_text">@lang('pages.header.logo')</div>
         </a>
         <div class="socials_group">
-            <div class="socials_text">@lang('pages.header.social')</div>
+            <div class="socials_text">@lang('pages.header.socials')</div>
             <div class="socials">
                 <a href="https://vk.com/weekendvmywer" target="_blank">
                     <div class="social_box vk_box">
@@ -29,12 +29,12 @@
                 </a>
             </div>
         </div>
-        <a class="free_call" href="@lang('pages.header.href_phone')">
-            <img src="{{ asset('/images/phone.svg') }}" alt="@lang('pages.header.button_description')" style="margin-right: 5px;">
+        <a class="free_call" href="tel:@lang('pages.phone_number_compressed')">
+            <img src="{{ asset('/images/phone.svg') }}" alt="@lang('pages.header.button')" style="margin-right: 5px;">
             @lang('pages.header.button')
         </a>
         <div class="phone_group">
-            <a class="phone_number" href="@lang('pages.header.href_phone')">@lang('pages.header.phone')</a>
+            <a class="phone_number" href="tel:@lang('pages.phone_number_compressed')">@lang('pages.phone_number')</a>
             <p class="phone_desc">@lang('pages.header.phone_description')</p>
         </div>
         <div class="burger_box" data-open="{{ asset('/images/burger.svg') }}" data-close="{{ asset('/images/close.svg') }}">
@@ -50,7 +50,7 @@
         <a href="{{ route('events') }}" class="header_button events_button">@lang('pages.header.events')</a>
         <a href="{{ route('cafe') }}" class="header_button cafe_button">@lang('pages.header.cafe')</a>
         <a href="{{ route('houses') }}" class="header_button houses_button">@lang('pages.header.houses')</a>
-        <a href="{{ route('entertainments') }}" class="header_button entertainments_button">@lang('pages.header.entertaiment')</a>
+        <a href="{{ route('entertainments') }}" class="header_button entertainments_button">@lang('pages.header.entertainments')</a>
         <a href="{{ route('products') }}" class="header_button products_button">@lang('pages.header.production')</a>
         <a href="{{ route('gallery') }}" class="header_button gallery_button">@lang('pages.header.gallery')</a>
         <a href="{{ route('projects') }}" class="header_button projects_button">@lang('pages.header.investors')</a>

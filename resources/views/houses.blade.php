@@ -14,12 +14,12 @@
             <div class="page_header_title">@lang('pages.houses.header.title')</div>
             <div class="page_header_text">@lang('pages.houses.header.description')</div>
             <div class="page_header_buttons">
-                <a href="#houses_catalog" class="page_header_button">@lang('pages.houses.header.button')</a>
+                <a href="#houses_catalog" class="page_header_button animate__animated animate__fadeIn">@lang('pages.houses.header.button')</a>
             </div>
         </div>
     </div>
     <section id="houses_catalog">
-        <div class="container">
+        <div class="container wow animate__animated animate__fadeIn">
             <div class="catalog">
                 @if($houses->isEmpty())
                     <div>@lang('pages.houses.empty')</div>

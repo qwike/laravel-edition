@@ -1,16 +1,16 @@
 <section>
-    <div class="container">
+    <div class="container wow animate__animated animate__fadeIn">
         <div class="section_header">
-            <div class="section_title">@lang('pages.entertainments_main.title')</div>
+            <div class="section_title">@lang('pages.main.entertainments.title')</div>
             <a class="button_section_more" href="{{ route('entertainments') }}">
-                @lang('pages.entertainments_main.button')
+                @lang('pages.main.entertainments.button')
                 <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">
             </a>
         </div>
-        <div class="section_description">@lang('pages.entertainments_main.description')</div>
+        <div class="section_description">@lang('pages.main.entertainments.description')</div>
         <div class="catalog">
             @if($entertainments->isEmpty())
-                <div>@lang('pages.entertainments_main.empty')</div>
+                <div>@lang('pages.main.entertainments.empty')</div>
             @else
                 @foreach($entertainments as $entertainment)
                     <div class="card">

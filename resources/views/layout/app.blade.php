@@ -7,7 +7,7 @@
     <title>@yield('title')</title>
     <link rel="shortcut icon" href="{{ asset('images/logo.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/animate.uses.min.css') }}">
     @yield('css')
     <script src="{{ asset('/js/jquery.js') }}"></script>
     <script src="{{ asset('/js/wow.min.js') }}"></script>

@@ -16,12 +16,12 @@
             <div class="page_header_title">@lang('pages.cafe.header.title')</div>
             <div class="page_header_text">@lang('pages.cafe.header.description')</div>
             <div class="page_header_buttons">
-                <a href="#events_catalog" class="page_header_button">@lang('pages.cafe.header.button')</a>
+                <a href="#events_catalog" class="page_header_button animate__animated animate__fadeIn">@lang('pages.cafe.header.button')</a>
             </div>
         </div>
     </div>
     <section id="events_catalog">
-        <div class="container">
+        <div class="container wow animate__animated animate__fadeIn">
             <div class="catalog">
                 @if($cafeEvents->isEmpty())
                     <div>@lang('pages.cafe.empty')</div>

@@ -16,12 +16,12 @@
             <div class="page_header_title">@lang('pages.production.header.title')</div>
             <div class="page_header_text">@lang('pages.production.header.description')</div>
             <div class="page_header_buttons">
-                <a href="#products_catalog" class="page_header_button">@lang('pages.production.header.button')</a>
+                <a href="#products_catalog" class="page_header_button animate__animated animate__fadeIn">@lang('pages.production.header.button')</a>
             </div>
         </div>
     </div>
     <section id="products_catalog">
-        <div class="container">
+        <div class="container wow animate__animated animate__fadeIn">
             <div class="section_header">
                 <div class="section_title">@lang('pages.production.title')</div>
             </div>
@@ -45,7 +45,7 @@
         </div>
     </section>
     <section>
-        <div class="container">
+        <div class="container wow animate__animated animate__fadeIn">
             <div class="section_header">
                 <div class="section_title">@lang('pages.production.shops.title')</div>
             </div>

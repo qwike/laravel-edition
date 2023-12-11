@@ -15,18 +15,18 @@
             <div class="page_header_title">@lang('pages.history.header.title')</div>
             <div class="page_header_text">@lang('pages.history.header.description')</div>
             <div class="page_header_buttons">
-                <a href="#history" class="page_header_button">@lang('pages.history.header.button')</a>
+                <a href="#history" class="page_header_button animate__animated animate__fadeIn">@lang('pages.history.header.button')</a>
             </div>
         </div>
     </div>
     <section id="history">
         <div class="container">
             <div class="history_text">
-                <p>
+                <p class="wow animate__animated animate__fadeIn">
                     @lang('pages.history.text_1')
                 </p>
                 <div class="columns_container">
-                    <p>
+                    <p class="wow animate__animated animate__fadeIn">
                         @lang('pages.history.text_2')
                     </p>
                     <div class="comparison">
@@ -34,7 +34,7 @@
                         <img src="{{ asset('/images/new1.jpg') }}" alt="@lang('pages.history.image_alt_2')">
                     </div>
                 </div>
-                <p>
+                <p class="wow animate__animated animate__fadeIn">
                     @lang('pages.history.text_3')
                 </p>
                 <div class="quote">
@@ -49,12 +49,12 @@
                         <img src="{{ asset('/images/old1.jpg') }}" alt="@lang('pages.history.image_alt_1')">
                         <img src="{{ asset('/images/new2.png') }}" alt="@lang('pages.history.image_alt_2')">
                     </div>
-                    <p>@lang('pages.history.text_4')</p>
+                    <p class="wow animate__animated animate__fadeIn">@lang('pages.history.text_4')</p>
                 </div>
-                <p>@lang('pages.history.text_5')</p>
+                <p class="wow animate__animated animate__fadeIn">@lang('pages.history.text_5')</p>
                 <div class="columns_container">
-                    <p>@lang('pages.history.text_6')</p>
-                    <div class="history_img_box">
+                    <p class="wow animate__animated animate__fadeIn">@lang('pages.history.text_6')</p>
+                    <div class="history_img_box wow animate__animated animate__zoomIn"">
                         <img src="{{ asset('/images/most.jpg') }}" alt="@lang('pages.history.image_alt_3')">
                     </div>
                 </div>
@@ -65,9 +65,9 @@
                         <cite>@lang('pages.history.author')</cite>
                     </blockquote>
                 </div>
-                <p>@lang('pages.history.text_7')</p>
+                <p class="wow animate__animated animate__fadeIn">@lang('pages.history.text_7')</p>
                 <div class="columns_container">
-                    <div class="history_img_box">
+                    <div class="history_img_box wow animate__animated animate__zoomIn">
                         <img src="{{ asset('/images/korepanov.png') }}" alt="@lang('pages.history.image_alt_4')">
                     </div>
                     <div class="quote">
@@ -78,8 +78,8 @@
                         </blockquote>
                     </div>
                 </div>
-                <p>@lang('pages.history.text_8')</p>
-                <div class="history_img_box">
+                <p class="wow animate__animated animate__fadeIn">@lang('pages.history.text_8')</p>
+                <div class="history_img_box wow animate__animated animate__zoomIn"">
                     <img src="{{ asset('/images/historylast.jpg') }}" alt="@lang('pages.history.image_alt_1')">
                 </div>
             </div>

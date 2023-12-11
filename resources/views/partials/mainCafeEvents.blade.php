@@ -1,16 +1,16 @@
 <section>
-    <div class="container">
+    <div class="container wow animate__animated animate__fadeIn">
         <div class="section_header">
-            <div class="section_title">@lang('pages.cafe_main.title')</div>
+            <div class="section_title">@lang('pages.main.cafe.title')</div>
             <a class="button_section_more" href="{{ route('cafe') }}">
-                @lang('pages.cafe_main.button')
+                @lang('pages.main.cafe.button')
                 <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">
             </a>
         </div>
-        <div class="section_description">@lang('pages.cafe_main.description')</div>
+        <div class="section_description">@lang('pages.main.cafe.description')</div>
         <div class="catalog cafe_catalog">
             @if($cafeEvents->isEmpty())
-                <div>@lang('pages.cafe_main.empty')</div>
+                <div>@lang('pages.main.cafe.empty')</div>
             @else
                 @foreach($cafeEvents as $cafeEvent)
                     <div class="card cafe_card">
@@ -23,10 +23,10 @@
                             <div class="card_line">
                                 <button class="card_button orderable"
                                         data-position-name="{{ $cafeEvent->name }}"
-                                        data-position-price="@lang('pages.cafe_main.card.data-position-price')"
+                                        data-position-price="@lang('pages.main.cafe.card.data-position-price')"
                                         data-orderable-type="{{ \App\Enums\OrderTypeEnum::from(\App\Models\CafeEvent::class)->name }}"
                                         data-orderable-id="{{ $cafeEvent->id }}">
-                                    @lang('pages.cafe_main.card.button')
+                                    @lang('pages.main.cafe.card.button')
                                     <img src="{{ asset('/images/arrow.svg') }}" alt="стрелка">
                                 </button>
                             </div>
