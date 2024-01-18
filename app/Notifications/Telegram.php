@@ -16,9 +16,10 @@ class Telegram extends Notification
     {
         return TelegramMessage::create()
             // Optional recipient user id.
-            ->to($notifiable->chat_id)
+            ->to($notifiable)
             // Markdown supported.
             ->content("Появилась новая заявка");
+
 //            ->buttonWithCallback('Confirm', 'confirm_invoice ');
     }
 }

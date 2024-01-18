@@ -38,8 +38,6 @@ class TelegraphDriver extends WebhookHandler implements TelegramDriverInterface
     {
         $this->getMessageByStatus(StatusEnum::retention);
     }
-
-
     public function changeorderstatus(): void
     {
         $chat = TelegraphChat::find($this->chat->id);
@@ -79,13 +77,16 @@ class TelegraphDriver extends WebhookHandler implements TelegramDriverInterface
     {
         $chat = $this->telegramChatRepository->getFirstById($this->chat->id);
         $orderId = $chat->storage()->get('order_id');
-
         if ($chat->storage()->get('comment')) {
             $order = $this->orderRepository->getFirstById($orderId);
+            $this->orderRepository->update($orderId, ['comment_admin' => $text]);
 
             if ($order) {
                 $chat->deleteMessage($chat->storage()->get('message_id'))->send();
-                $this->orderRepository->update($orderId, ['comment_admin' => $text]);
+                $order = $this->orderRepository->getFirstById($orderId);
+                //Супер важная штука чтобы обновлялся коментарий !!!!!!!!!
+                $chat->message('')->send();
+
                 $this->formattedMessage($order, $chat);
             }
 

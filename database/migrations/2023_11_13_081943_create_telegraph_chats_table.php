@@ -11,11 +11,13 @@ return new class () extends Migration {
             $table->id();
             $table->string('chat_id');
             $table->string('name')->nullable();
+            $table->boolean('auth')->default(false);
             $table->string('notified')->default('false');
-            $table->foreignId('telegraph_bot_id')->constrained('telegraph_bots')->cascadeOnDelete();
+            $table->foreignId('telegraph_bot_id')->constrained('telegraph_bots')->cascadeOnDelete()->default('1');
             $table->timestamps();
 
             $table->unique(['chat_id', 'telegraph_bot_id']);
         });
     }
 };
+

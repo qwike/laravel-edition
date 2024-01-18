@@ -29,7 +29,7 @@ return [
      *
      * For reference, see https://core.telegram.org/bots/api#using-a-local-bot-api-server
      */
-    'custom_webhook_domain' => 'https://9564-88-80-63-60.ngrok-free.app',
+    'custom_webhook_domain' => 'https://0ddf-92-39-222-67.ngrok-free.app',
 
     /*s
      * If enabled, Telegraph dumps received
@@ -41,23 +41,23 @@ return [
      * If enabled, unknown webhook commands are
      * reported as exception in application logs
      */
-    'report_unknown_webhook_commands' => true,
+    'report_unknown_webhook_commands' => false,
 
     'security' => [
         /*
          * if enabled, allows callback queries from unregistered chats
          */
-        'allow_callback_queries_from_unknown_chats' => true,
+        'allow_callback_queries_from_unknown_chats' => false,
 
         /*
          * if enabled, allows messages and commands from unregistered chats
          */
-        'allow_messages_from_unknown_chats' => true,
+        'allow_messages_from_unknown_chats' => false,
 
         /*
          * if enabled, store unknown chats as new TelegraphChat models
          */
-        'store_unknown_chats_in_db' => true,
+        'store_unknown_chats_in_db' => false,
     ],
 
     /*

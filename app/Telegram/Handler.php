@@ -19,13 +19,17 @@ use function PHPUnit\Framework\isEmpty;
 class Handler extends WebhookHandler
 {
     public array $category = ["App\Models\House" => "Домики", "App\Models\Excursion" => "Экскурсии", "App\Models\CafeEvent" => "Кафе" 	];
-
+    public function adduser():void{
+        $chat = TelegraphChat::find($this->chat->id);
+        $chat->message('Введите chat id нового пользователя')->send();
+    }
     public function ordersinprocess(): void
     {
         $orders = Order::query()->where('status', '=', 'process')->get();
         $chat = TelegraphChat::find($this->chat->id);
         if($orders->isEmpty()){
             $chat->message('<i>"Новых" </i> заявок нет')->send();
+            $chat->message('Введите chat id нового пользователя')->send();
             return;
         }
         foreach($orders as $order){
