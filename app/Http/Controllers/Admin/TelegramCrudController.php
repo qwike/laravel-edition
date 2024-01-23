@@ -16,7 +16,7 @@ class TelegramCrudController extends CrudController
 
     public function setup()
     {
-        CRUD::setModel(\DefStudio\Telegraph\Models\TelegraphChat::class);
+        CRUD::setModel(\App\Models\TelegraphChat::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/telegram');
         CRUD::setEntityNameStrings('Телеграмм', 'Телеграммы');
     }

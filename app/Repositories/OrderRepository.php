@@ -20,7 +20,7 @@ class OrderRepository
 
     public function orderGetAllByStatus(StatusEnum $status): Collection
     {
-        return Order::query()->where('status', '=', $status)->get();
+        return Order::query()->with('orderable')->where('status', '=', $status)->get();
     }
     public function getFirstById(int $id): ?Order
     {

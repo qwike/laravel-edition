@@ -1,6 +1,7 @@
 Заявка № <b>{{$order->id}}</b>
 <b>Статус:</b> {{$order->status?->label()}}
 <b>Категория:</b> {{$order->orderable_type?->label()}}
+<b>Позиция:</b> {{$order->orderable?->name}}
 
 <b>Дата:</b> {{$order->created_at}}
 <b>Клиент:</b> {{$order->name}}

@@ -9,9 +9,11 @@ use App\Repositories\OrderRepository;
 use App\Repositories\TelegramChatRepository;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\View\View;
 
 use \Illuminate\Support\Facades\Notification;
+use NotificationChannels\Telegram\Exceptions\CouldNotSendNotification;
 
 
 class FormController extends Controller
@@ -24,7 +26,12 @@ class FormController extends Controller
         $orderRepository->create($request->validated());
         $chatIds = $telegramChatRepository->getAll()->pluck('chat_id');
 
-        Notification::send($chatIds, new Telegram());
+        try {
+            Notification::send($chatIds, new Telegram());
+        } catch (CouldNotSendNotification $e) {
+            Log::error($e);
+        }
+
 
         return response()->json([
             'status' => true,
