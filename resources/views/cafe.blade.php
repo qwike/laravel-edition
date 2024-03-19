@@ -13,7 +13,6 @@
 @section('content')
     <div class="page_header" id="page_header_cafe">
         <div class="container">
-            ЫВАХЫВХАЫВХАЫВХА КАКШКИ
             <div class="page_header_title">@lang('pages.cafe.header.title')</div>
             <div class="page_header_text">@lang('pages.cafe.header.description')</div>
             <div class="page_header_buttons">
